@@ -1,4 +1,4 @@
-" Copyright 2005-2010 Richard Russon.
+" Copyright 2005-2011 Richard Russon.
 
 source ~/.vim/fold/deffold.vim
 
@@ -9,15 +9,11 @@ function! Diff_FoldLevel(lnum)
 
 	if ((next =~ '^diff.*') ||
 	  \ (next =~ '^Only in.*') ||
+	  \ (next =~ '^Binary files .* differ') ||
 	  \ (next =~ '^Files .* are identical'))
-		let level = 's1'
-	elseif ((line =~ '^diff.*') ||
-	      \ ((line =~ "^---.*") && (prev !~ 'index .*')) ||
-	      \ (line =~ '^commit.*'))
-		let level = 'a1'
-	elseif (((line =~ '^$') && (prev !~ '^Date:.*')) ||
-	      \ (next =~ '^commit.*'))
 		let level = '<1'
+	elseif (line =~ '^diff.*')
+		let level = 'a1'
 	else
 		let level = '='
 	endif
@@ -26,14 +22,7 @@ endfunction
 
 function! Diff_FoldText(lnum)
 	let line = getline (a:lnum)
-	if (line =~ '^commit.*')
-		"let line = substitute (line, '^....\([^	]\+\)	.*', '\1', '')
-	elseif (line =~ '^---.*')
-		let line = substitute (line, '^....\([^	]\+\)	.*', '\1', '')
-	else
-		let line = substitute (line, '^.* ', '', 'g')
-	endif
-	"let line = 'diff ' . line
+	let line = substitute (line, '^.* ', '', 'g')
 	let line = line . ' (' . (v:foldend - v:foldstart - 3) . ')'
 	return line
 endfunction
@@ -41,4 +30,3 @@ endfunction
 " Enable folding.
 set foldexpr=Diff_FoldLevel(v:lnum)
 set foldtext=Diff_FoldText(v:foldstart)
-
