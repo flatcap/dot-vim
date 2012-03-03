@@ -19,11 +19,11 @@ map <2-LeftMouse> za
 noremap <silent> <C-]> :let ic_save=&ic<CR>:set noic<CR><C-]>:let &ic=ic_save<CR>
 
 " F8 - Switch between .c and .h
-nmap           <F1>	:set list!<CR><Bar>:set list?<CR>
-nmap           <F2>	:set hlsearch!<CR><Bar>:set hlsearch?<CR>
+nmap           <F1>	:set list!<Bar>:set list?<CR>
+nmap           <F2>	:set hlsearch!<Bar>:set hlsearch?<CR>
 nmap  <silent> <F3>	:let &laststatus = 2-&laststatus<CR>
 nmap           <F4>	:call tagsrotate#TagsRotate()<CR>
-nmap           <F5>	:set ignorecase!<CR><Bar>:set ignorecase?<CR>
+nmap           <F5>	:set ignorecase!<Bar>:set ignorecase?<CR>
 nmap           <F6>	zmzv
 nmap           <F7>	zr
 nmap           <F8>	:e %:p:s,.h$,.x,:s,.cpp$,.h,:s,.x$,.cpp,<CR>
@@ -35,9 +35,9 @@ nmap           <F12>	:cwindow 5<CR>
 " Shift-F1-F4 are a bit wonky
 " S-F5: create some temp space
 nmap <silent>  O1;2P	:set number!<CR>
-nmap           O1;2Q	:set paste!<CR><Bar>:set paste?<CR>
+nmap           O1;2Q	:set paste!<Bar>:set paste?<CR>
 nmap           O1;2R	:set ruler!<CR><C-L>
-nmap           O1;2S	:set wrap!<CR><Bar>:set wrap?<CR>
+nmap           O1;2S	:set wrap!<Bar>:set wrap?<CR>
 nmap           <S-F5>	:vnew<CR>:set buftype=nofile<CR>
 nmap           <S-F6>	:tabs<CR>
 nmap           <S-F7>	:tabclose<CR>
