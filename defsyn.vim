@@ -11,6 +11,7 @@ syntax on
 "	142 - dark yellow
 "	165 - purple
 "	184 - yellow
+"	207 - shocking pink
 "	239 - dark grey
 
 " Vim basics
@@ -29,7 +30,7 @@ highlight SignColumn	ctermfg=70		ctermbg=black		cterm=none
 highlight SpecialKey	ctermfg=darkcyan
 highlight StatusLine	ctermfg=darkcyan	ctermbg=none		cterm=underline,bold
 highlight StatusLineNC	ctermfg=darkblue	ctermbg=none		cterm=underline
-highlight VertSplit	ctermfg=darkgrey	ctermbg=black		cterm=none
+highlight VertSplit	ctermfg=darkgrey	ctermbg=none		cterm=none
 highlight Visual	ctermfg=black		ctermbg=white		cterm=none
 highlight WarningMsg	ctermfg=black		ctermbg=yellow		cterm=none
 

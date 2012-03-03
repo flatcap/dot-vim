@@ -45,7 +45,7 @@ highlight cParenError        ctermfg=Red
 highlight cPreCondit         ctermfg=DarkCyan
 highlight cPreProc           ctermfg=DarkCyan
 highlight cRepeat            ctermfg=DarkCyan
-highlight cSpaceError        ctermbg=Red
+highlight cSpaceError        ctermbg=18
 highlight cSpecial           ctermfg=DarkYellow
 highlight cSpecialCharacter  ctermfg=DarkYellow
 highlight cSpecialError      ctermfg=none
@@ -81,3 +81,5 @@ highlight attrpack ctermfg=darkgrey
 syntax keyword extras uchar_t u8 u16 u32 u64 s8 s16 s32 s64
 highlight      extras ctermfg=DarkCyan
 
+syntax match rar "// *RAR.*"
+highlight rar ctermfg=207

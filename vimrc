@@ -11,11 +11,12 @@ let g:bufExplorerShowRelativePath=1
 
 let pascal_delphi=1
 let pascal_no_functions=1
+let mapleader=","
 
 let c_space_errors=1
 
 autocmd BufNewFile,BufRead *                            set fdm=manual
-autocmd BufNewFile,BufRead *.c,*.h                      source ~/.vim/syntax/c.vim
+autocmd BufNewFile,BufRead *.c,*.h,*.cc,*.cpp           source ~/.vim/syntax/c.vim
 autocmd BufNewFile,BufRead *.pas,*.dpr                  source ~/.vim/syntax/pascal.vim
 autocmd BufNewFile,BufRead *.html,*css                  source ~/.vim/syntax/html.vim
 autocmd BufNewFile,BufRead *.java                       source ~/.vim/syntax/java.vim
@@ -25,8 +26,11 @@ autocmd BufNewFile,BufRead *.xsl                        source ~/.vim/syntax/xsl
 autocmd BufNewFile,BufRead *.module,*.php,*.inc,*.theme,*.engine,*.install,*.js source ~/.vim/syntax/php.vim
 autocmd BufNewFile,BufRead *.sql,/tmp/sql*              set syn=mysql
 autocmd BufNewFile,BufRead *.gconf                      set syn=xml
+autocmd BufNewFile,BufRead *.gv                         set syn=dot
 autocmd BufNewFile,BufRead *.txt                        setf txt
 autocmd BufNewFile,BufRead *.txt                        set ai nosi ts=8 sw=8 noet
+
+autocmd BufNewFile,BufRead *.c,*.h,*.cc,*.cpp           set fdm=manual
 
 " vim -b : edit binary using xxd-format!
 augroup Binary

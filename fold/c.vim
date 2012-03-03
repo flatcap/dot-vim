@@ -9,6 +9,7 @@ endif
 let s:prefix_comment   = "--> "
 let s:prefix_copyright = "--> Copyright"
 let s:prefix_function  = "F) "
+"let s:prefix_function  = "        "
 let s:prefix_property  = "Property: "
 let s:prefix_section   = "Section: "
 let s:prefix_signal    = "Signal: "
@@ -38,13 +39,13 @@ function! C_FoldLevel(lnum)
 		let level = '>1'
 
 	" Function/Signal/Property comment block
-	elseif ((line =~ '^\s\+/\*\*\=') && (next =~ '^\s\+\* [_a-z]\+::\=.*'))
+	elseif ((line =~ '^\s\+/\*\*\=') && (next =~ '^\s\+\* [_a-zA-Z]\+::\=.*'))
 		let level = 'a1'
-	elseif ((line =~ '^/\*\*.*') && (next =~ '^ \* [_a-z]\+.*'))
+	elseif ((line =~ '^/\*\*.*') && (next =~ '^ \* [~_a-zA-Z]\+.*'))
 		let level = '>2'
-	elseif ((line =~ '^/\*\*\=.*') && (next =~ '^ \* [_a-z]\+.*') && (nex2 =~ '^ \* @[_a-z]\+.*'))
+	elseif ((line =~ '^/\*\*\=.*') && (next =~ '^ \* [_a-zA-Z]\+.*') && (nex2 =~ '^ \* @[_a-zA-Z]\+.*'))
 		let level = '>2'
-	"elseif ((line =~ '^/\*\*\=.*') && (next =~ '^ \* [_a-z]\+:.*'))
+	"elseif ((line =~ '^/\*\*\=.*') && (next =~ '^ \* [_a-zA-Z]\+:.*'))
 	"	let level = '>2'
 
 	" Normal comment blocks
@@ -146,14 +147,14 @@ function! C_FoldText(lnum)
 		let text = C_FoldCopyright(a:lnum + 1)
 	elseif ((line =~ '^/\*\*\=') && (next =~ '^ \* SECTION:.*'))
 		let text = C_FoldSection(a:lnum + 1)
-	elseif ((line =~ '^\s\+/\*\*\=') && (next =~ '^\s\+\* [_a-z]\+::\=.*'))
+	elseif ((line =~ '^\s\+/\*\*\=') && (next =~ '^\s\+\* [_a-zA-Z]\+::\=.*'))
 		let text = C_FoldSigProp(a:lnum + 1)
 
-	elseif ((line =~ '^/\*\*.*') && (next =~ '^ \* [_a-z]\+.*'))
+	elseif ((line =~ '^/\*\*.*') && (next =~ '^ \* [~_a-zA-Z]\+.*'))
 		let text = C_FoldFunction(a:lnum + 1)
-	elseif ((line =~ '^/\*\*\=.*') && (next =~ '^ \* [_a-z]\+.*') && (nex2 =~ '^ \* @[_a-z]\+.*'))
+	elseif ((line =~ '^/\*\*\=.*') && (next =~ '^ \* [_a-zA-Z]\+.*') && (nex2 =~ '^ \* @[_a-zA-Z]\+.*'))
 		let text = C_FoldFunction(a:lnum + 1)
-	"elseif ((line =~ '^/\*\*\=.*') && (next =~ '^ \* [_a-z]\+:.*'))
+	"elseif ((line =~ '^/\*\*\=.*') && (next =~ '^ \* [_a-zA-Z]\+:.*'))
 	"	let text = C_FoldFunction(a:lnum + 1)
 
 	else

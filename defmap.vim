@@ -15,7 +15,8 @@ nmap <silent> Q :update<BAR>quit<CR>
 map <2-LeftMouse> za
 
 " Case-sensitive for tag searching
-noremap <silent> <C-]> :let ic_save=&ic<CR>:set noic<CR><C-]>:let &ic=ic_save<CR>zO
+"noremap <silent> <C-]> :let ic_save=&ic<CR>:set noic<CR><C-]>:let &ic=ic_save<CR>zO
+noremap <silent> <C-]> :let ic_save=&ic<CR>:set noic<CR><C-]>:let &ic=ic_save<CR>
 
 " F8 - Switch between .c and .h
 nmap           <F1>	:set list!<CR><Bar>:set list?<CR>
@@ -25,8 +26,8 @@ nmap           <F4>	:call tagsrotate#TagsRotate()<CR>
 nmap           <F5>	:set ignorecase!<CR><Bar>:set ignorecase?<CR>
 nmap           <F6>	zmzv
 nmap           <F7>	zr
-nmap           <F8>	:e %:p:s,.h$,.x,:s,.c$,.h,:s,.x$,.c,<CR>
-nmap           <F9>	:update<CR>:make<CR><CR>zvzz
+nmap           <F8>	:e %:p:s,.h$,.x,:s,.cpp$,.h,:s,.x$,.cpp,<CR>
+nmap           <F9>	:update<CR>:make -s<CR><CR>zvzz
 nmap           <F10>	:cnext<CR>zvzz
 nmap           <F11>	:cc<CR>zvzz
 nmap           <F12>	:cwindow 5<CR>
@@ -52,3 +53,6 @@ vmap           <S-F10>	:!uniq<CR>
 vmap           <S-F11>	:!grep<Space>
 vmap           <S-F12>	:!column -t<CR>
 
+" C-Up/Down Scroll Window
+map [1;5B 
+map [1;5A 
