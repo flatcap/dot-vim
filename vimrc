@@ -1,3 +1,5 @@
+let mapleader=","
+
 source ~/.vim/defset.vim
 source ~/.vim/defmap.vim
 source ~/.vim/defsyn.vim
@@ -11,7 +13,6 @@ let g:bufExplorerShowRelativePath=1
 
 let pascal_delphi=1
 let pascal_no_functions=1
-let mapleader=","
 
 let c_space_errors=1
 
