@@ -15,9 +15,10 @@ nmap <silent> Q :update<BAR>quit<CR>
 map <2-LeftMouse> za
 
 " Find common items
-nmap <leader>c	:call findme#Constructor()<CR>
-nmap <leader>d	:call findme#Destructor()<CR>
-nmap <leader>i	:call findme#Include()<CR>
+nmap <silent> <leader>c	:silent! call findme#Constructor()<CR>
+nmap <silent> <leader>d	:silent! call findme#Destructor()<CR>
+nmap <silent> <leader>i	:silent! call findme#Include()<CR>
+nmap <silent> <leader>h :silent! call swapfile#SwapFile()<CR>
 
 " Case-sensitive for tag searching
 "noremap <silent> <C-]> :let ic_save=&ic<CR>:set noic<CR><C-]>:let &ic=ic_save<CR>zO
