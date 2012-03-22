@@ -15,8 +15,8 @@ syntax on
 "	239 - dark grey
 
 " Vim basics
-highlight CursorColumn	ctermfg=black		ctermbg=22		cterm=none
-highlight CursorLine	ctermfg=black		ctermbg=22		cterm=none
+highlight CursorColumn	ctermfg=white		ctermbg=22		cterm=none
+highlight CursorLine	ctermfg=white		ctermbg=22		cterm=none
 highlight Directory	ctermfg=darkcyan	ctermbg=black
 highlight ErrorMsg	ctermfg=black		ctermbg=red		cterm=none
 highlight IncSearch	ctermfg=black		ctermbg=red		cterm=none
