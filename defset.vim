@@ -15,7 +15,7 @@ set   history=500
 set nohlsearch
 set   ignorecase
 set   incsearch
-set   infercase
+set noinfercase
 set   laststatus=0
 set   lazyredraw
 set   listchars=extends:>,precedes:<,tab:>-,eol:$,trail:X
