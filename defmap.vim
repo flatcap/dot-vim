@@ -19,6 +19,8 @@ nmap <silent> <leader>c	:silent! call findme#Constructor()<CR>
 nmap <silent> <leader>d	:silent! call findme#Destructor()<CR>
 nmap <silent> <leader>i	:silent! call findme#Include()<CR>
 nmap <silent> <leader>h :silent! call swapfile#SwapFile()<CR>
+nmap <silent> <leader>m :silent! update<Bar>make<CR>
+nmap <silent> <leader>t :silent! edit docs/todo.txt<CR>G
 
 " Case-sensitive for tag searching
 "noremap <silent> <C-]> :let ic_save=&ic<CR>:set noic<CR><C-]>:let &ic=ic_save<CR>zO
