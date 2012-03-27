@@ -18,10 +18,12 @@ set   incsearch
 set noinfercase
 set   laststatus=0
 set   lazyredraw
+set   linebreak
 set   listchars=extends:>,precedes:<,tab:>-,eol:$,trail:X
 set   magic
 set   mouse=nvr
 set noruler
+set   scrolloff=3
 set   shiftround
 set   shiftwidth=8
 set   shortmess=filnxtToOsrmI
@@ -51,5 +53,7 @@ set novisualbell
 set nowarn
 set   whichwrap=b,s,[,],<,>,~
 set   wildignore=*.o
+set nowildmenu
+set   wildmode=list:longest
 set   winwidth=10
 set nowrap
