@@ -22,10 +22,6 @@ nmap <silent> <leader>h :silent! call swapfile#SwapFile()<CR>
 nmap <silent> <leader>m :silent! update<Bar>make -s<CR>
 nmap <silent> <leader>t :silent! tabedit docs/todo.txt<CR>G
 
-" Case-sensitive for tag searching
-"noremap <silent> <C-]> :let ic_save=&ic<CR>:set noic<CR><C-]>:let &ic=ic_save<CR>zO
-noremap <silent> <C-]> :let ic_save=&ic<CR>:set noic<CR><C-]>:let &ic=ic_save<CR>
-
 " F8 - Switch between .c and .h
 nmap           <F1>	:set list!<Bar>:set list?<CR>
 nmap           <F2>	:set hlsearch!<Bar>:set hlsearch?<CR>
