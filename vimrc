@@ -33,6 +33,9 @@ autocmd BufNewFile,BufRead *.txt                        set ai nosi ts=8 sw=8 no
 
 autocmd BufNewFile,BufRead *.c,*.h,*.cc,*.cpp           set fdm=manual
 
+" automatically hide fugitive buffers after use
+autocmd BufReadPost fugitive://* set bufhidden=delete
+
 " vim -b : edit binary using xxd-format!
 augroup Binary
   autocmd!
