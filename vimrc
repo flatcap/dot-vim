@@ -36,6 +36,9 @@ autocmd BufNewFile,BufRead *.c,*.h,*.cc,*.cpp           set fdm=manual
 " automatically hide fugitive buffers after use
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
+" If there's an error in my STL use, there's little point staring at the source
+autocmd BufReadPost */c++/4.6.3/*.h set bufhidden=delete
+
 " vim -b : edit binary using xxd-format!
 augroup Binary
   autocmd!
