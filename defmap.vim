@@ -58,5 +58,14 @@ vmap           <S-F11>	:!grep<Space>
 vmap           <S-F12>	:!column -t<CR>
 
 " C-Up/Down Scroll Window
-map [1;5B 
-map [1;5A 
+nmap [1;5A 
+nmap [1;5B 
+imap [1;5A 
+imap [1;5B 
+
+" Shift-Up/Down Scroll Window
+nmap [1;2A 
+nmap [1;2B 
+imap [1;2A 
+imap [1;2B 
+
