@@ -19,7 +19,7 @@ nmap <silent> <leader>c	:silent! call findme#Constructor()<CR>
 nmap <silent> <leader>d	:silent! call findme#Destructor()<CR>
 nmap <silent> <leader>i	:silent! call findme#Include()<CR>
 nmap <silent> <leader>h :silent! call swapfile#SwapFile()<CR>
-nmap <silent> <leader>m :silent! update<Bar>make -s<CR>
+nmap <silent> <leader>m :call make#RichMake()<CR>
 nmap <silent> <leader>t :silent! tabedit docs/todo.txt<CR>G
 
 " F8 - Switch between .c and .h
