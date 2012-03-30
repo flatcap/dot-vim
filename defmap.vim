@@ -6,7 +6,7 @@ cmap <C-B> <S-Left>
 cmap <C-F> <S-Right>
 
 " Tab between windows
-map <Tab> 
+nmap <Tab> <C-W><C-W>
 
 " Quit, now
 nmap <silent> Q :update<BAR>quit<CR>
@@ -42,18 +42,18 @@ nmap           <F12>	:cwindow 5<CR>
 
 " Shift-F1-F4 are a bit wonky
 " S-F5: create some temp space
-nmap <silent>  O1;2P	:set number!<CR>
-nmap           O1;2Q	:set paste!<Bar>:set paste?<CR>
-nmap           O1;2R	:set ruler!<CR><C-L>
-nmap           O1;2S	:set wrap!<Bar>:set wrap?<CR>
-nmap           <S-F5>	:vnew<CR>:set buftype=nofile bufhidden=delete<CR>
-nmap           <S-F6>	:tabs<CR>
-nmap           <S-F7>	:tabclose<CR>
-nmap           <S-F8>	:tabnew<Space>
-nmap           <S-F9>	:%!sort<CR>
-nmap           <S-F10>	:%!uniq<CR>
-nmap           <S-F11>	:%!grep<Space>
-nmap           <S-F12>	:%!column -t<CR>
+nmap <silent>  <Esc>O1;2P	:set number!<CR>
+nmap           <Esc>O1;2Q	:set paste!<Bar>:set paste?<CR>
+nmap           <Esc>O1;2R	:set ruler!<CR><C-L>
+nmap           <Esc>O1;2S	:set wrap!<Bar>:set wrap?<CR>
+nmap           <S-F5>		:vnew<CR>:set buftype=nofile bufhidden=delete<CR>
+nmap           <S-F6>		:tabs<CR>
+nmap           <S-F7>		:tabclose<CR>
+nmap           <S-F8>		:tabnew<Space>
+nmap           <S-F9>		:%!sort<CR>
+nmap           <S-F10>		:%!uniq<CR>
+nmap           <S-F11>		:%!grep<Space>
+nmap           <S-F12>		:%!column -t<CR>
 
 " Visual versions of the text manipulations
 vmap           <S-F9>	:!sort<CR>
@@ -62,14 +62,14 @@ vmap           <S-F11>	:!grep<Space>
 vmap           <S-F12>	:!column -t<CR>
 
 " C-Up/Down Scroll Window
-nmap [1;5A 
-nmap [1;5B 
-imap [1;5A 
-imap [1;5B 
+nmap <Esc>[1;5A <C-Y>
+nmap <Esc>[1;5B <C-E>
+imap <Esc>[1;5A <C-O><C-Y>
+imap <Esc>[1;5B <C-O><C-E>
 
 " Shift-Up/Down Scroll Window
-nmap [1;2A 
-nmap [1;2B 
-imap [1;2A 
-imap [1;2B 
+nmap <Esc>[1;2A <C-Y>
+nmap <Esc>[1;2B <C-E>
+imap <Esc>[1;2A <C-O><C-Y>
+imap <Esc>[1;2B <C-O><C-E>
 
