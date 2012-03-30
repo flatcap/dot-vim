@@ -33,6 +33,10 @@ autocmd BufNewFile,BufRead *.txt                        set ai nosi ts=8 sw=8 no
 
 autocmd BufNewFile,BufRead *.c,*.h,*.cc,*.cpp           set fdm=manual
 
+autocmd BufNewFile  *.c    0r ~/.vim/templates/file.c
+autocmd BufNewFile  *.cpp  0r ~/.vim/templates/file.cpp
+autocmd BufNewFile  *.html 0r ~/.vim/templates/file.html
+
 " automatically hide fugitive buffers after use
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
