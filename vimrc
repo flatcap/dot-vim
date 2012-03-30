@@ -41,7 +41,9 @@ autocmd BufNewFile  *.html 0r ~/.vim/templates/file.html
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " If there's an error in my STL use, there's little point staring at the source
-autocmd BufReadPost */c++/4.6.3/*.h set bufhidden=delete
+autocmd BufRead */c++/4.6.3/* set syntax=c bufhidden=delete foldlevel=4
+
+autocmd BufReadPost *.h set bufhidden=delete autowriteall
 
 " vim -b : edit binary using xxd-format!
 augroup Binary

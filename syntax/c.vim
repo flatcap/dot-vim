@@ -1,7 +1,8 @@
 source ~/.vim/fold/c.vim
 
 set noexpandtab
-set path=.,/home/flatcap/gt/src,/home/flatcap/vte/src,/usr/include,/usr/include/linux,/usr/include/atk-1.0,/usr/include/cairo,/usr/include/dbus-1.0,/usr/include/freetype2,/usr/include/gconf/2,/usr/include/glib-2.0,/usr/include/gtk-2.0,/usr/include/libpng12,/usr/include/orbit-2.0,/usr/include/pango-1.0,/usr/include/pixman-1,/usr/include/startup-notification-1.0,/usr/lib64/glib-2.0/include
+set path=.,/usr/include,/usr/include/atk-1.0,/usr/include/atkmm-1.6,/usr/include/c++/4.6.3,/usr/include/cairo,/usr/include/cairomm-1.0,/usr/include/freetype2,/usr/include/gdkmm-3.0,/usr/include/gdk-pixbuf-2.0,/usr/include/giomm-2.4,/usr/include/glib-2.0,/usr/include/glibmm-2.4,/usr/include/gtk-3.0,/usr/include/gtk-3.0/unix-print,/usr/include/gtkmm-3.0,/usr/include/libpng12,/usr/include/pango-1.0,/usr/include/pangomm-1.4,/usr/include/pixman-1,/usr/include/sigc++-2.0,/usr/lib64/cairomm-1.0/include,/usr/lib64/gdkmm-3.0/include,/usr/lib64/giomm-2.4/include,/usr/lib64/glib-2.0/include,/usr/lib64/glibmm-2.4/include,/usr/lib64/gtkmm-3.0/include,/usr/lib64/pangomm-1.4/include,/usr/lib64/sigc++-2.0/include
+set suffixesadd=.h
 
 set cindent
 "set cinoptions={.5s,:.5s,+.5s,t0,g0,^-2,e-2,n-2,p2s,(0,=.5s
