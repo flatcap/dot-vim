@@ -22,6 +22,10 @@ nmap <silent> <leader>h :silent! call swapfile#SwapFile()<CR>
 nmap <silent> <leader>m :call make#RichMake()<CR>
 nmap <silent> <leader>t :silent! tabedit docs/todo.txt<CR>G
 
+nmap <silent> <leader>fc :silent! call function#CommentBlock()<CR>
+nmap <silent> <leader>fp :silent! call function#CopyrightBlock()<CR>
+nmap <silent> <leader>fi :silent! call function#IncludeGuard()<CR>
+
 " F8 - Switch between .c and .h
 nmap           <F1>	:set list!<Bar>:set list?<CR>
 nmap           <F2>	:set hlsearch!<Bar>:set hlsearch?<CR>
