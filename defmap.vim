@@ -21,6 +21,7 @@ nmap <silent> <leader>i	:silent! call findme#Include()<CR>
 nmap <silent> <leader>h :silent! call swapfile#SwapFile()<CR>
 nmap <silent> <leader>m :call make#RichMake()<CR>
 nmap <silent> <leader>t :silent! tabedit docs/todo.txt<CR>G
+nmap <silent> <leader>l :ls<CR>
 
 nmap <silent> <leader>fc :silent! call function#CommentBlock()<CR>
 nmap <silent> <leader>fp :silent! call function#CopyrightBlock()<CR>
