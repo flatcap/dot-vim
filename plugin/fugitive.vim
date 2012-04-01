@@ -1359,14 +1359,11 @@ function! s:Diff(bang,...)
   try
     let spec = s:repo().translate(file)
     let commit = matchstr(spec,'\C[^:/]//\zs\x\+')
-    let oldwig = &wildignore
-    let &wildignore = ""
     if s:buffer().compare_age(commit) < 0
-      execute 'rightbelow '.split.' `=spec`'
+      execute 'rightbelow '.split.' '.s:fnameescape(spec)
     else
-      execute 'leftabove '.split.' `=spec`'
+      execute 'leftabove '.split.' '.s:fnameescape(spec)
     endif
-    let &wildignore = oldwig
     call s:diffthis()
     wincmd p
     call s:diffthis()
