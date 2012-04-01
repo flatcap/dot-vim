@@ -52,8 +52,8 @@ set   viminfo='50,:500,@100,/500,n~/.vim/viminfo
 set novisualbell
 set nowarn
 set   whichwrap=b,s,[,],<,>,~
-set   wildignore=*.o,*.h
-set   wildignorecase
+set   wildignore=*.o,*.h,main
+set nowildignorecase
 set nowildmenu
 set   wildmode=list:longest
 set   winwidth=10
