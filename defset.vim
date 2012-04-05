@@ -23,7 +23,7 @@ set   listchars=extends:>,precedes:<,tab:>-,eol:$,trail:X
 set   magic
 set   mouse=nvr
 set noruler
-set   scrolloff=3
+set   scrolloff=0
 set   shiftround
 set   shiftwidth=8
 set   shortmess=filnxtToOsrmI
@@ -52,7 +52,7 @@ set   viminfo='50,:500,@100,/500,n~/.vim/viminfo
 set novisualbell
 set nowarn
 set   whichwrap=b,s,[,],<,>,~
-set   wildignore=*.o,*.h,main
+set   wildignore=*.o,*.h,main,tags
 set nowildignorecase
 set nowildmenu
 set   wildmode=list:longest
