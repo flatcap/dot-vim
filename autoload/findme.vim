@@ -7,7 +7,7 @@ function! findme#Constructor()
 
 	while i < 100
 		let line = getline (i)
-		if (line =~ '^\([a-zA-Z][a-zA-Z_0-9]\+\)::\1\s*(.*$')
+		if (line =~? '\v^(\h\w+)::\1\s*\(.*$')
 			call cursor (i, 0)
 			execute 'normal zt|zv'
 		endif
@@ -20,7 +20,7 @@ function! findme#Destructor()
 
 	while i < 100
 		let line = getline (i)
-		if (line =~ '^\([a-zA-Z][a-zA-Z_0-9]\+\)::\~\1\s*(.*$')
+		if (line =~? '\v^(\h\w+)::\~\1\s*\(.*$')
 			call cursor (i, 0)
 			execute 'normal zt|zv'
 		endif
@@ -33,7 +33,7 @@ function! findme#Include()
 
 	while i >= 0
 		let line = getline (i)
-		if (line =~ '^\s*#\s*include\s.*')
+		if (line =~# '\v^\s*#\s*include\s.*')
 			call cursor (i, 0)
 			execute 'normal zz|zv'
 			break
