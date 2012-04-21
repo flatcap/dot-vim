@@ -8,8 +8,7 @@ source ~/.vim/defsyn.vim
 
 filetype plugin indent on " load filetype plugins/indent settings
 
-source ~/.vim/plugin/bufexplorer.vim
-map Z \be
+map Z <leader>be
 let g:bufExplorerSortBy='name'
 let g:bufExplorerShowRelativePath=1
 
