@@ -28,6 +28,9 @@ nmap <silent> <leader>fc :silent! call function#CommentBlock()<CR>
 nmap <silent> <leader>fp :silent! call function#CopyrightBlock()<CR>
 nmap <silent> <leader>fi :silent! call function#IncludeGuard()<CR>
 
+" open tag in new window
+nnoremap <C-W>] :vsplit<CR><C-]>zv
+
 " F8 - Switch between .c and .h
 nmap           <F1>	:set list!<Bar>:set list?<CR>
 nmap           <F2>	:set hlsearch!<Bar>:set hlsearch?<CR>
