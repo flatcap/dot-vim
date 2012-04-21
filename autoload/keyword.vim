@@ -50,5 +50,5 @@ endfunction
 
 call s:Keyword_Clear()
 
-nmap <leader>k		:call <SID>Keyword_Toggle("<C-R><C-W>")<CR>
+nnoremap <silent> <script> <plug>Keyword_Toggle	:call <SID>Keyword_Toggle("<C-R><C-W>")<CR>
 
