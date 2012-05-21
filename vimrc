@@ -35,7 +35,7 @@ autocmd BufNewFile,BufRead *.gv                         set syn=dot
 autocmd BufNewFile,BufRead *.txt                        setf txt
 autocmd BufNewFile,BufRead *.txt                        set ai nosi ts=8 sw=8 noet
 
-autocmd BufNewFile,BufRead *.{automount,conf,device,mount,path,service,socket,swap,target,timer,unit} set syn=dosini
+autocmd BufNewFile,BufRead *.{automount,device,mount,path,service,socket,swap,target,timer,unit} set syn=dosini
 
 autocmd BufNewFile,BufRead *.c,*.h,*.cc,*.cpp           set fdm=manual
 
