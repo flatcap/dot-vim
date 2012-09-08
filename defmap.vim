@@ -55,13 +55,13 @@ nmap           <S-F5>		:vnew<CR>:set buftype=nofile bufhidden=delete<CR>
 nmap           <S-F6>		:tabs<CR>
 nmap           <S-F7>		:tabclose<CR>
 nmap           <S-F8>		:tabnew<Space>
-nmap           <S-F9>		:%!sort<CR>
+nmap           <S-F9>		:%!LANG=C sort<CR>
 nmap           <S-F10>		:%!uniq<CR>
 nmap           <S-F11>		:%!grep<Space>
 nmap           <S-F12>		:%!column -t<CR>
 
 " Visual versions of the text manipulations
-vmap           <S-F9>	:!sort<CR>
+vmap           <S-F9>	:!LANG=C sort<CR>
 vmap           <S-F10>	:!uniq<CR>
 vmap           <S-F11>	:!grep<Space>
 vmap           <S-F12>	:!column -t<CR>
