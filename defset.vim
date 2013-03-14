@@ -18,7 +18,7 @@ set   incsearch
 set noinfercase
 set   laststatus=0
 set   lazyredraw
-set   linebreak
+set nolinebreak
 set   listchars=extends:>,precedes:<,tab:>-,eol:$,trail:X
 set   magic
 set nomore
