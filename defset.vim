@@ -21,6 +21,7 @@ set   lazyredraw
 set   linebreak
 set   listchars=extends:>,precedes:<,tab:>-,eol:$,trail:X
 set   magic
+set nomore
 set   mouse=nvr
 set noruler
 set   scrolloff=0
