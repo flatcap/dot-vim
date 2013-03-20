@@ -39,6 +39,7 @@ set   smarttab
 set   splitbelow
 set   splitright
 set   suffixes=,.h
+set   synmaxcol=1024
 set   tabstop=8
 set   tagrelative
 set   tags=tags

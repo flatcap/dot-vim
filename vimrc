@@ -30,7 +30,7 @@ autocmd BufNewFile,BufRead *.dcf,pharos                 source ~/.vim/syntax/dcf
 autocmd BufNewFile,BufRead *.xsl                        source ~/.vim/syntax/xsl.vim
 autocmd BufNewFile,BufRead *.module,*.php,*.inc,*.theme,*.engine,*.install,*.js source ~/.vim/syntax/php.vim
 autocmd BufNewFile,BufRead *.sql,/tmp/sql*              set syn=mysql
-autocmd BufNewFile,BufRead *.gconf                      set syn=xml
+autocmd BufNewFile,BufRead *.gconf,*.kml,*.gpx          set syn=xml
 autocmd BufNewFile,BufRead *.gv                         set syn=dot
 autocmd BufNewFile,BufRead *.txt                        setf txt
 autocmd BufNewFile,BufRead *.txt                        set ai nosi ts=8 sw=8 noet
