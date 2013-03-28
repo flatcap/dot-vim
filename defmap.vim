@@ -51,7 +51,7 @@ nmap <silent>  <Esc>O1;2P	:set number!<CR>
 nmap           <Esc>O1;2Q	:set paste!<Bar>:set paste?<CR>
 nmap           <Esc>O1;2R	:set ruler!<CR><C-L>
 nmap           <Esc>O1;2S	:set wrap!<Bar>:set wrap?<CR>
-nmap           <S-F5>		:vnew<CR>:set buftype=nofile bufhidden=delete<CR>
+nmap <silent>  <S-F5>		:vnew<CR>:set buftype=nofile bufhidden=delete<CR>
 nmap           <S-F6>		:tabs<CR>
 nmap           <S-F7>		:tabclose<CR>
 nmap           <S-F8>		:tabnew<Space>
