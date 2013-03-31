@@ -35,8 +35,9 @@ autocmd BufNewFile,BufRead *.gv                         set syn=dot
 autocmd BufNewFile,BufRead *.txt                        setf txt
 autocmd BufNewFile,BufRead *.txt                        set ai nosi ts=8 sw=8 noet
 
-autocmd BufReadPost *.kmz %!unzip -p % | tidy -q -xml | unexpand -t8
-autocmd BufReadPost *.kmz set syn=xml
+autocmd BufReadPre  *.kmz,*.map let &bin=1
+autocmd BufReadPost *.kmz,*.map %!unzip -p % | tidy -q -xml | unexpand -t8
+autocmd BufReadPost *.kmz,*.map set syn=xml
 
 autocmd BufNewFile,BufRead *.{automount,device,mount,path,service,socket,swap,target,timer,unit} set syn=dosini
 
