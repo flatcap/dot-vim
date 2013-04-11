@@ -94,7 +94,7 @@ cmap jj <esc>
 nmap <silent> <Leader>o :only<CR>
 
 " Make the current file executable
-nmap ,x :w<cr>:!chmod 755 %<cr>:e<cr>
+nmap ,x :w<cr>:!chmod +x %<cr>:e<cr>
 
 " Strip the first two characters off each line -- useful for find(1) output
 nmap ,2 :%s/^..//<CR>
