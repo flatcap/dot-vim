@@ -60,3 +60,13 @@ set nowildmenu
 set   wildmode=list:longest
 set   winwidth=10
 set nowrap
+
+if &diff
+	set diffopt=filler,context:3,foldcolumn:0
+	hi Folded ctermbg=none ctermfg=22 term=none
+	hi DiffChange term=none ctermbg=none
+	set laststatus=2
+	hi DiffText ctermfg=165 ctermbg=black
+	hi DiffChange ctermbg=none ctermfg=none
+endif
+

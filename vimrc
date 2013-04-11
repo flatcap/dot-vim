@@ -47,6 +47,9 @@ autocmd BufNewFile  *.c    0r ~/.vim/templates/file.c
 autocmd BufNewFile  *.cpp  0r ~/.vim/templates/file.cpp
 autocmd BufNewFile  *.html 0r ~/.vim/templates/file.html
 
+" good enough for now
+autocmd BufNewFile,BufRead  *.js   so ~/.vim/fold/c.vim
+
 " automatically hide fugitive buffers after use
 autocmd BufReadPost fugitive://* set bufhidden=delete
 

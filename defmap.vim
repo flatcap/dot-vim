@@ -78,3 +78,24 @@ nmap <Esc>[1;2B <C-E>
 imap <Esc>[1;2A <C-O><C-Y>
 imap <Esc>[1;2B <C-O><C-E>
 
+" Previous/Next match for command
+cmap <C-P> <Up>
+cmap <C-N> <Down>
+
+" Make horizontal scrolling easier
+nmap <silent> <C-l> 10zl
+nmap <silent> <C-h> 10zh
+
+" Alright... let's try this out
+imap jj <esc>
+cmap jj <esc>
+
+" Only mapping
+nmap <silent> <Leader>o :only<CR>
+
+" Make the current file executable
+nmap ,x :w<cr>:!chmod 755 %<cr>:e<cr>
+
+" Strip the first two characters off each line -- useful for find(1) output
+nmap ,2 :%s/^..//<CR>
+
