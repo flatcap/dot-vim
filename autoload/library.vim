@@ -1,3 +1,4 @@
+" Copyright 2011-2012 Richard Russon (flatcap)
 " library
 
 function! library#Highlight(group, filename, colour)

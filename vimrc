@@ -43,10 +43,11 @@ autocmd BufNewFile,BufRead *.{automount,device,mount,path,service,socket,swap,ta
 
 autocmd BufNewFile,BufRead *.c,*.h,*.cc,*.cpp           set fdm=manual
 
-autocmd BufNewFile  *.c    0r ~/.vim/templates/file.c
-autocmd BufNewFile  *.cpp  0r ~/.vim/templates/file.cpp
-autocmd BufNewFile  *.html 0r ~/.vim/templates/file.html
-autocmd BufNewFile  *.sh   0r ~/.vim/templates/file.sh
+autocmd BufNewFile  *.c    call template#load("c", 8, 1)
+autocmd BufNewFile  *.cpp  call template#load("cpp", 8, 1)
+autocmd BufNewFile  *.html call template#load("html", 9, 2)
+autocmd BufNewFile  *.sh   call template#load("sh", 3, 1)
+autocmd BufNewFile  *.awk  call template#load("awk", 6, 1)
 
 " good enough for now
 autocmd BufNewFile,BufRead *.js  so ~/.vim/fold/c.vim

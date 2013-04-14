@@ -1,3 +1,4 @@
+" Copyright 2012 Richard Russon (flatcap)
 
 function! tagsrotate#TagsRotate()
 	let tagdict = {

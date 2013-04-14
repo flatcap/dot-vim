@@ -1,4 +1,4 @@
-" Copyright 2012 Richard Russon.
+" Copyright 2012 Richard Russon (flatcap)
 "
 " Move the cursor to some commonly used places.
 

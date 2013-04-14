@@ -1,3 +1,4 @@
+" Copyright 2012 Richard Russon (flatcap)
 
 function! ifzero#IfZero() range
 	call append (a:lastline, "#endif")

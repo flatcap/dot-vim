@@ -1,4 +1,4 @@
-" Copyright 2012 Richard Russon.
+" Copyright 2012 Richard Russon (flatcap)
 "
 " Switch between c/cc/cpp and h/hpp files
 
@@ -29,7 +29,7 @@ function! swapfile#SwapFile()
 			continue
 		endif
 
-		let n = bufnr (filename)		" Is is loaded already?
+		let n = bufnr (filename)		" Is it loaded already?
 		let win_count = winnr ('$')
 		let w = 1
 		while (w <= win_count)			" Is it in a visible window?

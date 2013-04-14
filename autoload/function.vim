@@ -1,4 +1,4 @@
-" Copyright 2012 Richard Russon.
+" Copyright 2012 Richard Russon (flatcap)
 "
 " Create a C function comment
 

@@ -1,5 +1,5 @@
-" Keyword highlighter
 " Copyright 2010-2012 Richard Russon (flatcap)
+" Keyword highlighter
 
 let s:key_list   = []
 let s:key_init   = 0
