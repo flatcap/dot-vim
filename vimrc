@@ -1,3 +1,5 @@
+set nocompatible
+
 let mapleader=","
 let showmarks_enable = 0
 

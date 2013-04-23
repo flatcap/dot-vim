@@ -5,7 +5,6 @@ set   backspace=indent,eol,start
 set   backup
 set   backupcopy=yes
 set   backupdir=/run/user/$UID/vim/backup
-set nocompatible
 set   diffopt=filler,vertical
 set   directory=/run/user/$UID/vim/swap
 set noerrorbells
