@@ -1,4 +1,5 @@
 let mapleader=","
+let showmarks_enable = 0
 
 call pathogen#infect()
 
