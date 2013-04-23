@@ -1,9 +1,12 @@
 set   autoindent
+set   autoread
 set   background=dark
 set   backspace=indent,eol,start
-set nobackup
+set   backup
+set   backupdir=/run/user/1000/vim/backup
 set nocompatible
 set   diffopt=filler,vertical
+set   directory=/run/user/1000/vim/swap
 set noerrorbells
 set noexrc
 set   fillchars=vert:\|,fold:\ 
@@ -19,10 +22,11 @@ set noinfercase
 set   laststatus=0
 set   lazyredraw
 set nolinebreak
-set   listchars=extends:>,precedes:<,tab:>-,eol:$,trail:X
+set   listchars=extends:>,precedes:<,tab:>-,eol:$,trail:X,nbsp:+
 set   magic
 set nomore
 set   mouse=nvr
+set   nrformats+=alpha
 set noruler
 set   scrolloff=0
 set   shiftround
@@ -39,6 +43,7 @@ set   smarttab
 set   splitbelow
 set   splitright
 set   suffixes=,.h
+set   swapfile
 set   synmaxcol=1024
 set   tabstop=8
 set   tagrelative
@@ -50,6 +55,8 @@ set   titleold=
 set   titlestring=vi\ %f\ %m%r
 set   t_Co=256
 set   t_vb=
+set   undofile
+set   undodir=/run/user/1000/vim/undo
 set   viminfo='50,:500,@100,/500,n~/.vim/viminfo
 set novisualbell
 set nowarn
