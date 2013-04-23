@@ -3,10 +3,10 @@ set   autoread
 set   background=dark
 set   backspace=indent,eol,start
 set   backup
-set   backupdir=/run/user/1000/vim/backup
+set   backupdir=/run/user/$UID/vim/backup
 set nocompatible
 set   diffopt=filler,vertical
-set   directory=/run/user/1000/vim/swap
+set   directory=/run/user/$UID/vim/swap
 set noerrorbells
 set noexrc
 set   fillchars=vert:\|,fold:\ 
@@ -56,7 +56,7 @@ set   titlestring=vi\ %f\ %m%r
 set   t_Co=256
 set   t_vb=
 set   undofile
-set   undodir=/run/user/1000/vim/undo
+set   undodir=/run/user/$UID/vim/undo
 set   viminfo='50,:500,@100,/500,n~/.vim/viminfo
 set novisualbell
 set nowarn
