@@ -3,6 +3,7 @@ set   autoread
 set   background=dark
 set   backspace=indent,eol,start
 set   backup
+set   backupcopy=yes
 set   backupdir=/run/user/$UID/vim/backup
 set nocompatible
 set   diffopt=filler,vertical
