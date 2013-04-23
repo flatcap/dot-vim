@@ -1,0 +1,14 @@
+vim/abolish		git://github.com/tpope/vim-abolish.git
+vim/commentary		git://github.com/tpope/vim-commentary.git
+vim/fugitive		git://github.com/tpope/vim-fugitive.git
+vim/git			git://github.com/tpope/vim-git.git
+vim/gundo		git://github.com/sjl/gundo.vim.git
+vim/obsession		git://github.com/tpope/vim-obsession.git
+vim/pathogen		git://github.com/tpope/vim-pathogen.git
+vim/repeat		git://github.com/tpope/vim-repeat.git
+vim/sensible		git://github.com/tpope/vim-sensible.git
+vim/showmarks		git://github.com/vimez/vim-showmarks.git
+vim/speeddating		git://github.com/tpope/vim-speeddating.git
+vim/surround		git://github.com/tpope/vim-surround.git
+vim/tabular		git://github.com/godlygeek/tabular.git
+vim/unimpaired		git://github.com/tpope/vim-unimpaired.git
