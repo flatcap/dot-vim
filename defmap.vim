@@ -83,8 +83,8 @@ cmap <C-P> <Up>
 cmap <C-N> <Down>
 
 " Make horizontal scrolling easier
-nmap <silent> <C-l> 10zl
-nmap <silent> <C-h> 10zh
+nmap <silent> <C-l> 8zl
+nmap <silent> <C-h> 8zh
 
 " Alright... let's try this out
 imap jj <esc>

@@ -46,6 +46,8 @@ autocmd BufNewFile,BufRead *.{automount,device,mount,path,service,socket,swap,ta
 
 autocmd BufNewFile,BufRead *.c,*.h,*.cc,*.cpp           set fdm=manual
 
+"autocmd BufRead [0-9][0-9][0-9][0-9][0-9]  source ~/decode/highlight.vim
+
 autocmd BufNewFile  *.c    call template#load("c", 8, 1)
 autocmd BufNewFile  *.cpp  call template#load("cpp", 8, 1)
 autocmd BufNewFile  *.html call template#load("html", 9, 2)

@@ -27,6 +27,7 @@ set   magic
 set nomore
 set   mouse=nvr
 set   nrformats+=alpha
+set   nrformats-=octal
 set noruler
 set   scrolloff=0
 set   shiftround
