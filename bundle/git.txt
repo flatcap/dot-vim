@@ -7,7 +7,6 @@ obsession	git://github.com/tpope/vim-obsession.git
 pathogen	git://github.com/tpope/vim-pathogen.git
 repeat		git://github.com/tpope/vim-repeat.git
 sensible	git://github.com/tpope/vim-sensible.git
-showmarks	git://github.com/vimez/vim-showmarks.git
 speeddating	git://github.com/tpope/vim-speeddating.git
 surround	git://github.com/tpope/vim-surround.git
 tabular		git://github.com/godlygeek/tabular.git
