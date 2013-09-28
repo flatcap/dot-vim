@@ -32,11 +32,8 @@ nmap <silent> <leader>fi :silent! call function#IncludeGuard()<CR>
 nnoremap <C-W>] :vsplit<CR><C-]>zv
 
 " F8 - Switch between .c and .h
-nmap           <F1>	:set list!<Bar>:set list?<CR>
-nmap           <F2>	:set hlsearch!<Bar>:set hlsearch?<CR>
 nmap  <silent> <F3>	:let &laststatus = 2-&laststatus<CR>
 nmap           <F4>	:call tagsrotate#TagsRotate()<CR>
-nmap           <F5>	:set ignorecase!<Bar>:set ignorecase?<CR>
 nmap           <F6>	zmzv
 nmap           <F7>	zr
 nmap           <F8>	:e %:p:s,.h$,.x,:s,.cpp$,.h,:s,.x$,.cpp,<CR>
@@ -47,24 +44,12 @@ nmap           <F12>	:cwindow 5<CR>
 
 " Shift-F1-F4 are a bit wonky
 " S-F5: create some temp space
-nmap <silent>  <Esc>O1;2P	:set number!<CR>
 nmap           <Esc>O1;2Q	:set paste!<Bar>:set paste?<CR>
 nmap           <Esc>O1;2R	:set ruler!<CR><C-L>
-nmap           <Esc>O1;2S	:set wrap!<Bar>:set wrap?<CR>
 nmap <silent>  <S-F5>		:vnew<CR>:set buftype=nofile bufhidden=delete<CR>
 nmap           <S-F6>		:tabs<CR>
 nmap           <S-F7>		:tabclose<CR>
 nmap           <S-F8>		:tabnew<Space>
-nmap           <S-F9>		:%!LANG=C sort<CR>
-nmap           <S-F10>		:%!uniq<CR>
-nmap           <S-F11>		:%!grep<Space>
-nmap           <S-F12>		:%!column -t<CR>
-
-" Visual versions of the text manipulations
-vmap           <S-F9>	:!LANG=C sort<CR>
-vmap           <S-F10>	:!uniq<CR>
-vmap           <S-F11>	:!grep<Space>
-vmap           <S-F12>	:!column -t<CR>
 
 " C-Up/Down Scroll Window
 nmap <Esc>[1;5A <C-Y>
@@ -96,7 +81,53 @@ nmap <silent> <Leader>o :only<CR>
 " Make the current file executable
 nmap ,x :w<cr>:!chmod +x %<cr>:e<cr>
 
-" Strip the first two characters off each line -- useful for find(1) output
-nmap ,2 :%s/^..//<CR>
+" Pipe into command
+nmap <Leader>1 :%!<Space>
+vmap <Leader>1 :!<Space>
 
-nmap ,u :diffupdate<CR>
+" Strip the first two characters off each line -- useful for find(1) output
+nmap <Leader>2 :%s/^..//<CR>
+vmap <Leader>2 :s/^..//<CR>
+
+nmap <Leader>u :diffupdate<CR>
+
+" End of line
+nmap <Leader>4 :%s/$//<Left>
+vmap <Leader>4 :s/$//<Left>
+
+" All of selection/file
+nmap <Leader>5 :%s/
+vmap <Leader>5 :s/
+
+" Start of line
+nmap <Leader>6 :%s/^
+vmap <Leader>6 :s/^
+
+" Strip leading path component
+nmap <Leader>/ :%s!^[^/]\+/*!!<CR>
+vmap <Leader>/ :s!^[^/]\+/*!!<CR>
+
+" Pipe into: sort, sort -R (random), uniq, grep, column -t
+nmap <Leader>pc :%!LANG=C column -t<CR>
+nmap <Leader>pg :%!LANG=C grep<Space>""<Left>
+nmap <Leader>pr :%!LANG=C sort -R<CR>
+nmap <Leader>ps :%!LANG=C sort -f<CR>
+nmap <Leader>pu :%!LANG=C uniq<CR>
+
+vmap <Leader>pc :!LANG=C column -t<CR>
+vmap <Leader>pg :!LANG=C grep<Space>""<Left>
+vmap <Leader>pr :!LANG=C sort -R<CR>
+vmap <Leader>ps :!LANG=C sort -f<CR>
+vmap <Leader>pu :!LANG=C uniq<CR>
+
+" Delete whitespace: Leading 6^, Trailing 4$, Before Tab <Tab>, Blank lines <Enter>
+nmap <Leader><Space>4       :%s/\s\+$//e<CR>
+nmap <Leader><Space>6       :%s/^\s\+//e<CR>
+nmap <Leader><Space><Enter> :%g/^\s*$/de<CR>
+nmap <Leader><Space><Tab>   :%s/<Space>\+<Tab>/<Tab>/e<CR>
+
+vmap <Leader><Space>4       :s/\s\+$//e<CR>
+vmap <Leader><Space>6       :s/^\s\+//e<CR>
+vmap <Leader><Space><Enter> :g/^\s*$/de<CR>
+vmap <Leader><Space><Tab>   :s/<Space>\+<Tab>/<Tab>/e<CR>
+
