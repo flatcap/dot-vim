@@ -103,6 +103,10 @@ vmap <Leader>5 :s/
 nmap <Leader>6 :%s/^
 vmap <Leader>6 :s/^
 
+" Everything
+nmap <Leader>8 :%s/.*//<Left>
+vmap <Leader>8 :s/.*//<Left>
+
 " Strip leading path component
 nmap <Leader>/ :%s!^[^/]\+/*!!<CR>
 vmap <Leader>/ :s!^[^/]\+/*!!<CR>

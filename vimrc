@@ -1,7 +1,6 @@
 set nocompatible
 
 let mapleader=","
-let showmarks_enable = 0
 
 call pathogen#infect()
 
@@ -14,9 +13,6 @@ filetype plugin indent on " load filetype plugins/indent settings
 map Z <leader>be
 let g:bufExplorerSortBy='name'
 let g:bufExplorerShowRelativePath=1
-
-let pascal_delphi=1
-let pascal_no_functions=1
 
 let g:c_space_errors=1
 "let g:c_gnu=1
