@@ -81,6 +81,9 @@ nmap <silent> <Leader>o :only<CR>
 " Make the current file executable
 nmap ,x :w<cr>:!chmod +x %<cr>:e<cr>
 
+" #ifdef 0
+vmap <Leader>0 :call ifzero#IfZero()<CR>
+
 " Pipe into command
 nmap <Leader>1 :%!<Space>
 vmap <Leader>1 :!<Space>
