@@ -32,24 +32,24 @@ nmap <silent> <leader>fi :silent! call function#IncludeGuard()<CR>
 nnoremap <C-W>] :vsplit<CR><C-]>zv
 
 " F8 - Switch between .c and .h
-nmap  <silent> <F3>	:let &laststatus = 2-&laststatus<CR>
-nmap           <F4>	:call tagsrotate#TagsRotate()<CR>
-nmap           <F6>	zmzv
-nmap           <F7>	zr
-nmap           <F8>	:e %:p:s,.h$,.x,:s,.cpp$,.h,:s,.x$,.cpp,<CR>
-nmap           <F9>	:update<CR>:make -s<CR><CR>zvzz
-nmap           <F10>	:cnext<CR>zvzz
-nmap           <F11>	:cc<CR>zvzz
-nmap           <F12>	:cwindow 5<CR>
+nmap <silent> <F3>	:let &laststatus = 2-&laststatus<CR>
+nmap          <F4>	:call tagsrotate#TagsRotate()<CR>
+nmap          <F6>	zmzv
+nmap          <F7>	zr
+nmap <silent> <F8>	:e %:p:s,.h$,.x,:s,.cpp$,.h,:s,.x$,.cpp,<CR>
+nmap <silent> <F9>	:update<CR>:make -s<CR><CR>zvzz
+nmap <silent> <F10>	:cnext<CR>zvzz
+nmap <silent> <F11>	:cc<CR>zvzz
+nmap <silent> <F12>	:cwindow 5<CR>
 
 " Shift-F1-F4 are a bit wonky
 " S-F5: create some temp space
-nmap           <Esc>O1;2Q	:set paste!<Bar>:set paste?<CR>
-nmap           <Esc>O1;2R	:set ruler!<CR><C-L>
-nmap <silent>  <S-F5>		:vnew<CR>:set buftype=nofile bufhidden=delete<CR>
-nmap           <S-F6>		:tabs<CR>
-nmap           <S-F7>		:tabclose<CR>
-nmap           <S-F8>		:tabnew<Space>
+nmap          <Esc>O1;2Q	:set paste!<Bar>:set paste?<CR>
+nmap          <Esc>O1;2R	:set ruler!<CR><C-L>
+nmap <silent> <S-F5>		:vnew<CR>:set buftype=nofile bufhidden=delete<CR>
+nmap          <S-F6>		:tabs<CR>
+nmap          <S-F7>		:tabclose<CR>
+nmap          <S-F8>		:tabnew<Space>
 
 " C-Up/Down Scroll Window
 nmap <Esc>[1;5A <C-Y>
@@ -68,8 +68,8 @@ cmap <C-P> <Up>
 cmap <C-N> <Down>
 
 " Make horizontal scrolling easier
-nmap <silent> <C-l> 8zl
-nmap <silent> <C-h> 8zh
+nmap <silent> <C-Left>  8zh
+nmap <silent> <C-Right> 8zl
 
 " Alright... let's try this out
 imap jj <esc>
