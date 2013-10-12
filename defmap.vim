@@ -9,7 +9,7 @@ cmap <C-F> <S-Right>
 nmap <Tab> <C-W><C-W>
 
 " Quit, now
-nmap <silent> map Q :call quit#SaveAndClose()<CR>
+nmap <silent> Q :call quit#SaveAndClose()<CR>
 
 " Double-click to open/close folds
 map <2-LeftMouse> za
