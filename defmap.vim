@@ -70,8 +70,8 @@ nmap <silent> <C-Left>  8zh
 nmap <silent> <C-Right> 8zl
 
 " Alright... let's try this out
-imap jj <esc>
-cmap jj <esc>
+imap jk <esc>
+cmap jk <esc>
 
 " Only mapping
 nmap <silent> <Leader>o :only<CR>
