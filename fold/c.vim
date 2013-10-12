@@ -33,8 +33,8 @@ function! C_FoldLevel(lnum)
 		let level = '='
 
 	" Very specific comment blocks
-	elseif ((line =~ '^/\*\*\=') && (next =~ '^ \* Copyright.*'))
-		let level = '>1'
+	elseif (line =~ '^/\* Copyright.*')
+		let level = '>2'
 	elseif ((line =~ '^/\*\*\=') && (next =~ '^ \* SECTION:.*'))
 		let level = '>1'
 
@@ -53,6 +53,8 @@ function! C_FoldLevel(lnum)
 		let level = 'a1'
 
 	" End of folds
+	elseif ((prev =~ '^ \*/') && a:lnum < 20)
+		let level = 0
 	elseif ((line =~ '^.*\*/') && (next !~ '^$'))
 		let level = 's1'
 	elseif ((prev =~ '^.*\*/') && (line =~ '^$'))
