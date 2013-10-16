@@ -31,6 +31,7 @@ autocmd BufNewFile,BufRead *.module,*.php,*.inc,*.theme,*.engine,*.install,*.js 
 autocmd BufNewFile,BufRead *.sql,/tmp/sql*              set syn=mysql
 autocmd BufNewFile,BufRead *.gconf,*.kml,*.gpx          set syn=xml
 autocmd BufNewFile,BufRead *.gv                         set syn=dot
+autocmd BufNewFile,BufRead *.conf                       set syn=conf
 autocmd BufNewFile,BufRead *.txt                        setf txt
 autocmd BufNewFile,BufRead *.txt                        set ai nosi ts=8 sw=8 noet
 
@@ -44,11 +45,11 @@ autocmd BufNewFile,BufRead *.c,*.h,*.cc,*.cpp           set fdm=manual
 
 "autocmd BufRead [0-9][0-9][0-9][0-9][0-9]  source ~/decode/highlight.vim
 
-autocmd BufNewFile  *.c    call template#load("c", 8, 1)
-autocmd BufNewFile  *.cpp  call template#load("cpp", 8, 1)
-autocmd BufNewFile  *.html call template#load("html", 9, 2)
-autocmd BufNewFile  *.sh   call template#load("sh", 3, 1)
-autocmd BufNewFile  *.awk  call template#load("awk", 6, 1)
+autocmd BufNewFile *.c    call template#load("c",    8, 1)
+autocmd BufNewFile *.cpp  call template#load("cpp",  8, 1)
+autocmd BufNewFile *.html call template#load("html", 9, 2)
+autocmd BufNewFile *.sh   call template#load("sh",   3, 1)
+autocmd BufNewFile *.awk  call template#load("awk",  6, 1)
 
 " good enough for now
 autocmd BufNewFile,BufRead *.js  so ~/.vim/fold/c.vim
@@ -82,4 +83,7 @@ autocmd BufReadPost * endif
 autocmd BufReadPost * if (exists ("b:current_syntax") && ((b:current_syntax == "diff") || (b:current_syntax == "gitcommit")))
 autocmd BufReadPost *   source ~/.vim/fold/diff.vim
 autocmd BufReadPost * endif
+
+" Attempt to save scratch buffer
+"autocmd BufWriteCmd * set buftype= bufhidden=
 
