@@ -28,9 +28,9 @@ highlight NonText	ctermfg=darkgrey	ctermbg=none
 highlight Search	ctermfg=black		ctermbg=yellow		cterm=none
 highlight SignColumn	ctermfg=70		ctermbg=black		cterm=none
 highlight SpecialKey	ctermfg=darkcyan
-highlight StatusLine	ctermfg=darkcyan	ctermbg=none		cterm=underline,bold
-highlight StatusLineNC	ctermfg=darkblue	ctermbg=none		cterm=underline
-highlight VertSplit	ctermfg=darkgrey	ctermbg=none		cterm=none
+highlight StatusLine	ctermfg=22		ctermbg=none		cterm=bold
+highlight StatusLineNC	ctermfg=22		ctermbg=none		cterm=none
+highlight VertSplit	ctermfg=black		ctermbg=none		cterm=none
 highlight Visual	ctermfg=black		ctermbg=white		cterm=none
 highlight WarningMsg	ctermfg=black		ctermbg=yellow		cterm=none
 
