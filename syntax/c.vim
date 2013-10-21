@@ -78,7 +78,7 @@ highlight cppStorageClass    ctermfg=DarkCyan
 highlight cppType            ctermfg=DarkCyan
 
 syntax match attrpack "__attribute__((__packed__))"
-highlight attrpack ctermfg=darkgrey
+highlight attrpack ctermfg=black
 
 syntax keyword extras uchar_t u8 u16 u32 u64 s8 s16 s32 s64
 highlight      extras ctermfg=DarkCyan

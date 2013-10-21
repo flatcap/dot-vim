@@ -4,7 +4,8 @@
 
 function! make#RichMake()
 	execute 'wall'
-	execute 'silent make -s | redraw!'
+	execute 'silent !clear'
+	execute 'silent make | redraw!'
 	execute 'botright cwindow 5'
 	
 	let num = bufnr ('$')

@@ -27,7 +27,6 @@ nmap <silent> <leader>l :ls<CR>
 nmap <silent> <leader>fc :silent! call function#CommentBlock()<CR>
 nmap <silent> <leader>fp :silent! call function#CopyrightBlock()<CR>
 nmap <silent> <leader>fi :silent! call function#IncludeGuard()<CR>
-nmap <silent> <leader>fi :silent! call function#IncludeGuard()<CR>
 nmap <silent> <leader>ff :silent! source ~/.vim/fold/c.vim<CR>
 
 " open tag in new window
