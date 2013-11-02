@@ -59,7 +59,7 @@ autocmd BufNewFile,BufRead *.awk so ~/.vim/fold/php.vim
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " If there's an error in my STL use, there's little point staring at the source
-autocmd BufRead */c++/4.6.3/* set syntax=c bufhidden=delete foldlevel=4
+autocmd BufRead */c++/4.8.2/* set syntax=c bufhidden=delete foldlevel=4
 autocmd BufRead /usr/include/* set foldlevel=4
 
 "autocmd BufReadPost *.h set bufhidden=delete autowriteall

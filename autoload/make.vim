@@ -1,4 +1,4 @@
-" Copyright 2012 Richard Russon (flatcap)
+" Copyright 2012-2013 Richard Russon (flatcap)
 "
 " Make and display the quickfix window if necessary
 

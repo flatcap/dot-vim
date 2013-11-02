@@ -65,7 +65,7 @@ set   whichwrap=b,s,[,],<,>,~
 set   wildignore=*.o,main,tags
 set nowildignorecase
 set nowildmenu
-set   wildmode=list:longest
+set   wildmode=list:full
 set   winwidth=10
 set nowrap
 
