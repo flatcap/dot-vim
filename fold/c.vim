@@ -53,7 +53,7 @@ function! C_FoldLevel(lnum)
 		let level = 'a1'
 
 	" End of folds
-	elseif ((prev =~ '^ \*/') && a:lnum < 20)
+	elseif ((prev =~ '^ \*/') && (a:lnum < 20) && (getline (1) =~ "^/*"))
 		let level = 0
 	elseif ((line =~ '^.*\*/') && (next !~ '^$'))
 		let level = 's1'

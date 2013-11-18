@@ -72,4 +72,5 @@ highlight Statement	ctermfg=darkcyan
 highlight StorageClass	ctermfg=darkcyan
 highlight Structure	ctermfg=darkcyan
 highlight Type		ctermfg=darkcyan
+highlight Folded	ctermfg=22		ctermbg=none		term=none
 
