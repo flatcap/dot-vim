@@ -36,7 +36,7 @@ function! function#CommentBlock()
 		\ " * " . f . "\n" .
 		\ " */\n"
 
-	execute "normal PV2jzfj"
+	execute 'normal ""P3j'
 endfunction
 
 function! function#CopyrightBlock()
@@ -62,7 +62,7 @@ function! function#CopyrightBlock()
 		\ " * Place - Suite 330, Boston, MA 02111-1307, USA.\n" .
 		\ " */\n\n"
 
-	execute 'normal ggPV16jzf``'
+	execute 'normal gg""PV16jzf``'
 endfunction
 
 function! function#IncludeGuard()
@@ -79,7 +79,7 @@ function! function#IncludeGuard()
 		\ "#define " . incname . "\n\n"
 
 	call cursor (insert, 1)
-	execute "normal P"
+	execute 'normal ""P'
 
 	let @" = "#endif // " . incname . "\n\n"
 
@@ -87,7 +87,7 @@ function! function#IncludeGuard()
 		let @" = "\n" . @"
 	endif
 
-	execute "normal Gp"
+	execute 'normal G""p'
 	
 	let cursor_pos[1] += 3
 	call setpos ('.', cursor_pos)
