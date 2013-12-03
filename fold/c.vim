@@ -1,4 +1,4 @@
-" Copyright 2001-2010 Richard Russon.
+" Copyright 2001-2013 Richard Russon.
 
 source ~/.vim/fold/deffold.vim
 
@@ -9,7 +9,6 @@ endif
 let s:prefix_comment   = "--> "
 let s:prefix_copyright = "--> Copyright"
 let s:prefix_function  = "F) "
-"let s:prefix_function  = "        "
 let s:prefix_property  = "Property: "
 let s:prefix_section   = "Section: "
 let s:prefix_signal    = "Signal: "
