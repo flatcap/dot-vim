@@ -10,10 +10,6 @@ source ~/.vim/defsyn.vim
 
 filetype plugin indent on " load filetype plugins/indent settings
 
-map Z <leader>be
-let g:bufExplorerSortBy='name'
-let g:bufExplorerShowRelativePath=1
-
 let g:c_space_errors=1
 "let g:c_gnu=1
 "let g:c_curly_error=1
@@ -59,7 +55,8 @@ autocmd BufNewFile,BufRead *.awk so ~/.vim/fold/php.vim
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " If there's an error in my STL use, there's little point staring at the source
-autocmd BufRead */c++/4.8.2/* set syntax=c bufhidden=delete foldlevel=4
+autocmd BufRead /usr/include/c++/4.8.2/*  set syntax=c bufhidden=delete foldlevel=4
+autocmd BufRead /usr/include/sigc++-2.0/* set syntax=c bufhidden=delete foldlevel=4
 autocmd BufRead /usr/include/* set foldlevel=4
 
 "autocmd BufReadPost *.h set bufhidden=delete autowriteall
@@ -88,3 +85,7 @@ autocmd BufReadPost * endif
 "autocmd BufWriteCmd * set buftype= bufhidden=
 
 "autocmd BufWritePre *.c %s/\s\+$//e
+
+map <F5> <C-W>jQ
+map <F2> :wall<CR>:make .obj/%:r.o<CR>
+

@@ -6,7 +6,8 @@ cmap <C-B> <S-Left>
 cmap <C-F> <S-Right>
 
 " Tab between windows
-nmap <Tab> <C-W><C-W>
+"nmap <Tab> <C-W><C-W>
+nmap <silent> <Tab> :call tab#TabSkip()<CR>
 
 " Quit, now
 nmap <silent> Q :call quit#SaveAndClose()<CR>
@@ -21,7 +22,7 @@ nmap <silent> <leader>i	:silent! call findme#Include()<CR>
 nmap <silent> <leader>h :silent! call swapfile#SwapFile()<CR>
 nmap <silent> <leader>H :silent! vsplit<Bar>call swapfile#SwapFile()<CR>
 nmap <silent> <leader>m :call make#RichMake()<CR>
-nmap <silent> <leader>t :silent! tabedit docs/todo.txt<CR>G
+"nmap <silent> <leader>t :silent! tabedit docs/todo.txt<CR>G
 nmap <silent> <leader>l :ls<CR>
 
 nmap <silent> <leader>fc :silent! call function#CommentBlock()<CR>
@@ -32,7 +33,7 @@ nmap <silent> <leader>ff :silent! source ~/.vim/fold/c.vim<CR>
 " open tag in new window
 nnoremap <C-W>] :vsplit<CR><C-]>zv
 
-" F8 - Switch between .c and .h
+nmap <silent> <F2>	:make .obj/%:r.o<CR>
 nmap <silent> <F3>	:let &laststatus = 2-&laststatus<CR>
 nmap          <F4>	:call tagsrotate#TagsRotate()<CR>
 nmap          <F6>	zmzv
@@ -71,8 +72,8 @@ nmap <silent> <C-Left>  8zh
 nmap <silent> <C-Right> 8zl
 
 " Alright... let's try this out
-imap jk <esc>
-cmap jk <esc>
+imap kj <esc>
+cmap kj <esc>
 
 " Only mapping
 nmap <silent> <Leader>o :only<CR>
@@ -81,10 +82,10 @@ nmap <silent> <Leader>o :only<CR>
 nmap <Leader>u :diffupdate<CR>
 
 " Make the current file executable
-nmap ,x :w<cr>:!chmod +x %<cr>:e<cr>
+nmap <leader>x :w<cr>:!chmod +x %<cr>:e<cr>
 
 " #ifdef 0
-vmap <Leader>0 :call ifzero#IfZero()<CR>
+vmap <leader>0 :call ifzero#IfZero()<CR>
 
 source ~/.vim/defmap_file.vim
 source ~/.vim/defmap_file_bufdo.vim
