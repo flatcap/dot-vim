@@ -1,4 +1,4 @@
-" Copyright 2012 Richard Russon (flatcap)
+" Copyright 2012-2014 Richard Russon (flatcap)
 "
 " Switch between c/cc/cpp and h/hpp files
 
@@ -6,14 +6,12 @@ function! swapfile#SwapFile()
 	let src = [ 'c', 'cpp', 'cc' ]
 	let hdr = [ 'h', 'hpp' ]
 
-	let file = bufname("%")
+	let stem   = expand ("%:r")
+	let suffix = expand ("%:e")
 
-	let bits = split(file, '\.')
-	if (len (bits) != 2)				" If the filename has more than one dot
-		return					" give up, for now
+	if (empty (suffix))
+		return
 	endif
-	let basename = bits[0]
-	let suffix   = bits[1]
 
 	if (index(src,suffix) >= 0)			" Select some suffixes to try
 		let search = hdr
@@ -24,7 +22,7 @@ function! swapfile#SwapFile()
 	endif
 
 	for i in search
-		let filename = basename.'.'.i
+		let filename = stem.'.'.i
 		if (!filereadable (filename))		" Does the file exist?
 			continue
 		endif
