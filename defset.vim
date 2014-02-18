@@ -69,6 +69,7 @@ set nowildmenu
 set   wildmode=list:full
 set   winwidth=10
 set nowrap
+set   wrapscan
 
 if &diff
 	set diffopt=filler,context:3,foldcolumn:0
