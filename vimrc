@@ -2,7 +2,14 @@ set nocompatible
 
 let mapleader=","
 
+let g:UltiSnipsJumpForwardTrigger  = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
 call pathogen#infect()
+
+set conceallevel=2
+set concealcursor=ncv
+highlight conceal ctermfg=red ctermbg=none
 
 source ~/.vim/defset.vim
 source ~/.vim/defmap.vim
@@ -16,7 +23,7 @@ let g:c_space_errors=1
 "let g:c_comment_strings=1
 
 autocmd BufNewFile,BufRead *                            set fdm=manual
-autocmd BufNewFile,BufRead *.c,*.h,*.cc,*.cpp           source ~/.vim/syntax/c.vim
+autocmd BufNewFile,BufRead *.c,*.h,*.cc,*.cpp           set syntax=c
 autocmd BufNewFile,BufRead *.pas,*.dpr                  source ~/.vim/syntax/pascal.vim
 autocmd BufNewFile,BufRead *.html,*css                  source ~/.vim/syntax/html.vim
 autocmd BufNewFile,BufRead *.java                       source ~/.vim/syntax/java.vim
@@ -55,9 +62,9 @@ autocmd BufNewFile,BufRead *.awk so ~/.vim/fold/php.vim
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " If there's an error in my STL use, there's little point staring at the source
-autocmd BufRead /usr/include/c++/4.8.2/*  set syntax=c bufhidden=delete foldlevel=4
-autocmd BufRead /usr/include/sigc++-2.0/* set syntax=c bufhidden=delete foldlevel=4
 autocmd BufRead /usr/include/* set foldlevel=4
+autocmd BufRead /usr/include/c++/4.8.2/*  set syntax=c bufhidden=delete
+autocmd BufRead /usr/include/sigc++-2.0/* set syntax=c bufhidden=delete
 
 "autocmd BufReadPost *.h set bufhidden=delete autowriteall
 

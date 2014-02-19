@@ -26,3 +26,8 @@ set foldcolumn=0
 set foldclose=
 set foldopen=mark,tag,quickfix
 
+" map 0 :set fdl=0<CR>
+" map 1 :set fdl=1<CR>
+" map 2 :set fdl=2<CR>
+" map 3 :set fdl=3<CR>
+
