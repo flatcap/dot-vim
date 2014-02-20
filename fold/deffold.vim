@@ -20,8 +20,8 @@ set foldmethod=expr
 "set debug=msg
 
 " More preferences
-set foldlevel=6
-set foldcolumn=4
+set foldlevel=0
+set foldcolumn=0
 "set foldmethod=manual
 set foldclose=
 set foldopen=mark,tag,quickfix
@@ -30,5 +30,5 @@ set foldopen=mark,tag,quickfix
 " map 1 :set fdl=1<CR>
 " map 2 :set fdl=2<CR>
 " map 3 :set fdl=3<CR>
-hi FoldColumn ctermbg=none
+"hi FoldColumn ctermbg=17
 

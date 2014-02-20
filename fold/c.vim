@@ -7,7 +7,7 @@ if ($QV == 1)
 endif
 
 let s:prefix_comment   = '--> '
-let s:prefix_function  = 'F) '
+let s:prefix_function  = 'F)'
 let s:abbreviation     = '...'
 
 let s:prefix_ctor	= 'ctor'
@@ -188,6 +188,8 @@ function! C_FoldFunction2(lnum)
 		let line = getline (a:lnum+i)
 		if (line =~ '^static.*')
 			let static = 1
+		elseif (line =~ '^__attribute__.*')
+			continue
 		elseif (line =~ '.*(.*')
 			break
 		endif
@@ -216,28 +218,25 @@ function! C_FoldFunction2(lnum)
 endfunction
 
 function! C_FoldGetFunctionIcon(lnum)
-	let index = -1
+
 	for i in range(a:lnum,a:lnum+20)
-		if (getline(i) =~ '^ \*/$')
-			let index = i
-			break;
-		endif
-	endfor
-
-	if (index < 0)
-		return s:prefix_function
-	endif
-
-	for i in range(0,4)
-		let line = getline (index+i)
+		let line = getline(i)
 		if (line =~ '^static.*')
 			return s:function_static
+		elseif (line =~ '^__attribute__.*')
+			continue
 		elseif (line =~ '^\i\+::\~*\i\+\s*(.*')
 			return s:function_method
+		elseif (line =~ '^\i\+::operator.*')
+			return s:function_method
+		elseif (line =~ '^operator.*')
+			return s:function_local
+		elseif (line =~ '^\i\+\s*(.*')
+			return s:function_local
 		endif
 	endfor
 
-	return s:function_local
+	return s:prefix_function
 endfunction
 
 " Determine the type of comment, then abbreviate it.
@@ -325,22 +324,22 @@ function! C_FoldLevel2(lnum)
 	let prev = substitute (prev, '#\(if\|else\|endif\).*', '', '')
 
 	" Ignore one-line C comments
-	if (line =~ '^\s*/\*.*\*/\s*$')
-		return level = '='
+	if (line =~ '^\s*/\*.*\*/.*$')
+		return '='
 	endif
 
-	if (prev =~ '#\(if\|else\|endif\).*')
-		let prev = ""
-	endif
+	let line = substitute (line, '\s*/\*[^*]*\*/\s*', '', '')
 
 	if ((line =~ '^template.*') && (nex3 =~ '^{$'))
 		let level = 'a1'
 
-	elseif ((prev == "") && (line =~ '.*(.*') && ((next == '{') || (nex2 == '{') || (nex3 == '{') || (nex4 == '{')))
+	elseif ((prev == "") && (line =~ '^\S.*(.*') && ((next == '{') || (nex2 == '{') || (nex3 == '{') || (nex4 == '{')))
 		let level = 'a1'
 
-	"START
 	elseif ((prev == "") && (line != "") && (next =~ '.*(.*') && (nex2 == '{'))
+		let level = 'a1'
+
+	elseif ((prev == "") && (line =~ '^.* \i\+\s*=\s*{$'))
 		let level = 'a1'
 
 	" Very specific comment blocks
