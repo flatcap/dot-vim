@@ -31,13 +31,6 @@ function! C_FoldLevel(lnum)
 	let nex2 = getline (a:lnum + 2)
 	let nex3 = getline (a:lnum + 3)
 
-	echohl line
-
-	" Ignore one-line C comments
-	let prev = substitute (prev, '/\*[^*]*\*/', '', '')
-	if (line =~ '^.*/\*.*\*/')
-		let level = '='
-
 	" Very specific comment blocks
 	elseif (line =~ '^/\* Copyright.*')
 		let level = '>2'
@@ -107,31 +100,50 @@ endfunction
 " We've found a block comment, so abbreviate it.
 " If it stretches to more than one line, append '...'
 function! C_FoldComment(lnum)
+	let list = []
 	let line = getline (a:lnum)
-	let next = getline (a:lnum+1)
-	let nex2 = getline (a:lnum+2)
 
+	" Keep track of the leading whitespace (converted to spaces)
 	let space = substitute (line, '\(\s*\).*', '\1', '')
-	let line = substitute (line, '\s*/\* *', '', '')
-	let next = substitute (next, '\s*\* *', '', '')
-	let next = substitute (next, '\s*\*/$', '', '')
-	let nex2 = substitute (nex2, '\s*\* *', '', '')
+	let space = substitute (space, '\t', '        ', 'g')
 
-	if (line == '')
-		let text = l:next
-	else
-		let text = line
+	" Trim opening comment marker /* or /**
+	let line = substitute (line, '^\s\+/\*\+\s*', '', '')
+	if (!empty (line))
+		let list += [ line ]
 	endif
 
-"	if (next !~ '^\s*\*/.*')
-"		" Truncate comment to screen width
-"		let c = &columns - strlen(s:abbreviation)
-"		let c = '^\(.\{' . c . '}\).*'
-"		let line = substitute (line, c, '\1', '')
-"		let line = line . s:abbreviation
-"	endif
-	let space = substitute (space, '\t', '        ', 'g')
-	return space . s:prefix_comment . text
+	" Examine the next three lines
+	for i in range (a:lnum+1, a:lnum+3)
+		let line = getline (i) 
+		if (line =~ '^\s\+\*\/\s*$')
+			" Found */ stop here
+			break
+		endif
+		" Trim leading whitespace and comment marker *
+		let line = substitute (line, '^\s\+\*\s*', '', '')
+		if (line =~ '.*\*\/\s*$')
+			" Line ends */ trim it and leading whitespace
+			let line = substitute (line, '\*/\s*$', '', '')
+			let list += [ line ]
+			break
+		endif
+
+		if (!empty (line))
+			let list += [ line ]
+		endif
+	endfor
+
+	let result = space . s:prefix_comment . join(list, " ")
+
+	" Truncate comment to screen width
+	" This doesn't take into account foldcolumn and numberwidth settings
+	let c = min ([winwidth(0), 80]) - 4
+	if (len(result) > c)
+		let result = result[0:c] . "..."
+	endif
+
+	return result
 endfunction
 
 " Determine the type of comment, then abbreviate it.
@@ -203,6 +215,31 @@ function! C_FoldFunction2(lnum)
 	return text
 endfunction
 
+function! C_FoldGetFunctionIcon(lnum)
+	let index = -1
+	for i in range(a:lnum,a:lnum+20)
+		if (getline(i) =~ '^ \*/$')
+			let index = i
+			break;
+		endif
+	endfor
+
+	if (index < 0)
+		return s:prefix_function
+	endif
+
+	for i in range(0,4)
+		let line = getline (index+i)
+		if (line =~ '^static.*')
+			return s:function_static
+		elseif (line =~ '^\i\+::\~*\i\+\s*(.*')
+			return s:function_method
+		endif
+	endfor
+
+	return s:function_local
+endfunction
+
 " Determine the type of comment, then abbreviate it.
 function! C_FoldText(lnum)
 	let prev = getline (a:lnum - 1)
@@ -211,22 +248,24 @@ function! C_FoldText(lnum)
 	let nex2 = getline (a:lnum + 2)
 	let nex3 = getline (a:lnum + 3)
 
-	if (prev =~ '^\s\+for\s(.*')
-		let s = v:foldend - v:foldstart - 1
-		let line = substitute (line, '\t', '        ', 'g')
-		if (1)
-			let line = substitute (line, '[^ ].*', '', '')
-			return line . s . " lines..."
-		else
-			if (0)
-				let line = substitute (line, '\s*{.*', '', '')
-				return line . " {" . s . " lines}"
-			else
-				let line = substitute (line, '\s*(.*', '', '')
-				return line . " (" . s . " lines)"
-			endif
-		endif
-	endif
+	" if (prev =~ '^\s\+for\s(.*')
+	" 	let s = v:foldend - v:foldstart - 1
+	" 	let line = substitute (line, '\t', '        ', 'g')
+	" 	if (1)
+	" 		let line = substitute (line, '[^ ].*', '', '')
+	" 		return line . s . " lines..."
+	" 	else
+	" 		if (0)
+	" 			let line = substitute (line, '\s*{.*', '', '')
+	" 			return line . " {" . s . " lines}"
+	" 		else
+	" 			let line = substitute (line, '\s*(.*', '', '')
+	" 			return line . " (" . s . " lines)"
+	" 		endif
+	" 	endif
+	" endif
+
+	"return v:foldlevel . " " . v:foldstart . " " . v:foldend
 
 	if (line =~ "^#include.*")
 		let s = v:foldend - v:foldstart
@@ -236,6 +275,17 @@ function! C_FoldText(lnum)
 	if ((line =~ '^/\* Copyright.*'))
 		let text = C_FoldCopyright(a:lnum)
 		return text
+	endif
+
+	if (line =~ '^\s\+/\*.*')
+		return C_FoldComment (a:lnum)
+	endif
+
+	if (line =~ '^/\*\*$')
+		" Function block
+		let next = substitute (next, '^\s\+\*\s*', '', '')
+		let icon = C_FoldGetFunctionIcon (v:foldstart+1)
+		return icon . ' ' . next
 	endif
 
 	return C_FoldFunction2(a:lnum)
@@ -253,7 +303,7 @@ function! C_FoldText(lnum)
 	"	let text = C_FoldFunction(a:lnum + 1)
 
 	elseif ((line =~ '^template.*') && (nex3 =~ '^{$}'))
-		let text = nex2;
+		let text = nex2
 
 	else
 		let text = C_FoldComment(a:lnum)
@@ -271,6 +321,14 @@ function! C_FoldLevel2(lnum)
 	let nex4 = getline (a:lnum + 4)
 	let nex5 = getline (a:lnum + 5)	" enough for 6 lines of preamble
 
+	let prev = substitute (prev, '/\*[^*]*\*/', '', '')
+	let prev = substitute (prev, '#\(if\|else\|endif\).*', '', '')
+
+	" Ignore one-line C comments
+	if (line =~ '^\s*/\*.*\*/\s*$')
+		return level = '='
+	endif
+
 	if (prev =~ '#\(if\|else\|endif\).*')
 		let prev = ""
 	endif
@@ -278,10 +336,11 @@ function! C_FoldLevel2(lnum)
 	if ((line =~ '^template.*') && (nex3 =~ '^{$'))
 		let level = 'a1'
 
-	elseif ((prev == "") && (line =~ '.*(.*') && (next =~ '^{$'))
+	elseif ((prev == "") && (line =~ '.*(.*') && ((next == '{') || (nex2 == '{') || (nex3 == '{') || (nex4 == '{')))
 		let level = 'a1'
 
-	elseif ((prev == "") && (line != "") && (next =~ '.*(.*') && (nex2 =~ '^{$'))
+	"START
+	elseif ((prev == "") && (line != "") && (next =~ '.*(.*') && (nex2 == '{'))
 		let level = 'a1'
 
 	" Very specific comment blocks
@@ -291,18 +350,15 @@ function! C_FoldLevel2(lnum)
 	elseif (line =~ '^/\*\*$')
 		let level = '>2'
 
-	elseif (line =~ '/\*\*$')
+	elseif (line =~ '^\s\+/\*.*$')
+		let level = 'a1'
+
+	elseif (line =~ '/\*\( .*\)\?$')
 		let level = 'a1'
 	elseif (line =~ '/\*\s')
 		let level = 'a1'
 
-	" elseif (prev =~ '^\s\+for\s*(.*)\s*{$')
-	" 	let level = 'a1'
-	" elseif (next =~ '^\s\+}$')
-	" 	let level = 's1'
-
 	elseif ((prev == "") && (line =~ '^#include.*'))
-	"elseif ((prev =~ "^\([^#].*\)\=$") && (line =~ '^#include.*'))
 		let level = '>3'
 
 	elseif ((prev =~ '^#include.*') && (line == ""))
