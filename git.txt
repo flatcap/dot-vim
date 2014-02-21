@@ -6,10 +6,8 @@ gundo		git://github.com/sjl/gundo.vim.git
 obsession	git://github.com/tpope/vim-obsession.git
 pathogen	git://github.com/tpope/vim-pathogen.git
 repeat		git://github.com/tpope/vim-repeat.git
-sensible	git://github.com/tpope/vim-sensible.git
 speeddating	git://github.com/tpope/vim-speeddating.git
 surround	git://github.com/tpope/vim-surround.git
 tabular		git://github.com/godlygeek/tabular.git
 ultisnips	git://github.com/SirVer/ultisnips.git
 unimpaired	git://github.com/tpope/vim-unimpaired.git
-
