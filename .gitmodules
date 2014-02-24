@@ -43,3 +43,12 @@
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = git://github.com/SirVer/ultisnips.git
+[submodule "bundle/exchange"]
+	path = bundle/exchange
+	url = git://github.com/tommcdo/vim-exchange.git
+[submodule "bundle/lion"]
+	path = bundle/lion
+	url = git://github.com/tommcdo/vim-lion.git
+[submodule "bundle/blame"]
+	path = bundle/blame
+	url = git://github.com/tommcdo/vim-fugitive-blame-ext.git
