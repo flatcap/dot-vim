@@ -1,9 +1,9 @@
-iabbrev map                  std::map
-iabbrev pair                 std::pair
-iabbrev set                  std::set
-iabbrev string               std::string
-iabbrev tuple                std::tuple
-iabbrev vector               std::vector
+" iabbrev map                  std::map
+" iabbrev pair                 std::pair
+" iabbrev set                  std::set
+" iabbrev string               std::string
+" iabbrev tuple                std::tuple
+" iabbrev vector               std::vector
 
 iabbrev cerr                 std::cerr
 iabbrev cout                 std::cout
