@@ -376,7 +376,9 @@ function! C_FoldLevel2(lnum)
 	elseif (line =~ '\*/')
 		let level = 's1'
 
-	elseif (prev[0] == '}')
+	elseif ((line[0] == '}') && (next == "") && (nex2 =~ "#endif.*"))
+		let level = '<1'
+	elseif ((prev[0] == '}') && (next !~ "#endif.*"))
 		let level = '<1'
 
 	else
@@ -389,4 +391,5 @@ endfunction
 " Enable folding.
 set foldexpr=C_FoldLevel2(v:lnum)
 set foldtext=C_FoldText(v:foldstart)
+set fdl=1 fdc=4
 

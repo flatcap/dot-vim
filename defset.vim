@@ -10,7 +10,7 @@ set   diffopt=filler,vertical
 set   directory=/run/user/$UID/vim/swap
 set noerrorbells
 set noexrc
-set   fillchars=vert:\|,fold:\ 
+set   fillchars=vert:│,fold:\ 
 set   foldopen=mark,tag,quickfix
 set   formatoptions=tcnoqr
 set   gdefault

@@ -13,14 +13,17 @@ highlight link Folded     Comment
 highlight link FoldColumn Comment
 
 " Enable folding.
-set fillchars=vert:\|,fold:\ 
 set foldmethod=expr
 
 " Enable debugging
 "set debug=msg
 
 " More preferences
-set foldlevel=0
+if (expand ("%:e") == 'h')
+	set foldlevel=1
+else
+	set foldlevel=1
+endif
 set foldcolumn=0
 "set foldmethod=manual
 set foldclose=
