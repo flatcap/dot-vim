@@ -391,5 +391,4 @@ endfunction
 " Enable folding.
 set foldexpr=C_FoldLevel2(v:lnum)
 set foldtext=C_FoldText(v:foldstart)
-set fdl=1 fdc=4
 

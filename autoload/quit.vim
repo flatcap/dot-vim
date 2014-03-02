@@ -1,11 +1,18 @@
-" Copyright 2013 Richard Russon (flatcap)
+" Copyright 2013-2014 Richard Russon (flatcap)
 "
 " Save and close the current window
 
 function! quit#SaveAndClose()
-	if &buftype == ""
-		execute 'silent update'
+	" Normal Window
+	if (&buftype == "")
+		if (empty (bufname("")))
+			quit!
+		else
+			execute 'silent update'
+			quit
+		endif
+	elseif ((&buftype == "quickfix") || (&buftype == "help") || (&buftype == "nofile"))
+		quit!
 	endif
-	quit
 endfunction
 

@@ -22,7 +22,7 @@ set foldmethod=expr
 if (expand ("%:e") == 'h')
 	set foldlevel=1
 else
-	set foldlevel=1
+	set foldlevel=0
 endif
 set foldcolumn=0
 "set foldmethod=manual
