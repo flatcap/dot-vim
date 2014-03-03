@@ -4,15 +4,9 @@
 
 function! quit#SaveAndClose()
 	" Normal Window
-	if (&buftype == "")
-		if (empty (bufname("")))
-			quit!
-		else
-			execute 'silent update'
-			quit
-		endif
-	elseif ((&buftype == "quickfix") || (&buftype == "help") || (&buftype == "nofile"))
-		quit!
+	if ((&buftype == "") && (!empty (bufname(""))))
+		execute 'silent update'
 	endif
+	quit!
 endfunction
 
