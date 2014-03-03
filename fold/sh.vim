@@ -39,7 +39,7 @@ function! Sh_FoldLevel(lnum)
 endfunction
 
 function! Sh_GetFuncName(lnum)
-	for i in range(a:lnum, a:lnum+9)
+	for i in range(a:lnum, a:lnum+20)
 		let line = getline(i)
 		if (line !~ '^#')
 			let line = substitute (line, 'function ', '', '')
