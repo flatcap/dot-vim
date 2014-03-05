@@ -28,7 +28,7 @@ let g:c_space_errors=1
 "let g:c_comment_strings=1
 
 autocmd BufNewFile,BufRead *                            set fdm=manual
-autocmd BufNewFile,BufRead *.c,*.h,*.cc,*.cpp           set syn=c
+autocmd BufNewFile,BufRead *.c,*.h,*.cc,*.cpp           set syn=c commentstring=//%s
 autocmd BufNewFile,BufRead *.c,*.h,*.cc,*.cpp           source ~/.vim/syntax/c/0_default.vim
 autocmd BufNewFile,BufRead *.pas,*.dpr                  source ~/.vim/syntax/pascal.vim
 autocmd BufNewFile,BufRead *.html,*css                  source ~/.vim/syntax/html.vim
