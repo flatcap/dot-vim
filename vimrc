@@ -5,6 +5,11 @@ let mapleader=","
 let g:UltiSnipsJumpForwardTrigger  = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
+let g:Tlist_Use_Right_Window=1
+let g:Tlist_Compact_Format=1
+let g:Tlist_Enable_Fold_Column=0
+let g:Tlist_Ctags_Cmd="ctags -I UNUSED"
+
 call pathogen#infect()
 
 set conceallevel=2

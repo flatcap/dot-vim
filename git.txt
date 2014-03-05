@@ -9,5 +9,7 @@ repeat		git://github.com/tpope/vim-repeat.git
 speeddating	git://github.com/tpope/vim-speeddating.git
 surround	git://github.com/tpope/vim-surround.git
 tabular		git://github.com/godlygeek/tabular.git
+taglist		git://github.com/vim-scripts/taglist.vim.git
 ultisnips	git://github.com/SirVer/ultisnips.git
 unimpaired	git://github.com/tpope/vim-unimpaired.git
+yankring	git://github.com/vim-scripts/YankRing.vim.git

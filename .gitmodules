@@ -52,3 +52,9 @@
 [submodule "bundle/blame"]
 	path = bundle/blame
 	url = git://github.com/tommcdo/vim-fugitive-blame-ext.git
+[submodule "bundle/taglist"]
+	path = bundle/taglist
+	url = git://github.com/vim-scripts/taglist.vim.git
+[submodule "bundle/yankring"]
+	path = bundle/yankring
+	url = git://github.com/vim-scripts/YankRing.vim.git
