@@ -60,6 +60,8 @@ imap <Esc>[1;5B <C-O><C-E>
 " Shift-Up/Down Scroll Window
 nmap <Esc>[1;2A <C-Y>
 nmap <Esc>[1;2B <C-E>
+vmap <Esc>[1;2A <C-Y>
+vmap <Esc>[1;2B <C-E>
 imap <Esc>[1;2A <C-O><C-Y>
 imap <Esc>[1;2B <C-O><C-E>
 
