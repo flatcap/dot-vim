@@ -15,4 +15,4 @@ highlight work_highlight ctermfg=146
 "syntax match cppSmartPtr "\(std::\)\?unique_ptr" conceal cchar=●
 "syntax match cppSmartPtr "\(std::\)\?weak_ptr" conceal cchar=◇
 
-"syntax match std_conceal   "__FUNCTION__" conceal cchar=ϝ
+syntax match std_conceal   "__FUNCTION__" conceal cchar=ϝ
