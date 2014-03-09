@@ -1,0 +1,52 @@
+extends c
+
+snippet copy "Copyright message" !b
+/* Copyright (c) `!v strftime("%Y")` Richard Russon (FlatCap)
+ *
+ * This file is part of ${1:DParted}.
+ *
+ * $1 is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * $1 is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with $1.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+
+endsnippet
+
+snippet fora "for auto loop"
+for (auto ${1:i} : ${2:list}) {
+	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+}
+endsnippet
+
+# snippet if "if construct"
+# if ($1) {
+# 	${VISUAL}${0:${VISUAL/(.*)/(?1::\/* code *\/)/}}
+# }
+# endsnippet
+
+snippet beginend "$1.begin(), $1.end() (beginend)"
+${1:v}${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}begin(), $1${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}end()
+endsnippet
+
+snippet cl "class .. (class)"
+class ${1:`!p snip.rv = snip.basename.capitalize() or "name"`}
+{
+public:
+	${1/(\w+).*/$1/} (${2:arguments});
+	virtual ~${1/(\w+).*/$1/}();
+
+protected:
+	${0:/* data */}
+};
+endsnippet
+
