@@ -95,3 +95,6 @@ source ~/.vim/defmap_file_bufdo.vim
 source ~/.vim/defmap_file_argdo.vim
 source ~/.vim/defmap_file_windo.vim
 
+" Select all
+nmap <C-A> ggVG
+
