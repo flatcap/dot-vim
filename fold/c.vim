@@ -198,7 +198,7 @@ function! C_FoldFunction2(lnum)
 	if (line =~ '^\i\+::\~*\i\+\s*(.*')
 		let text = substitute (line, '\s*(.*', '', '')
 
-		if (text =~ '^\(.*\)::\1')
+		if (text =~ '^\C\(.*\)::\1')
 			let text = C_FoldCtor (line)
 		elseif (text =~ '^\(.*\)::\~\1')
 			let text = substitute (text, '^\(.*\)::\~\1', s:prefix_dtor, '')
