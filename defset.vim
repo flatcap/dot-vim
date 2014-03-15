@@ -11,7 +11,7 @@ set   directory=/run/user/$UID/vim/swap
 set noequalalways
 set noerrorbells
 set noexrc
-set   fillchars=vert:│,fold:\ 
+set   fillchars=stl:─,stlnc:─,vert:│,fold:\ 
 set   foldopen=mark,tag,quickfix
 set   formatoptions=tcnoqr
 set   gdefault
