@@ -58,3 +58,9 @@
 [submodule "bundle/yankring"]
 	path = bundle/yankring
 	url = git://github.com/vim-scripts/YankRing.vim.git
+[submodule "bundle/airline"]
+	path = bundle/airline
+	url = git://github.com/bling/vim-airline.git
+[submodule "bundle/signify"]
+	path = bundle/signify
+	url = git://github.com/mhinz/vim-signify.git

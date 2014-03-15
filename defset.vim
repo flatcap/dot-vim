@@ -21,7 +21,7 @@ set nohlsearch
 set   ignorecase
 set   incsearch
 set noinfercase
-set   laststatus=0
+set   laststatus=2
 set   lazyredraw
 set nolinebreak
 set   listchars=extends:>,precedes:<,tab:>-,eol:$,trail:X,nbsp:+
@@ -45,9 +45,11 @@ set   smartindent
 set   smarttab
 set   splitbelow
 set   splitright
+set   statusline=─%f
 set   suffixes=,.h
 set   swapfile
 set   synmaxcol=1024
+set   showtabline=1
 set   tabstop=8
 set   tagrelative
 set   tags=tags
