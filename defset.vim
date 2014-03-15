@@ -8,6 +8,7 @@ set   backupdir=/run/user/$UID/vim/backup
 set   clipboard=unnamed,unnamedplus
 set   diffopt=filler,vertical
 set   directory=/run/user/$UID/vim/swap
+set noequalalways
 set noerrorbells
 set noexrc
 set   fillchars=vert:│,fold:\ 

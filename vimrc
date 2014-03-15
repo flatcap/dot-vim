@@ -100,6 +100,6 @@ autocmd BufReadPost * endif
 
 "autocmd BufWritePre *.c %s/\s\+$//e
 
-map <F5> <C-W>jQ
+map <F5> :cclose<CR>
 map <F2> :wall<CR>:make .obj/%:r.o<CR>
 
