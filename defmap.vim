@@ -78,8 +78,8 @@ imap kj <esc>
 cmap kj <esc>
 
 " Only mapping
-nmap <silent> <Leader>o :only<CR>
-nmap <silent> <Leader>O :only<CR>:tabonly<CR>:set ls=0<CR>
+nmap <silent> <Leader>o :only<CR>:set ls=1<CR>
+nmap <silent> <Leader>O :only<CR>:tabonly<CR>:set ls=1<CR>
 
 " Update diff markings
 nmap <Leader>u :diffupdate<CR>
