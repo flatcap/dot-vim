@@ -7,9 +7,14 @@ let g:Tlist_Compact_Format=1
 let g:Tlist_Enable_Fold_Column=0
 let g:Tlist_Ctags_Cmd="ctags -I UNUSED"
 
+let g:airline#extensions#tabline#buffer_min_count = 1
+let g:airline#extensions#tabline#buffer_nr_show = 0
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_tab_nr = 0
+let g:airline#extensions#tabline#tab_min_count = 2
+let g:airline#extensions#whitespace#checks = [ 'trailing' ]
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 0
-let g:airline#extensions#tabline#show_buffers = 1
 let g:airline_theme="wombat"
 
 let g:signify_disable_by_default = 1
