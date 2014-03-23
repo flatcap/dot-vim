@@ -24,3 +24,5 @@ iabbrev s32	std::int32_t
 iabbrev u64	std::uint64_t
 iabbrev s64	std::int64_t
 
+iabbrev String	string
+
