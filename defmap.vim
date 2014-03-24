@@ -97,5 +97,8 @@ source ~/.vim/defmap_file_argdo.vim
 source ~/.vim/defmap_file_windo.vim
 
 " Select all
-nmap <C-A> ggVG
+"nmap <C-A> ggVG
+
+nmap <silent> <F9> :call nextfile#NextFile()<CR>
+
 
