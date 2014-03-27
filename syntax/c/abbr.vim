@@ -25,4 +25,12 @@ iabbrev u64	std::uint64_t
 iabbrev s64	std::int64_t
 
 iabbrev String	string
+iabbrev c_stR	c_str
+
+iabbrev le16	le16_to_cpu
+iabbrev le32	le32_to_cpu
+iabbrev le64	le64_to_cpu
+iabbrev be16	be16_to_cpu
+iabbrev be32	be32_to_cpu
+iabbrev be64	be64_to_cpu
 
