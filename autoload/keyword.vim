@@ -35,6 +35,9 @@ function! s:Keyword_Remove(name)
 	let i = index(s:key_list, a:name)
 	if (i >= 0)
 		unlet s:key_list[i]
+		if (@/ == a:name)
+			let @/ = ""
+		endif
 	endif
 	call s:Keyword_Highlight()
 endfunction
@@ -43,6 +46,7 @@ function! s:Keyword_Toggle(name)
 	let i = index(s:key_list, a:name)
 	if (i < 0)
 		call s:Keyword_Add(a:name)
+		let @/=a:name
 	else
 		call s:Keyword_Remove(a:name)
 	endif
