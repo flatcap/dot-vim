@@ -15,7 +15,7 @@ endfunction
 function! s:Keyword_Highlight()
 	call s:Keyword_Clear()
 	for item in s:key_list
-		execute 'syntax keyword ' s:key_group item
+		execute 'syntax keyword ' s:key_group item ' containedin=ALL'
 	endfor
 	if (!empty (s:key_list))
 		let s:key_init = 1
