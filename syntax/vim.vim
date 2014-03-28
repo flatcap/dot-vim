@@ -1,8 +1,6 @@
-highlight link vimNumber NONE
+" highlight link vimNumber NONE
 
-highlight Comment	ctermfg=DarkGreen
-highlight Constant	ctermfg=none cterm=Bold
-highlight PreProc	ctermfg=none cterm=none
-highlight Statement	ctermfg=DarkCyan
-highlight String	ctermfg=226
-highlight Type		ctermfg=DarkCyan
+" highlight Constant	ctermfg=none cterm=Bold
+" highlight PreProc	ctermfg=none cterm=none
+" highlight Statement	ctermfg=DarkCyan
+" highlight Type		ctermfg=DarkCyan

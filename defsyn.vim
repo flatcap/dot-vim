@@ -19,6 +19,7 @@ highlight CursorColumn	ctermfg=white		ctermbg=22		cterm=none
 highlight CursorLine	ctermfg=white		ctermbg=22		cterm=none
 highlight Directory	ctermfg=darkcyan	ctermbg=black
 highlight ErrorMsg	ctermfg=black		ctermbg=red		cterm=none
+highlight Folded	ctermfg=22		ctermbg=none		cterm=none
 highlight IncSearch	ctermfg=black		ctermbg=red		cterm=none
 highlight LineNr	ctermfg=239		ctermbg=none
 highlight MatchParen	ctermfg=white		ctermbg=darkblue
@@ -53,24 +54,25 @@ highlight DiffDelete	ctermfg=black		ctermbg=124		cterm=none
 highlight DiffText	ctermfg=black		ctermbg=129		cterm=none
 
 " Keywords common to many languages
-highlight Comment	ctermfg=darkgreen				cterm=none
-highlight String	ctermfg=184
-highlight SpecialChar	ctermfg=165
-highlight Todo		ctermfg=darkgreen	ctermbg=black		cterm=reverse
-highlight clear Number
+highlight Comment	ctermfg=22					cterm=none
+highlight String	ctermfg=229
+highlight Todo		ctermfg=22		ctermbg=black		cterm=reverse
+highlight Number	ctermfg=none
 
-highlight Conditional	ctermfg=darkcyan
-highlight Constant	ctermfg=darkcyan
-highlight Include	ctermfg=darkcyan
-highlight Label		ctermfg=darkcyan
-highlight Macro		ctermfg=darkcyan
-highlight Operator	ctermfg=darkcyan
-highlight PreCondit	ctermfg=darkcyan
-highlight PreProc	ctermfg=darkcyan
-highlight Repeat	ctermfg=darkcyan
-highlight Statement	ctermfg=darkcyan
-highlight StorageClass	ctermfg=darkcyan
-highlight Structure	ctermfg=darkcyan
-highlight Type		ctermfg=darkcyan
-highlight Folded	ctermfg=22		ctermbg=none		term=none
+" highlight Type		ctermfg=red  cterm=reverse
+" highlight Statement	ctermfg=blue cterm=reverse
+"highlight Type		ctermfg=123
+"highlight Statement	ctermfg=123
+" highlight Type		ctermfg=123
+
+" highlight Conditional	ctermfg=darkcyan
+" highlight Include	ctermfg=darkcyan
+" highlight Label		ctermfg=darkcyan
+" highlight Macro		ctermfg=darkcyan
+" highlight Operator	ctermfg=darkcyan
+" highlight PreCondit	ctermfg=darkcyan
+" highlight PreProc	ctermfg=darkcyan
+" highlight Repeat	ctermfg=darkcyan
+" highlight StorageClass	ctermfg=darkcyan
+" highlight Structure	ctermfg=darkcyan
 

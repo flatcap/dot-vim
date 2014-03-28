@@ -1,7 +1,40 @@
 source ~/.vim/fold/c.vim
 
 set noexpandtab
-set path=.,/usr/include,/usr/include/at-spi2-atk/2.0,/usr/include/atk-1.0,/usr/include/atkmm-1.6,/usr/include/c++/4.8.2/,/usr/include/cairo,/usr/include/cairomm-1.0,/usr/include/freetype2,/usr/include/gdk-pixbuf-2.0,/usr/include/gdkmm-3.0,/usr/include/gio-unix-2.0/,/usr/include/giomm-2.4,/usr/include/glib-2.0,/usr/include/glibmm-2.4,/usr/include/gtk-3.0,/usr/include/gtk-3.0/unix-print,/usr/include/gtkmm-3.0,/usr/include/harfbuzz,/usr/include/libdrm,/usr/include/libpng16,/usr/include/pango-1.0,/usr/include/pangomm-1.4,/usr/include/pixman-1,/usr/include/sigc++-2.0,/usr/lib/gcc/x86_64-redhat-linux/4.8.2/include,/usr/lib64/cairomm-1.0/include,/usr/lib64/gdkmm-3.0/include,/usr/lib64/giomm-2.4/include,/usr/lib64/glib-2.0/include,/usr/lib64/glibmm-2.4/include,/usr/lib64/gtkmm-3.0/include,/usr/lib64/pangomm-1.4/include,/usr/lib64/sigc++-2.0/include
+set path=.
+set path+=/usr/include
+set path+=/usr/include/at-spi2-atk/2.0
+set path+=/usr/include/atk-1.0
+set path+=/usr/include/atkmm-1.6
+set path+=/usr/include/c++/4.8.2/
+set path+=/usr/include/cairo
+set path+=/usr/include/cairomm-1.0
+set path+=/usr/include/freetype2
+set path+=/usr/include/gdk-pixbuf-2.0
+set path+=/usr/include/gdkmm-3.0
+set path+=/usr/include/gio-unix-2.0/
+set path+=/usr/include/giomm-2.4
+set path+=/usr/include/glib-2.0
+set path+=/usr/include/glibmm-2.4
+set path+=/usr/include/gtk-3.0
+set path+=/usr/include/gtk-3.0/unix-print
+set path+=/usr/include/gtkmm-3.0
+set path+=/usr/include/harfbuzz
+set path+=/usr/include/libdrm
+set path+=/usr/include/libpng16
+set path+=/usr/include/pango-1.0
+set path+=/usr/include/pangomm-1.4
+set path+=/usr/include/pixman-1
+set path+=/usr/include/sigc++-2.0
+set path+=/usr/lib/gcc/x86_64-redhat-linux/4.8.2/include
+set path+=/usr/lib64/cairomm-1.0/include
+set path+=/usr/lib64/gdkmm-3.0/include
+set path+=/usr/lib64/giomm-2.4/include
+set path+=/usr/lib64/glib-2.0/include
+set path+=/usr/lib64/glibmm-2.4/include
+set path+=/usr/lib64/gtkmm-3.0/include
+set path+=/usr/lib64/pangomm-1.4/include
+set path+=/usr/lib64/sigc++-2.0/include
 
 set suffixesadd=.h
 
@@ -10,30 +43,44 @@ set cindent
 "set cinoptions=>4,n-2,{2,^-2,:2,=2,g0,h2,p5,t0,+2,(0,u0,w1,m1
 "set cinoptions=>4,{1s,n-2,}0,t0,^-2
 set shiftwidth=8
-set tabstop=8 
+set tabstop=8
+
+highlight link cFormat           cString
+highlight link cSpecial          cString
+highlight link cSpecialCharacter cString
+highlight link cCharacter        cString
+
+highlight cConstant          ctermfg=123
+
+" highlight cConditional       ctermfg=DarkCyan
+" highlight cDefine            ctermfg=DarkCyan
+" highlight cInclude           ctermfg=DarkCyan
+" highlight cLabel             ctermfg=DarkCyan
+" highlight cOperator          ctermfg=DarkCyan
+" highlight cPreCondit         ctermfg=DarkCyan
+" highlight cPreProc           ctermfg=DarkCyan
+" highlight cRepeat            ctermfg=DarkCyan
+" highlight cStatement         ctermfg=DarkCyan
+" highlight cStorageClass      ctermfg=DarkCyan
+" highlight cStructure         ctermfg=DarkCyan
+" highlight cType              ctermfg=DarkCyan
+" highlight cUserLabel         ctermfg=DarkCyan
+" highlight cppBoolean         ctermfg=DarkCyan
+" highlight cppClassDecl       ctermfg=DarkCyan
+" highlight cppClassPreDecl    ctermfg=DarkCyan
+" highlight cppExceptions      ctermfg=DarkCyan
+" highlight cppMethod          ctermfg=DarkCyan
+" highlight cppScopeDecl       ctermfg=DarkCyan
+" highlight cppStatement       ctermfg=DarkCyan
+" highlight cppStorageClass    ctermfg=DarkCyan
+" highlight cppType            ctermfg=DarkCyan
 
 highlight cBitField          ctermfg=none
 highlight cBracket           ctermfg=none
-highlight cCharacter         ctermfg=Yellow
-highlight cComment           ctermfg=DarkGreen
-highlight cComment2String    ctermfg=DarkGreen
-highlight cCommentError      ctermfg=Red
-highlight cCommentL          ctermfg=DarkGreen
-highlight cCommentSkip       ctermfg=DarkGreen
-highlight cCommentStart      ctermfg=DarkGreen
-highlight cCommentStartError ctermfg=Red
-highlight cCommentString     ctermfg=DarkGreen
-highlight cConditional       ctermfg=DarkCyan
-highlight cConstant          ctermfg=DarkCyan
-highlight cDefine            ctermfg=DarkCyan
 highlight cErrInBracket      ctermfg=none
 highlight cErrInParen        ctermfg=none
-highlight cError             ctermfg=none
+highlight cError             ctermfg=red cterm=reverse
 highlight cFloat             ctermfg=none
-highlight cFormat            ctermfg=Yellow
-highlight cInclude           ctermfg=DarkCyan
-highlight cIncluded          ctermfg=Yellow
-highlight cLabel             ctermfg=DarkCyan
 highlight cMulti             ctermfg=none
 highlight cNumber            ctermfg=none
 highlight cNumbers           ctermfg=none
@@ -41,47 +88,19 @@ highlight cNumbersCom        ctermfg=none
 highlight cOctal             ctermfg=none
 highlight cOctalError        ctermfg=Red
 highlight cOctalZero         ctermfg=none
-highlight cOperator          ctermfg=DarkCyan
 highlight cParen             ctermfg=none
 highlight cParenError        ctermfg=Red
-highlight cPreCondit         ctermfg=DarkCyan
-highlight cPreProc           ctermfg=DarkCyan
-highlight cRepeat            ctermfg=DarkCyan
 highlight cSpaceError        ctermbg=18
-highlight cSpecial           ctermfg=Yellow
-highlight cSpecialCharacter  ctermfg=Yellow
 highlight cSpecialError      ctermfg=none
-highlight cStatement         ctermfg=DarkCyan
-highlight cStorageClass      ctermfg=DarkCyan
-highlight cString            ctermfg=Yellow
-highlight cStructure         ctermfg=DarkCyan
 highlight cTodo              ctermfg=DarkGreen cterm=reverse
-highlight cType              ctermfg=DarkCyan
 highlight cUserCont          ctermfg=none
-highlight cUserLabel         ctermfg=DarkCyan
 
 highlight cCppBracket        ctermfg=none
-highlight cCppOut            ctermfg=DarkGreen
-highlight cCppOut2           ctermfg=DarkGreen
-highlight cCppParen          ctermfg=none
-highlight cCppSkip           ctermfg=DarkGreen
-highlight cCppString         ctermfg=Yellow
-highlight cppBoolean         ctermfg=DarkCyan
-highlight cppClassDecl       ctermfg=DarkCyan
-highlight cppClassPreDecl    ctermfg=DarkCyan
-highlight cppExceptions      ctermfg=DarkCyan
-highlight cppMethod          ctermfg=DarkCyan
+highlight cCppParen          ctermfg=red
 highlight cppNumber          ctermfg=none
-highlight cppScopeDecl       ctermfg=DarkCyan
-highlight cppStatement       ctermfg=DarkCyan
-highlight cppStorageClass    ctermfg=DarkCyan
-highlight cppType            ctermfg=DarkCyan
 
 syntax match attrpack "__attribute__((__packed__))"
 highlight attrpack ctermfg=black
-
-syntax keyword extras uchar_t u8 u16 u32 u64 s8 s16 s32 s64
-highlight      extras ctermfg=DarkCyan
 
 syntax match rar "// *RAR.*"
 highlight rar ctermfg=207
