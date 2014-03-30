@@ -44,24 +44,25 @@ protected:
 };
 endsnippet
 
-snippet vec "std::vector"
+snippet v "std::vector"
 std::vector<${1:std::string}> $0
 endsnippet
 
-# snippet s "std::string"
-# std::string$0
-# endsnippet
-
-snippet v "std::vector"
-std::vector<$1> $0
-endsnippet
-
 snippet m "std::map"
-std::map<$1,$2> $0
+std::map<${1:std::string},${2:std::string}> $0
 endsnippet
 
-snippet "(^|[^:])(string)" "desc" r
-`!p snip.rv = match.group(1)+"std::"+match.group(2)`
+snippet s "std::string"
+std::string$0
+endsnippet
+
+snippet npos "std::string::npos"
+std::string::npos$0
+endsnippet
+
+snippet "(^|[^:_])(string|cout|cerr|endl|e|size_t|runtime_error|dynamic_pointer_cast|bind|stringstream|function|ostream|make_pair|setw|setfill|hex|transform|swap|sort|make_shared|tie)" "desc" r
+`!p snip.rv = match.group(1)+"std::"+match.group(2)
+if match.group(2) == "e": snip.rv += "ndl"`
 endsnippet
 
 snippet "([uis])([0-9]+)" "std int types" r
@@ -70,8 +71,18 @@ if match.group(1) == "u": snip.rv += "u"
 snip.rv += "int"+match.group(2)+"_t"`
 endsnippet
 
+snippet "(end|begin|to_string|max|min)" "single item brackers" r
+`!p snip.rv = "std::"+match.group(1)` ($2) $0
+endsnippet
+
 snippet "(array|bitset|deque|forward_list|list|multiset|priority_queue|queue|set|stack|unordered_multiset|unordered_set|vector)" "single item containers" r
 `!p snip.rv = "std::"+match.group(1)`<${2:std::string}> $0
+endsnippet
+
+snippet "(shared|weak|unique|uniq)" "single item containers" r
+`!p snip.rv = "std::"+match.group(1)
+if match.group(1) == "uniq": snip.rv += "ue"
+snip.rv += "_ptr"`<$2> $0
 endsnippet
 
 snippet "(map|multimap|pair|unordered_map|unordered_multimap)" "double item containers" r
@@ -81,37 +92,4 @@ endsnippet
 snippet tuple "triple item containers"
 std::tuple<$2,$3,$4> $0
 endsnippet
-
-# std::string               616	s
-# std::vector               248   v
-# std::runtime_error        95    runtime_error
-# std::dynamic_pointer_cast 83    dcast
-# std::shared_ptr           64    shared
-# std::end                  45    end
-# std::string::npos         40    npos
-# std::begin                39    begin
-# std::to_string            28    to_string
-# std::map                  27    m
-# std::bind                 26    bind
-# std::stringstream         24    ss
-# std::set                  16    set
-# std::function             16    fn
-# std::ostream              14    os
-# std::weak_ptr             8     weak
-# std::multimap             7     mm
-# std::make_pair            7     make_pair
-# std::max                  6     max
-# std::setw                 5     setw
-# std::setfill              5     setfill
-# std::hex                  5     hex
-# std::pair                 4     pair
-# std::transform            3     transform
-# std::swap                 3     swap
-# std::sort                 2     sort
-# std::make_shared          2     make_shared
-# std::deque                2     deque
-# std::tie                  1     tie
-# std::stack                1     stack
-# std::size_t               1     size_t
-# std::min                  1     min
 
