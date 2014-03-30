@@ -5,6 +5,7 @@
 function! make#RichMake()
 	execute 'wall'
 	execute 'silent !clear'
+	execute 'wincmd t'
 	execute 'silent make | redraw!'
 	execute 'botright cwindow 5'
 	
