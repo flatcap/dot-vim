@@ -60,7 +60,7 @@ snippet npos "std::string::npos"
 std::string::npos$0
 endsnippet
 
-snippet "(^|[^:_])(string|cout|cerr|endl|e|size_t|runtime_error|dynamic_pointer_cast|bind|stringstream|function|ostream|make_pair|setw|setfill|hex|transform|swap|sort|make_shared|tie)" "desc" r
+snippet "(^|[^:_])\b(string|cout|cerr|endl|e|size_t|runtime_error|dynamic_pointer_cast|bind|stringstream|function|ostream|make_pair|setw|setfill|hex|transform|swap|sort|make_shared|tie)" "desc" r
 `!p snip.rv = match.group(1)+"std::"+match.group(2)
 if match.group(2) == "e": snip.rv += "ndl"`
 endsnippet
