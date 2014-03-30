@@ -73,3 +73,6 @@
 [submodule "bundle/piper"]
 	path = bundle/piper
 	url = git:work/vim/piper.git
+[submodule "bundle/keyword"]
+	path = bundle/keyword
+	url = git:work/vim/keyword
