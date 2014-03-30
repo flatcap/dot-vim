@@ -76,3 +76,6 @@
 [submodule "bundle/keyword"]
 	path = bundle/keyword
 	url = git:work/vim/keyword
+[submodule "bundle/deleteto"]
+	path = bundle/deleteto
+	url = git:work/vim/deleteto
