@@ -92,9 +92,6 @@ nmap <leader>x :w<cr>:!chmod +x %<cr>:e<cr>
 vmap <leader>0 :call ifzero#IfZero()<CR>
 
 source ~/.vim/defmap_file.vim
-source ~/.vim/defmap_file_bufdo.vim
-source ~/.vim/defmap_file_argdo.vim
-source ~/.vim/defmap_file_windo.vim
 
 " Select all
 "nmap <C-A> ggVG
