@@ -4,14 +4,14 @@ set   background=dark
 set   backspace=indent,eol,start
 set   backup
 set   backupcopy=yes
-set   backupdir=/run/user/$UID/vim/backup
+set   backupdir=~/.vim/backup
 set   clipboard=unnamed,unnamedplus
 set   diffopt=filler,vertical
-set   directory=/run/user/$UID/vim/swap
+set   directory=~/.vim/swap
 set noequalalways
 set noerrorbells
 set noexrc
-set   fillchars=stl:─,stlnc:─,vert:│,fold:\ 
+set   fillchars=fold:\ ,vert:│
 set   foldopen=mark,tag,quickfix
 set   formatoptions=tcnoqr
 set   gdefault
@@ -32,6 +32,7 @@ set   nrformats+=alpha
 set   nrformats-=octal
 set noruler
 set   scrolloff=0
+set   sessionoptions=buffers,curdir,folds,options,tabpages,winsize
 set   shiftround
 set   shiftwidth=8
 set   shortmess=filnxtToOsrmI
@@ -45,7 +46,7 @@ set   smartindent
 set   smarttab
 set   splitbelow
 set   splitright
-set   statusline=─%f
+set   statusline=%f
 set   suffixes=,.h
 set   swapfile
 set   synmaxcol=1024
@@ -61,8 +62,9 @@ set   titlestring=vi\ %f\ %m%r
 set   t_Co=256
 set   t_vb=
 set   undofile
-set   undodir=/run/user/$UID/vim/undo
-set   viminfo='50,:500,@100,/500,n~/.vim/viminfo
+set   undodir=~/.vim/undo
+set   viewdir=~/.vim/view
+set   viminfo=%,'50,:500,@100,/500,n~/.vim/viminfo
 set novisualbell
 set nowarn
 set   whichwrap=b,s,[,],<,>,~
