@@ -51,29 +51,29 @@ highlight link cSpecialCharacter cString
 highlight link cCharacter        cString
 
 highlight cConstant          ctermfg=123
+highlight cppStatement       ctermfg=123
+highlight cRepeat            ctermfg=123
+highlight cppExceptions      ctermfg=123
 
-" highlight cConditional       ctermfg=DarkCyan
-" highlight cDefine            ctermfg=DarkCyan
-" highlight cInclude           ctermfg=DarkCyan
-" highlight cLabel             ctermfg=DarkCyan
-" highlight cOperator          ctermfg=DarkCyan
-" highlight cPreCondit         ctermfg=DarkCyan
-" highlight cPreProc           ctermfg=DarkCyan
-" highlight cRepeat            ctermfg=DarkCyan
-" highlight cStatement         ctermfg=DarkCyan
-" highlight cStorageClass      ctermfg=DarkCyan
-" highlight cStructure         ctermfg=DarkCyan
-" highlight cType              ctermfg=DarkCyan
-" highlight cUserLabel         ctermfg=DarkCyan
-" highlight cppBoolean         ctermfg=DarkCyan
-" highlight cppClassDecl       ctermfg=DarkCyan
-" highlight cppClassPreDecl    ctermfg=DarkCyan
-" highlight cppExceptions      ctermfg=DarkCyan
-" highlight cppMethod          ctermfg=DarkCyan
-" highlight cppScopeDecl       ctermfg=DarkCyan
-" highlight cppStatement       ctermfg=DarkCyan
-" highlight cppStorageClass    ctermfg=DarkCyan
-" highlight cppType            ctermfg=DarkCyan
+highlight cConditional       ctermfg=123
+highlight cDefine            ctermfg=123
+highlight cInclude           ctermfg=123
+highlight cLabel             ctermfg=123
+highlight cOperator          ctermfg=123
+highlight cPreCondit         ctermfg=123
+highlight cPreProc           ctermfg=123
+highlight cStatement         ctermfg=123
+highlight cStorageClass      ctermfg=123
+highlight cStructure         ctermfg=123
+highlight cType              ctermfg=123
+highlight cUserLabel         ctermfg=123
+highlight cppBoolean         ctermfg=123
+highlight cppClassDecl       ctermfg=123
+highlight cppClassPreDecl    ctermfg=123
+highlight cppMethod          ctermfg=123
+highlight cppScopeDecl       ctermfg=123
+highlight cppStorageClass    ctermfg=123
+highlight cppType            ctermfg=123
 
 highlight cBitField          ctermfg=none
 highlight cBracket           ctermfg=none
@@ -104,3 +104,6 @@ highlight attrpack ctermfg=black
 
 syntax match rar "// *RAR.*"
 highlight rar ctermfg=207
+
+syntax keyword identifier nullptr
+
