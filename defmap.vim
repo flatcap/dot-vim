@@ -16,19 +16,12 @@ nmap <silent> Q :call quit#SaveAndClose()<CR>
 map <2-LeftMouse> za
 
 " Find common items
-nmap <silent> <leader>c	:silent! call findme#Constructor()<CR>
-nmap <silent> <leader>d	:silent! call findme#Destructor()<CR>
-nmap <silent> <leader>i	:silent! call findme#Include()<CR>
 nmap <silent> <leader>h :silent! call swapfile#SwapFile()<CR>
 nmap <silent> <leader>H :silent! vsplit<Bar>call swapfile#SwapFile()<CR>
 nmap <silent> <leader>m :call make#RichMake()<CR>
-"nmap <silent> <leader>t :silent! tabedit docs/todo.txt<CR>G
-"nmap <silent> <leader>l :ls<CR>
 nmap <silent> <leader>l :CommandTBuffer<CR>
 
 nmap <silent> <leader>fc :silent! call function#CommentBlock()<CR>
-nmap <silent> <leader>fp :silent! call function#CopyrightBlock()<CR>
-nmap <silent> <leader>fi :silent! call function#IncludeGuard()<CR>
 nmap <silent> <leader>ff :silent! source ~/.vim/fold/c.vim<CR>
 
 " open tag in new window
