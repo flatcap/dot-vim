@@ -105,5 +105,5 @@ highlight attrpack ctermfg=black
 syntax match rar "// *RAR.*"
 highlight rar ctermfg=207
 
-syntax keyword identifier nullptr
+syntax keyword identifier nullptr this
 
