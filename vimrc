@@ -40,15 +40,15 @@ let g:c_space_errors=1
 "let g:c_curly_error=1
 "let g:c_comment_strings=1
 
-autocmd BufNewFile,BufRead *                            set fdm=manual
-autocmd BufNewFile,BufRead *.c,*.h,*.cc,*.cpp           set syn=c commentstring=//%s
-autocmd BufNewFile,BufRead *.c,*.h,*.cc,*.cpp           source ~/.vim/syntax/c/0_default.vim
-autocmd BufNewFile,BufRead *.pas,*.dpr                  source ~/.vim/syntax/pascal.vim
-autocmd BufNewFile,BufRead *.html,*css                  source ~/.vim/syntax/html.vim
-autocmd BufNewFile,BufRead *.java                       source ~/.vim/syntax/java.vim
-autocmd BufNewFile,BufRead *.vim                        source ~/.vim/syntax/vim.vim
-autocmd BufNewFile,BufRead *.dcf,pharos                 source ~/.vim/syntax/dcf.vim
-autocmd BufNewFile,BufRead *.xsl                        source ~/.vim/syntax/xsl.vim
+autocmd BufNewFile,BufRead *                             set fdm=manual
+autocmd BufNewFile,BufRead *.c,*.h,*.cc,*.cpp,*.ccg,*.hg set syn=c commentstring=//%s
+autocmd BufNewFile,BufRead *.c,*.h,*.cc,*.cpp,*.ccg,*.hg source ~/.vim/syntax/c/0_default.vim
+autocmd BufNewFile,BufRead *.pas,*.dpr                   source ~/.vim/syntax/pascal.vim
+autocmd BufNewFile,BufRead *.html,*css                   source ~/.vim/syntax/html.vim
+autocmd BufNewFile,BufRead *.java                        source ~/.vim/syntax/java.vim
+autocmd BufNewFile,BufRead *.vim                         source ~/.vim/syntax/vim.vim
+autocmd BufNewFile,BufRead *.dcf,pharos                  source ~/.vim/syntax/dcf.vim
+autocmd BufNewFile,BufRead *.xsl                         source ~/.vim/syntax/xsl.vim
 autocmd BufNewFile,BufRead *.module,*.php,*.inc,*.theme,*.engine,*.install,*.js source ~/.vim/syntax/php.vim
 autocmd BufNewFile,BufRead *.sql,/tmp/sql*              set syn=mysql
 autocmd BufNewFile,BufRead *.gconf,*.kml,*.gpx          set syn=xml
