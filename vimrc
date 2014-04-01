@@ -1,11 +1,11 @@
 set nocompatible
 
-let mapleader=","
+let mapleader=','
 
 let g:Tlist_Use_Right_Window=1
 let g:Tlist_Compact_Format=1
 let g:Tlist_Enable_Fold_Column=0
-let g:Tlist_Ctags_Cmd="ctags -I UNUSED"
+let g:Tlist_Ctags_Cmd='ctags -I UNUSED'
 
 let g:airline#extensions#tabline#buffer_min_count = 1
 let g:airline#extensions#tabline#buffer_nr_show = 0
@@ -15,13 +15,15 @@ let g:airline#extensions#tabline#show_tab_nr = 0
 let g:airline#extensions#tabline#tab_min_count = 2
 let g:airline#extensions#whitespace#checks = [ 'trailing' ]
 let g:airline_powerline_fonts = 1
-let g:airline_theme="wombat"
+let g:airline_theme='wombat'
 
 let g:signify_disable_by_default = 1
 
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-let g:UltiSnipsSnippetDirectories=["snippets"]
+let g:UltiSnipsJumpForwardTrigger='<tab>'
+let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
+let g:UltiSnipsSnippetDirectories=['snippets']
+
+let g:zipPlugin_ext = '*.zip,*.jar,*.xpi,*.ja,*.war,*.ear,*.celzip,*.oxt,*.kmz,*.wsz,*.xap,*.docx,*.docm,*.dotx,*.dotm,*.potx,*.potm,*.ppsx,*.ppsm,*.pptx,*.pptm,*.ppam,*.sldx,*.thmx,*.xlam,*.xlsx,*.xlsm,*.xlsb,*.xltx,*.xltm,*.xlam,*.crtx,*.vdw,*.glox,*.gcsx,*.gqsx,*.ods'
 
 call pathogen#infect()
 
@@ -67,11 +69,11 @@ autocmd BufNewFile,BufRead *.c,*.h,*.cc,*.cpp           set fdm=manual
 
 "autocmd BufRead [0-9][0-9][0-9][0-9][0-9]  source ~/decode/highlight.vim
 
-autocmd BufNewFile *.c    call template#load("c",    8, 1)
-autocmd BufNewFile *.cpp  call template#load("cpp",  6, 1)
-autocmd BufNewFile *.html call template#load("html", 9, 2)
-autocmd BufNewFile *.sh   call template#load("sh",   3, 1)
-autocmd BufNewFile *.awk  call template#load("awk",  6, 1)
+autocmd BufNewFile *.c    call template#load('c',    8, 1)
+autocmd BufNewFile *.cpp  call template#load('cpp',  6, 1)
+autocmd BufNewFile *.html call template#load('html', 9, 2)
+autocmd BufNewFile *.sh   call template#load('sh',   3, 1)
+autocmd BufNewFile *.awk  call template#load('awk',  6, 1)
 
 " good enough for now
 autocmd BufNewFile,BufRead *.js  so ~/.vim/fold/c.vim
