@@ -6,7 +6,7 @@ set   backup
 set   backupcopy=yes
 set   backupdir=~/.vim/backup
 set   clipboard=unnamed,unnamedplus
-set   cpoptions=aABeFMns
+set   cpoptions=aABceFMns
 set   diffopt=filler,vertical
 set   directory=~/.vim/swap
 set noequalalways
