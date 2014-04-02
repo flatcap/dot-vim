@@ -90,5 +90,5 @@ source ~/.vim/defmap_file.vim
 " Select all
 "nmap <C-A> ggVG
 
-nmap <silent> <F9> :call nextfile#NextFile()<CR>
+nmap <silent> <F9> <Plug>SaveNextFile
 
