@@ -1,3 +1,10 @@
+let s:dirs = [ 'backup', 'swap', 'undo', 'view' ]
+for i in s:dirs
+	if (!isdirectory(i))
+		call mkdir($HOME.'/.vim/'.i, 'p')
+	endif
+endfor
+
 set   autoindent
 set   autoread
 set   background=dark
