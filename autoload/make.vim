@@ -1,12 +1,26 @@
-" Copyright 2012-2013 Richard Russon (flatcap)
+" Copyright 2012-2014 Richard Russon (flatcap)
 "
 " Make and display the quickfix window if necessary
 
 function! make#RichMake()
+	if (!filereadable ('Makefile') && !filereadable ('makefile'))
+		echohl Error
+		echomsg 'No Makefile'
+		echohl None
+		return
+	endif
+
 	execute 'wall'
 	execute 'silent !clear'
 	execute 'wincmd t'
-	execute 'silent make | redraw!'
+	call system ('make')
+	execute 'redraw!'
+	if (v:shell_error != 0)
+		echohl Error
+		echomsg 'make failed'
+		echohl None
+		return
+	endif
 	execute 'botright cwindow 5'
 	
 	let num = bufnr ('$')
