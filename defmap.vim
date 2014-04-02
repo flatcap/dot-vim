@@ -27,6 +27,7 @@ nmap <silent> <leader>ff :silent! source ~/.vim/fold/c.vim<CR>
 " open tag in new window
 nnoremap <C-W>] :vsplit<CR><C-]>zv
 
+nmap <silent> <F1>      :let &conceallevel=2-&conceallevel<CR>
 nmap <silent> <F2>	:make .obj/%:r.o<CR>
 nmap <silent> <F3>	:let &laststatus = 2-&laststatus<CR>
 nmap          <F4>	:call tagsrotate#TagsRotate()<CR>
