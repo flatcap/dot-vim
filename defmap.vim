@@ -92,4 +92,3 @@ source ~/.vim/defmap_file.vim
 
 nmap <silent> <F9> :call nextfile#NextFile()<CR>
 
-
