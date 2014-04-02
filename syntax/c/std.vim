@@ -2,6 +2,9 @@
 syntax match std_conceal   "\vstd::\ze\i"       conceal
 syntax match std_highlight "\vstd::\i+(::\i+)?" contains=std_conceal
 
+syntax match std_conceal   "\vstd::string::\zenpos" conceal
+syntax match std_highlight "\vstd::string(::\i+)?" contains=std_conceal
+
 highlight std_conceal   ctermfg=121
 highlight std_highlight ctermfg=121
 
