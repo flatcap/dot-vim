@@ -19,13 +19,20 @@ set foldmethod=expr
 "set debug=msg
 
 " More preferences
-if (expand ("%:e") == 'h')
-	set foldlevel=1
+let path = expand("%:p")
+if (path =~ '/upstream/')
+	set foldlevel=4
 	set conceallevel=0
 else
-	set foldlevel=0
-	set conceallevel=2
+	if (expand ("%:e") == 'h')
+		set foldlevel=1
+		set conceallevel=0
+	else
+		set foldlevel=0
+		set conceallevel=2
+	endif
 endif
+
 set foldcolumn=0
 "set foldmethod=manual
 set foldclose=
