@@ -29,6 +29,7 @@ Bundle 'vim-scripts/taglist.vim.git'
 Bundle 'git:work/vim/deleteto.git'
 Bundle 'git:work/vim/keyword.git'
 Bundle 'git:work/vim/piper.git'
+Bundle 'git:work/vim/save-next-file.git'
 
 filetype plugin indent on
 
