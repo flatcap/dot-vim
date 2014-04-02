@@ -13,8 +13,7 @@ function! make#RichMake()
 	execute 'wall'
 	execute 'silent !clear'
 	execute 'wincmd t'
-	call system ('make')
-	execute 'redraw!'
+	execute 'silent make | redraw!'
 	if (v:shell_error != 0)
 		echohl Error
 		echomsg 'make failed'
