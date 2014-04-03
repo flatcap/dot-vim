@@ -143,7 +143,7 @@ autocmd BufReadPost *   source ~/.vim/fold/diff.vim
 autocmd BufReadPost * endif
 
 " Attempt to save scratch buffer
-"autocmd BufWriteCmd * set buftype= bufhidden=
+autocmd BufNew * :set buftype= bufhidden=
 
 "autocmd BufWritePre *.c %s/\s\+$//e
 
