@@ -44,6 +44,26 @@ protected:
 };
 endsnippet
 
+snippet rv "return_val_if_fail"
+return_val_if_fail (${1:TEST}, ${2:RETVAL});$0
+endsnippet
+
+snippet ri "return_if_fail"
+return_if_fail (${1:TEST});$0
+endsnippet
+
+snippet n "nullptr"
+nullptr
+endsnippet
+
+snippet f "false"
+false
+endsnippet
+
+snippet t "true"
+true
+endsnippet
+
 snippet v "std::vector"
 std::vector<${1:std::string}> $0
 endsnippet
@@ -57,16 +77,19 @@ std::string$0
 endsnippet
 
 snippet c "std::cout"
-std::cout$0
+std::cout << $0
+endsnippet
+
+snippet e "std::endl"
+<< std::endl$0
 endsnippet
 
 snippet npos "std::string::npos"
 std::string::npos$0
 endsnippet
 
-snippet "(^|[^:_])\b(string|cout|cerr|endl|e|size_t|runtime_error|dynamic_pointer_cast|bind|stringstream|function|ostream|make_pair|setw|setfill|hex|transform|swap|sort|make_shared|tie)" "desc" r
-`!p snip.rv = match.group(1)+"std::"+match.group(2)
-if match.group(2) == "e": snip.rv += "ndl"`
+snippet "(^|[^:_])\b(string|cout|cerr|endl|size_t|runtime_error|dynamic_pointer_cast|bind|stringstream|function|ostream|make_pair|setw|setfill|hex|transform|swap|sort|make_shared|tie)" "desc" r
+`!p snip.rv = match.group(1)+"std::"+match.group(2)`
 endsnippet
 
 snippet "([uis])([0-9]+)" "std int types" r
