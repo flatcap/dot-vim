@@ -100,8 +100,8 @@ autocmd BufNewFile,BufRead *.c,*.h,*.cc,*.cpp           set fdm=manual
 
 "autocmd BufRead [0-9][0-9][0-9][0-9][0-9]  source ~/decode/highlight.vim
 
-autocmd BufNewFile *.c    call template#load('c',    8, 1)
-autocmd BufNewFile *.cpp  call template#load('cpp',  6, 1)
+" autocmd BufNewFile *.c    call template#load('c',    8, 1)
+" autocmd BufNewFile *.cpp  call template#load('cpp',  6, 1)
 autocmd BufNewFile *.html call template#load('html', 9, 2)
 autocmd BufNewFile *.sh   call template#load('sh',   3, 1)
 autocmd BufNewFile *.awk  call template#load('awk',  6, 1)
