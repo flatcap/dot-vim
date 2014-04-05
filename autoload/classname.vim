@@ -8,7 +8,7 @@ function! classname#classname()
 	if (suffix == 'h')
 		" Class
 		call cursor(1,1)
-		if (search ('^class\>.*', 'cW', 0, 100) > 0)
+		if (search ('^class\>.*[^;]$', 'cW', 0, 100) > 0)
 			let class = getline('.')
 			let @c = substitute(class, 'class\s\+\(\i\+\).*', '\1', '')
 		else
