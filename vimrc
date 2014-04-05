@@ -4,6 +4,7 @@ filetype off
 set runtimepath+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+" git clone git://github.com/gmarik/Vundle.vim.git bundle/vundle
 Bundle 'gmarik/vundle'
 
 Bundle 'bling/vim-airline.git'
