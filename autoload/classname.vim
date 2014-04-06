@@ -24,6 +24,7 @@ function! classname#classname()
 			let @c = ''
 		endif
 	endif
+	let b:class = @c
 
 	call setpos ('.', cursor_pos)
 endfunction
