@@ -88,6 +88,10 @@ snippet npos "std::string::npos"
 std::string::npos$0
 endsnippet
 
+snippet "\.c" "desc" r
+.c_str()
+endsnippet
+
 snippet "(^|[^:_])\b(string|cout|cerr|endl|size_t|runtime_error|dynamic_pointer_cast|bind|stringstream|function|ostream|make_pair|setw|setfill|hex|transform|swap|sort|make_shared|tie)" "desc" r
 `!p snip.rv = match.group(1)+"std::"+match.group(2)`
 endsnippet
