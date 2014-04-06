@@ -54,7 +54,7 @@ highlight DiffDelete	ctermfg=black		ctermbg=124		cterm=none
 highlight DiffText	ctermfg=black		ctermbg=129		cterm=none
 
 " Keywords common to many languages
-highlight Comment	ctermfg=22					cterm=none
+highlight Comment	ctermfg=77					cterm=none
 highlight String	ctermfg=229
 highlight Todo		ctermfg=22		ctermbg=black		cterm=reverse
 highlight Number	ctermfg=none
