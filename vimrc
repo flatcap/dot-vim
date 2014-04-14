@@ -150,6 +150,7 @@ autocmd BufNew * :set buftype= bufhidden=
 
 "autocmd BufWritePre *.c %s/\s\+$//e
 
-map <F5> :cclose<CR>
-map <F2> :wall<CR>:make .obj/%:r.o<CR>
+nmap <silent> <F5> :cclose<CR>
+nmap <silent> <F2> :wall<CR>:make .obj/%:r.o<CR>
+nmap <silent> <F8> :GundoToggle<CR>
 
