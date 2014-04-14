@@ -80,6 +80,10 @@ snippet c "std::cout"
 std::cout << $0
 endsnippet
 
+snippet ce "std::cout"
+std::cout << $0 << std::endl;
+endsnippet
+
 snippet e "std::endl"
 << std::endl$0
 endsnippet
@@ -126,5 +130,9 @@ endsnippet
 
 snippet "^::?" "this class" r
 `!v b:class`::
+endsnippet
+
+snippet "(std::cout.*)" "this class" r
+`!p snip.rv = match.group(1)` << $0
 endsnippet
 
