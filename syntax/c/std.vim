@@ -20,7 +20,3 @@ highlight work_highlight ctermfg=146
 
 syntax match std_conceal "__\(PRETTY_\)\=FUNCTION__" conceal cchar=ϝ
 
-" map <F9>  :set conceallevel=0<CR>
-" map <F10> :set conceallevel=2<CR>
-
-" set conceallevel=2
