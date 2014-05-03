@@ -115,7 +115,7 @@ function! C_FoldComment(lnum)
 
 	" Examine the next three lines
 	for i in range (a:lnum+1, a:lnum+3)
-		let line = getline (i) 
+		let line = getline (i)
 		if (line =~ '^\s\+\*\/\s*$')
 			" Found */ stop here
 			break
@@ -321,7 +321,9 @@ function! C_FoldLevel2(lnum)
 	let nex5 = getline (a:lnum + 5)	" enough for 6 lines of preamble
 
 	let prev = substitute (prev, '/\*[^*]*\*/', '', '')
-	let prev = substitute (prev, '#\(if\|else\|endif\).*', '', '')
+	if ((prev[0] == '#') && (line[0] != '#'))
+		let prev = substitute (prev, '#\(if\|else\|endif\).*', '', '')
+	endif
 
 	" Ignore one-line C comments
 	if (line =~ '^\s*/\*.*\*/.*$')
@@ -376,9 +378,10 @@ function! C_FoldLevel2(lnum)
 	elseif (line =~ '\*/')
 		let level = 's1'
 
-	elseif ((line[0] == '}') && (next == "") && (nex2 =~ "#endif.*"))
+	elseif ((line[0] == '}') && (next =~ "#endif.*"))
 		let level = '<1'
-	elseif ((prev[0] == '}') && (next !~ "#endif.*"))
+
+	elseif ((prev[0] == '}') && (line == ""))
 		let level = '<1'
 
 	else
