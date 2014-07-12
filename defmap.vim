@@ -92,3 +92,4 @@ source ~/.vim/defmap_file.vim
 
 nmap <silent> <F9> <Plug>SaveNextFile
 
+cmap @ (.*)

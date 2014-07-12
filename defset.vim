@@ -30,7 +30,7 @@ set nohlsearch
 set   ignorecase
 set   incsearch
 set noinfercase
-set   laststatus=2
+set   laststatus=1
 set   lazyredraw
 set nolinebreak
 set   listchars=extends:>,precedes:<,tab:>-,eol:$,trail:X,nbsp:+
