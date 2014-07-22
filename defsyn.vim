@@ -78,3 +78,12 @@ highlight Number	ctermfg=none
 
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
+highlight black   ctermfg=black
+highlight blue    ctermfg=blue
+highlight cyan    ctermfg=cyan
+highlight green   ctermfg=green
+highlight magenta ctermfg=magenta
+highlight red     ctermfg=red
+highlight white   ctermfg=white
+highlight yellow  ctermfg=yellow
+
