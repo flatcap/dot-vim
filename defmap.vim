@@ -83,8 +83,8 @@ nmap <Leader>u :diffupdate<CR>
 nmap <leader>x :w<cr>:!chmod +x %<cr>:e<cr>
 
 " #ifdef 0
-vmap <leader>0 :call ifzero#IfZero()<CR>
-vmap <leader>r :call ifzero#IfRar()<CR>
+vmap <leader>0 :call ifzero#Ifdef()<CR>
+vmap <leader>r :call ifzero#Ifdef('RAR')<CR>
 
 source ~/.vim/defmap_file.vim
 
