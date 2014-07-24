@@ -27,10 +27,10 @@ Bundle 'tpope/vim-surround.git'
 Bundle 'tpope/vim-unimpaired.git'
 Bundle 'vim-scripts/taglist.vim.git'
 
-Bundle 'git:work/vim/deleteto.git'
-Bundle 'git:work/vim/keyword.git'
-Bundle 'git:work/vim/piper.git'
-Bundle 'git:work/vim/save-next-file.git'
+Bundle 'git:vim/deleteto.git'
+Bundle 'git:vim/keyword.git'
+Bundle 'git:vim/piper.git'
+Bundle 'git:vim/save-next-file.git'
 
 filetype plugin indent on
 
