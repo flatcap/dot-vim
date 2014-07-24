@@ -94,3 +94,4 @@ source ~/.vim/defmap_file.vim
 nmap <silent> <F9> <Plug>SaveNextFile
 
 cmap @ (.*)
+nmap <silent> gcr :set commentstring=//RAR%s<cr><Plug>CommentaryLine:set commentstring=//%s<CR>
