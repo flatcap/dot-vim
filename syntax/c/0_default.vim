@@ -107,5 +107,6 @@ highlight rar ctermfg=207
 
 syntax keyword identifier nullptr this delete
 
-syntax match ClassName "^\i\+::" conceal cchar=▶
+syntax match ClassName "^\i\+::" conceal cchar=:
+highlight ClassName ctermfg=240
 
