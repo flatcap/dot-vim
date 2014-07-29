@@ -21,6 +21,9 @@ nmap <silent> <leader>H :silent! vsplit<Bar>call swapfile#SwapFile()<CR>
 nmap <silent> <leader>m :call make#RichMake()<CR>
 nmap <silent> <leader>l :CommandTBuffer<CR>
 
+nmap <silent> <leader>vv :vert split<CR>
+nmap <silent> <leader>vn :vert split<Bar>:next<CR>
+
 nmap <silent> <leader>fc :silent! call function#CommentBlock()<CR>
 nmap <silent> <leader>ff :silent! source ~/.vim/fold/c.vim<CR>
 

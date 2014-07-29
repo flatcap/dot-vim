@@ -1,3 +1,6 @@
+syntax match ClassName "^\i\+::" conceal cchar=:
+highlight ClassName ctermfg=240
+
 syntax match std_conceal   "\vstd::((string|chrono|placeholders)::)?\ze\i+>" conceal
 syntax match std_highlight "\vstd::((string|chrono|placeholders)::)?\i+"     contains=std_conceal
 
