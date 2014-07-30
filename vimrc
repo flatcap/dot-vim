@@ -114,6 +114,7 @@ autocmd BufEnter *.cpp,*.h call classname#classname()
 " good enough for now
 autocmd BufNewFile,BufRead *.js  so ~/.vim/fold/c.vim
 autocmd BufNewFile,BufRead *.awk so ~/.vim/fold/php.vim
+autocmd BufNewFile,BufRead *.vim so ~/.vim/fold/vim.vim
 
 " automatically hide fugitive buffers after use
 autocmd BufReadPost fugitive://* set bufhidden=delete

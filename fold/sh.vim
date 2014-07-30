@@ -69,6 +69,7 @@ function! Sh_FoldText(lnum)
 	endif
 endfunction
 
+
 " Enable folding.
 set foldexpr=Sh_FoldLevel(v:lnum)
 set foldtext=Sh_FoldText(v:foldstart)

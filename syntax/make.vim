@@ -26,6 +26,7 @@ function! Make_FoldText(lnum)
 	return desc
 endfunction
 
+
 " Remove the defaults first.
 highlight Folded     term=none ctermfg=none ctermbg=none
 highlight FoldColumn term=none ctermfg=none ctermbg=none

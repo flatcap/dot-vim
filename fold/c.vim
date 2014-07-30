@@ -170,15 +170,31 @@ function! C_FoldCtor (text)
 
 	if ((ctor == "()") || (ctor == "(void)"))
 		let ctor = "default"
-	elseif (ctor =~ '(const ' . class . '&\s*\i\+).*')
-		let ctor = "copy"
-	elseif (ctor =~ "(" . class . '&&\s*\i\+).*')
+	elseif (ctor =~ "(" . class . '&&\s*\i.*')
 		let ctor = "move"
+	elseif (ctor =~ '(const ' . class . '&\s*\i.*')
+		let ctor = "copy"
 	else
 		let ctor = "other"
 	endif
 
 	return s:prefix_ctor ." (" . ctor . ")"
+endfunction
+
+function! C_FoldOperator (text)
+	let class = substitute (a:text, '::.*', '\1', '')
+	let oper  = substitute (a:text, '^\i\+::\(\S\+\).*', '\1', '')
+	let args  = substitute (a:text, '^[^(]\+', '', '')
+
+	if (args =~ "(" . class . '&&\s*\i.*')
+		let type = "move"
+	elseif (args =~ '(const ' . class . '&\s*\i.*')
+		let type = "copy"
+	else
+		let type = "other"
+	endif
+
+	return oper . " (" . type . ")"
 endfunction
 
 function! C_FoldFunction2(lnum)
@@ -195,11 +211,13 @@ function! C_FoldFunction2(lnum)
 		endif
 
 	endfor
-	if (line =~ '^\i\+::\~*\i\+\s*(.*')
+	if (line =~ '^\i\+::\~*\i\+[=]*\s*(.*')
 		let text = substitute (line, '\s*(.*', '', '')
 
 		if (text =~ '^\C\(.*\)::\1')
 			let text = C_FoldCtor (line)
+		elseif (text =~ '^\C\(.*\)::operator.*')
+			let text = C_FoldOperator (line)
 		elseif (text =~ '^\(.*\)::\~\1')
 			let text = substitute (text, '^\(.*\)::\~\1', s:prefix_dtor, '')
 		else
@@ -280,6 +298,14 @@ function! C_FoldText(lnum)
 		return C_FoldComment (a:lnum)
 	endif
 
+	if ((line =~ '^public:') || (line =~ '^protected:') || (line =~ '^private:'))
+		if (next =~ '^\s\+//.*')
+			return line . substitute (next, '^\s\+//\s*', ' ', '')
+		else
+			return line
+		endif
+	endif
+
 	if (line =~ '^/\*\*$')
 		" Function block
 		let next = substitute (next, '^\s\+\*\s*', '', '')
@@ -289,26 +315,26 @@ function! C_FoldText(lnum)
 
 	return C_FoldFunction2(a:lnum)
 
-	elseif ((line =~ '^/\*\*\=') && (next =~ '^ \* SECTION:.*'))
-		let text = C_FoldSection(a:lnum + 1)
-	elseif ((line =~ '^\s\+/\*\*\=') && (next =~ '^\s\+\* [_a-zA-Z]\+::\=.*'))
-		let text = C_FoldSigProp(a:lnum + 1)
-
-	elseif ((line =~ '^/\*\*.*') && (next =~ '^ \* [~_a-zA-Z]\+.*'))
-		let text = C_FoldFunction(a:lnum + 1)
-	elseif ((line =~ '^/\*\*\=.*') && (next =~ '^ \* [_a-zA-Z]\+.*') && (nex2 =~ '^ \* @[_a-zA-Z]\+.*'))
-		let text = C_FoldFunction(a:lnum + 1)
-	"elseif ((line =~ '^/\*\*\=.*') && (next =~ '^ \* [_a-zA-Z]\+:.*'))
-	"	let text = C_FoldFunction(a:lnum + 1)
-
-	elseif ((line =~ '^template.*') && (nex3 =~ '^{$}'))
-		let text = nex2
-
-	else
-		let text = C_FoldComment(a:lnum)
-	endif
-
-	return text
+"	elseif ((line =~ '^/\*\*\=') && (next =~ '^ \* SECTION:.*'))
+"		let text = C_FoldSection(a:lnum + 1)
+"	elseif ((line =~ '^\s\+/\*\*\=') && (next =~ '^\s\+\* [_a-zA-Z]\+::\=.*'))
+"		let text = C_FoldSigProp(a:lnum + 1)
+"
+"	elseif ((line =~ '^/\*\*.*') && (next =~ '^ \* [~_a-zA-Z]\+.*'))
+"		let text = C_FoldFunction(a:lnum + 1)
+"	elseif ((line =~ '^/\*\*\=.*') && (next =~ '^ \* [_a-zA-Z]\+.*') && (nex2 =~ '^ \* @[_a-zA-Z]\+.*'))
+"		let text = C_FoldFunction(a:lnum + 1)
+"	"elseif ((line =~ '^/\*\*\=.*') && (next =~ '^ \* [_a-zA-Z]\+:.*'))
+"	"	let text = C_FoldFunction(a:lnum + 1)
+"
+"	elseif ((line =~ '^template.*') && (nex3 =~ '^{$}'))
+"		let text = nex2
+"
+"	else
+"		let text = C_FoldComment(a:lnum)
+"	endif
+"
+"	return text
 endfunction
 
 function! C_FoldLevel2(lnum)
@@ -383,6 +409,13 @@ function! C_FoldLevel2(lnum)
 
 	elseif ((prev[0] == '}') && (line == ""))
 		let level = '<1'
+
+	elseif ((line =~ '^public:') || (line =~ '^protected:') || (line =~ '^private:'))
+		let level = 'a1'
+	elseif ((line != '{') && ((next =~ '^public:') || (next =~ '^protected:') || (next =~ '^private:')))
+		let level = 's1'
+	elseif ((v:foldlevel == 3) && (line =~ '^}.*'))
+		let level = 1
 
 	else
 		let level = '='

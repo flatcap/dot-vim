@@ -19,6 +19,7 @@ function! Dosini_FoldText(lnum)
 	return getline (a:lnum)
 endfunction
 
+
 " Enable folding.
 set foldexpr=Dosini_FoldLevel(v:lnum)
 set foldtext=Dosini_FoldText(v:foldstart)

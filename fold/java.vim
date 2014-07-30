@@ -58,6 +58,7 @@ function! Java_FoldText(lnum)
 	return desc
 endfunction
 
+
 " Enable folding.
 set foldexpr=Java_FoldLevel(v:lnum)
 set foldtext=Java_FoldText(v:foldstart)

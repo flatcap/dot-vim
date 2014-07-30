@@ -36,6 +36,7 @@ function! XSL_FoldText(lnum)
 	return line
 endfunction
 
+
 " Enable folding.
 set foldexpr=XSL_FoldLevel(v:lnum)
 set foldtext=XSL_FoldText(v:foldstart)

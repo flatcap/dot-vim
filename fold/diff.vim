@@ -27,6 +27,7 @@ function! Diff_FoldText(lnum)
 	return line
 endfunction
 
+
 " Enable folding.
 set foldexpr=Diff_FoldLevel(v:lnum)
 set foldtext=Diff_FoldText(v:foldstart)

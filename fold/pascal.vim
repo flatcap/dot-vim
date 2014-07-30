@@ -100,6 +100,7 @@ function! Pascal_FoldText(lnum)
 	endif
 endfunction
 
+
 " Enable folding.
 set foldexpr=Pascal_FoldLevel(v:lnum)
 set foldtext=Pascal_FoldText(v:foldstart)

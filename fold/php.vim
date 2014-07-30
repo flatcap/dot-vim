@@ -44,6 +44,7 @@ function! PHP_FoldText(lnum)
 	return desc
 endfunction
 
+
 " Enable folding.
 set foldexpr=PHP_FoldLevel(v:lnum)
 set foldtext=PHP_FoldText(v:foldstart)
