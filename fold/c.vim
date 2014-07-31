@@ -218,6 +218,8 @@ function! C_FoldFunction2(lnum)
 			let text = C_FoldCtor (line)
 		elseif (text =~ '^\C\(.*\)::operator.*')
 			let text = C_FoldOperator (line)
+		elseif (text =~ '^\C\(.*\)::swap')
+			let text = 'swap (member)'
 		elseif (text =~ '^\(.*\)::\~\1')
 			let text = substitute (text, '^\(.*\)::\~\1', s:prefix_dtor, '')
 		else
@@ -226,6 +228,9 @@ function! C_FoldFunction2(lnum)
 		let text = s:function_method . ' ' . text
 	else
 		let text = substitute (line, '\s*(.*', '', '')
+		if (line =~ '^\Cswap\s*(.*')
+			let text .= " (global)"
+		endif
 		if (static)
 			let text = s:function_static . ' ' . text
 		else
