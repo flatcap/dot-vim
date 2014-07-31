@@ -21,7 +21,6 @@ set noequalalways
 set noerrorbells
 set noexrc
 set   fillchars=fold:\ ,vert:│
-set   foldopen=mark,tag,quickfix
 set   formatoptions=tcnoqr
 set   gdefault
 set   hidden

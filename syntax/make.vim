@@ -51,6 +51,4 @@ set foldmethod=expr
 set foldlevel=0
 set foldcolumn=0
 "set foldmethod=manual
-set foldclose=
-set foldopen=mark,tag
 
