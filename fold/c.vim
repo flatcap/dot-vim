@@ -304,10 +304,12 @@ function! C_FoldText(lnum)
 	endif
 
 	if ((line =~ '^public:') || (line =~ '^protected:') || (line =~ '^private:'))
-		if (next =~ '^\s\+//.*')
+		if (line =~ '^\i\+:\s*//.*')
+			return substitute (line, ':.*// *', ': ', '')
+		elseif (next =~ '^\s\+//.*')
 			return line . substitute (next, '^\s\+//\s*', ' ', '')
 		else
-			return line
+			return substitute (line, ':.*', ': ', '')
 		endif
 	endif
 
@@ -419,8 +421,8 @@ function! C_FoldLevel2(lnum)
 		let level = 'a1'
 	elseif ((line != '{') && ((next =~ '^public:') || (next =~ '^protected:') || (next =~ '^private:')))
 		let level = 's1'
-	elseif ((v:foldlevel == 3) && (line =~ '^}.*'))
-		let level = 1
+	elseif ((v:foldlevel == 1) && (line =~ '^};$'))
+		let level = 0
 
 	else
 		let level = '='
