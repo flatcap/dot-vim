@@ -88,7 +88,7 @@ autocmd BufNewFile,BufRead *.xsl                         source ~/.vim/syntax/xs
 autocmd BufNewFile,BufRead *.module,*.php,*.inc,*.theme,*.engine,*.install,*.js source ~/.vim/syntax/php.vim
 autocmd BufNewFile,BufRead *.sql,/tmp/sql*              set syn=mysql
 autocmd BufNewFile,BufRead *.gconf,*.kml,*.gpx          set syn=xml
-autocmd BufNewFile,BufRead *.gv                         set syn=dot
+autocmd BufNewFile,BufRead *.gv                         set syn=dot commentstring=//%s
 autocmd BufNewFile,BufRead *.conf                       set syn=cfg
 autocmd BufNewFile,BufRead *.txt                        setf txt
 autocmd BufNewFile,BufRead *.txt                        set ai nosi ts=8 sw=8 noet
