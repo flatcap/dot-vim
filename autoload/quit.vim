@@ -8,5 +8,9 @@ function! quit#SaveAndClose()
 		execute 'silent update'
 	endif
 	quit!
+
+	if ((winnr("$") == 1) && (&buftype == "quickfix"))
+		quit!
+	endif
 endfunction
 
