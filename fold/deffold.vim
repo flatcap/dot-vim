@@ -36,7 +36,11 @@ endif
 set foldcolumn=0
 "set foldmethod=manual
 set foldclose=
-set foldopen=mark,tag,quickfix,search
+set foldopen=
+set foldopen+=mark
+set foldopen+=tag
+set foldopen+=quickfix
+"set foldopen+=search
 
 " map 0 :set fdl=0<CR>
 " map 1 :set fdl=1<CR>

@@ -76,7 +76,7 @@ set   viminfo=%,'50,:500,@100,/500,n~/.vim/viminfo
 set novisualbell
 set nowarn
 set   whichwrap=b,s,[,],<,>,~
-set   wildignore=*.o,dparted,main,tags,Makefile
+set   wildignore=*.o,dparted,main,tags
 set nowildignorecase
 set nowildmenu
 set   wildmode=list:full
