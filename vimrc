@@ -110,6 +110,7 @@ autocmd BufNewFile *.sh   call template#load('sh',   3, 1)
 autocmd BufNewFile *.awk  call template#load('awk',  6, 1)
 
 autocmd BufEnter *.cpp,*.h call classname#classname()
+autocmd BufEnter * call vimlocal#Load()
 
 " good enough for now
 autocmd BufNewFile,BufRead *.js  so ~/.vim/fold/c.vim
