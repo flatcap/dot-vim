@@ -6,15 +6,15 @@ if ($QV == 1)
 	finish
 endif
 
-let s:function = '●'
+let s:function = '      ●'
 
 function! Dot_FoldText(lnum)
 	let line = getline (a:lnum)
 
 	if (line =~ '.*[$')
-		let line = substitute (line, '^\t\(\i\+\) [$', '\1', '')
+		let line = substitute (line, '^\s\+\(\i\+\) [$', '\1', '')
 	elseif (line =~ '\tsubgraph.*')
-		let line = substitute (line, '^\t\i\+ \(\i\+\) {$', '\1', '')
+		let line = substitute (line, '^\s\+\S\+ \+\(\i\+\) {$', '\1', '')
 	endif
 
 	return s:function . ' ' . line
