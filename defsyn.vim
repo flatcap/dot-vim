@@ -19,7 +19,7 @@ highlight CursorColumn	ctermfg=white		ctermbg=22		cterm=none
 highlight CursorLine	ctermfg=white		ctermbg=22		cterm=none
 highlight Directory	ctermfg=darkcyan	ctermbg=black
 highlight ErrorMsg	ctermfg=black		ctermbg=red		cterm=none
-highlight Folded	ctermfg=22		ctermbg=none		cterm=none
+highlight Folded	ctermfg=green		ctermbg=none		cterm=none
 highlight IncSearch	ctermfg=black		ctermbg=red		cterm=none
 highlight LineNr	ctermfg=239		ctermbg=none
 highlight MatchParen	ctermfg=white		ctermbg=darkblue
