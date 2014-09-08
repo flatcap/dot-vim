@@ -136,3 +136,7 @@ snippet "(std::cout.*)" "this class" r
 `!p snip.rv = match.group(1)` << $0
 endsnippet
 
+snippet "\b(code|debug|info|error|ctor|dtor|listener)" "dparted loggging" r
+`!p snip.rv = "log_"+match.group(1)+" ("`"$1"$2);$0
+endsnippet
+
