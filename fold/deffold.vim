@@ -1,16 +1,16 @@
 " Common to all folded files
 
 " Remove the defaults first.
-highlight Folded     term=none ctermfg=none ctermbg=none
-highlight FoldColumn term=none ctermfg=none ctermbg=none
+" highlight Folded     term=none ctermfg=none ctermbg=none
+" highlight FoldColumn term=none ctermfg=none ctermbg=none
 
 " Add some custom colours.
-"highlight Folded     term=none ctermfg=green ctermbg=darkgrey
-"highlight FoldColumn term=none ctermfg=black  ctermbg=darkgrey
+" highlight Folded     term=none ctermfg=green ctermbg=darkgrey
+" highlight FoldColumn term=none ctermfg=black ctermbg=darkgrey
 
 " Or leave the folds comment coloured.
-highlight link Folded     Comment
-highlight link FoldColumn Comment
+" highlight link Folded     Comment
+" highlight link FoldColumn Comment
 
 " Enable folding.
 set foldmethod=expr

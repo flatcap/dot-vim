@@ -34,6 +34,8 @@ Bundle 'git:vim/save-next-file.git'
 
 filetype plugin indent on
 
+syntax on
+
 let mapleader=','
 
 let g:Tlist_Use_Right_Window=1
@@ -77,8 +79,7 @@ let g:c_space_errors=1
 "let g:c_comment_strings=1
 
 autocmd BufNewFile,BufRead *                             set fdm=manual
-autocmd BufNewFile,BufRead *.c,*.h,*.cc,*.cpp,*.ccg,*.hg set syn=c commentstring=//%s
-autocmd BufNewFile,BufRead *.c,*.h,*.cc,*.cpp,*.ccg,*.hg source ~/.vim/syntax/c/0_default.vim
+autocmd BufNewFile,BufRead *.c,*.h,*.cc,*.cpp,*.ccg,*.hg source ~/.vim/fold/c.vim
 autocmd BufNewFile,BufRead *.pas,*.dpr                   source ~/.vim/syntax/pascal.vim
 autocmd BufNewFile,BufRead *.html,*css                   source ~/.vim/syntax/html.vim
 autocmd BufNewFile,BufRead *.java                        source ~/.vim/syntax/java.vim
@@ -99,8 +100,6 @@ autocmd BufReadPost *.kmz,*.map %!unzip -p % | tidy -q -xml | unexpand -t8
 autocmd BufReadPost *.kmz,*.map set syn=xml
 
 autocmd BufNewFile,BufRead *.{automount,device,mount,path,service,socket,swap,target,timer,unit} set syn=dosini
-
-autocmd BufNewFile,BufRead *.c,*.h,*.cc,*.cpp           set fdm=manual
 
 "autocmd BufRead [0-9][0-9][0-9][0-9][0-9]  source ~/decode/highlight.vim
 

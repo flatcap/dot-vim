@@ -1,5 +1,3 @@
-syntax on
-
 " Colours used below
 "	12 - darkblue
 "	18 - very dark blue

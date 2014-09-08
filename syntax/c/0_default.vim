@@ -1,3 +1,4 @@
+source /usr/share/vim/vim74/syntax/cpp.vim
 source ~/.vim/fold/c.vim
 
 set noexpandtab
@@ -37,6 +38,7 @@ set path+=/usr/lib64/pangomm-1.4/include
 set path+=/usr/lib64/sigc++-2.0/include
 
 set suffixesadd=.h
+set commentstring=//%s
 
 set cindent
 "set cinoptions={.5s,:.5s,+.5s,t0,g0,^-2,e-2,n-2,p2s,(0,=.5s
@@ -104,6 +106,4 @@ highlight attrpack ctermfg=black
 
 syntax match rar "// *RAR.*"
 highlight rar ctermfg=207
-
-syntax keyword identifier nullptr this delete
 
