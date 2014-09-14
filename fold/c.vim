@@ -379,7 +379,7 @@ function! C_FoldLevel2(lnum)
 
 	" Very specific comment blocks
 	elseif (line =~ '^/\* Copyright.*')
-		let level = '>3'
+		let level = '>4'
 
 	elseif (line =~ '^/\*\*$')
 		let level = '>2'

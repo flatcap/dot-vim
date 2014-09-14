@@ -58,7 +58,7 @@ highlight Todo		ctermfg=22		ctermbg=black		cterm=reverse
 highlight Number	ctermfg=none
 
 " highlight Type		ctermfg=red  cterm=reverse
-" highlight Statement	ctermfg=blue cterm=reverse
+highlight Statement	ctermfg=cyan cterm=none
 "highlight Type		ctermfg=123
 "highlight Statement	ctermfg=123
 " highlight Type		ctermfg=123

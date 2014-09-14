@@ -52,6 +52,7 @@ highlight link cSpecial          cString
 highlight link cSpecialCharacter cString
 highlight link cCharacter        cString
 
+highlight Constant           ctermfg=123
 highlight cConstant          ctermfg=123
 highlight cppStatement       ctermfg=123
 highlight cRepeat            ctermfg=123
