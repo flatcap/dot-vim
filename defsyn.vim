@@ -29,7 +29,7 @@ highlight SignColumn	ctermfg=70		ctermbg=black		cterm=none
 highlight SpecialKey	ctermfg=darkcyan
 highlight StatusLine	ctermfg=42		ctermbg=none		cterm=none
 highlight StatusLineNC	ctermfg=black		ctermbg=none		cterm=none
-highlight VertSplit	ctermfg=black		ctermbg=none		cterm=none
+highlight VertSplit	ctermfg=237		ctermbg=none		cterm=none
 highlight Visual	ctermfg=black		ctermbg=white		cterm=none
 highlight WarningMsg	ctermfg=black		ctermbg=yellow		cterm=none
 
