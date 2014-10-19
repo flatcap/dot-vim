@@ -93,6 +93,7 @@ autocmd BufNewFile,BufRead *.gv                         set ft=dot
 autocmd BufNewFile,BufRead *.conf                       set syn=cfg
 autocmd BufNewFile,BufRead *.txt                        setf txt
 autocmd BufNewFile,BufRead *.txt                        set ai nosi ts=8 sw=8 noet
+autocmd BufNewFile,BufRead .extra                       set syn=sh
 " autocmd BufNewFile,BufRead .vimlocal                    setf vim
 
 autocmd BufReadPre  *.kmz,*.map let &bin=1
