@@ -14,6 +14,7 @@ set   backup
 set   backupcopy=yes
 set   backupdir=~/.vim/backup
 set   clipboard=unnamed,unnamedplus
+set   commentstring=#%s
 set   cpoptions=aABceFMns
 set   diffopt=filler,vertical
 set   directory=~/.vim/swap
