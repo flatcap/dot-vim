@@ -3,8 +3,8 @@
 " Switch between c/cc/cpp and h/hpp files
 
 function! swapfile#SwapFile()
-	let src = [ 'c', 'cpp', 'cc' ]
-	let hdr = [ 'h', 'hpp' ]
+	let src = [ 'c', 'cpp', 'cc', 'html' ]
+	let hdr = [ 'h', 'hpp', 'js' ]
 
 	let stem   = expand ("%:r")
 	let suffix = expand ("%:e")
