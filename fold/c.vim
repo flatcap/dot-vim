@@ -414,15 +414,15 @@ function! C_FoldLevel2(lnum)
 	elseif ((line[0] == '}') && (next =~ "#endif.*"))
 		let level = '<1'
 
-	elseif ((prev[0] == '}') && (line == ""))
+	elseif ((prev =~ '^}') && (line == ""))
 		let level = '<1'
 
 	elseif ((line =~ '^public:') || (line =~ '^protected:') || (line =~ '^private:'))
 		let level = 'a1'
 	elseif ((line != '{') && ((next =~ '^public:') || (next =~ '^protected:') || (next =~ '^private:')))
 		let level = 's1'
-	elseif ((v:foldlevel == 1) && (line =~ '^};$'))
-		let level = 0
+	" elseif ((v:foldlevel == 1) && (line =~ '^};$'))
+	" 	let level = 0
 
 	else
 		let level = '='
