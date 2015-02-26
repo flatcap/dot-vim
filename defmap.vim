@@ -100,3 +100,6 @@ nmap <silent> <F9> <Plug>SaveNextFile
 
 cmap @ (.*)
 nmap <silent> gcr :set commentstring=//RAR%s<cr><Plug>CommentaryLine:set commentstring=//%s<CR>
+
+map <silent> <leader>t :S/{true,false}/{false,true}/w<CR>
+
