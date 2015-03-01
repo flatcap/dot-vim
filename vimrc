@@ -110,6 +110,7 @@ autocmd BufNewFile,BufRead *.{automount,device,mount,path,service,socket,swap,ta
 autocmd BufNewFile *.html call template#load('html', 9, 2)
 autocmd BufNewFile *.sh   call template#load('sh',   3, 1)
 autocmd BufNewFile *.awk  call template#load('awk',  6, 1)
+autocmd BufNewFile *.pl   call template#load('pl',  10, 1)
 
 autocmd BufEnter *.cpp,*.h call classname#classname()
 autocmd BufEnter * call vimlocal#Load()
