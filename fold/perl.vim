@@ -2,7 +2,9 @@
 
 source ~/.vim/fold/deffold.vim
 
-let s:function = '▶'
+let s:function   = '▶'
+let s:show_args  = 0
+let s:show_lines = 0
 
 function! Perl_FoldText(lnum)
 	let line = getline (a:lnum)
@@ -15,19 +17,32 @@ function! Perl_FoldText(lnum)
 
 	let fn = substitute (line, 'sub \+\(\i\+\)\( *{\)*', '\1', '')
 
-	if (next =~ '^{$')
-		let args = nex2
-	else
-		let args = next
-	endif
-	if (args =~ 'my .* @_;')
-		let args = substitute (args, '\s\+my \+\(([^)]\+)\) *= *@_;', '\1', '')
-		let args = substitute (args, '\$', '', 'g')
-	else
-		let args = ''
+	let args = ''
+	if (s:show_args)
+		if (next =~ '^{$')
+			let args = nex2
+		else
+			let args = next
+		endif
+
+		if (args =~ 'my .* @_;')
+			let args = substitute (args, '\s\+my \+\(([^)]\+)\) *= *@_;', '\1', '')
+			let args = substitute (args, '\$', '', 'g')
+		else
+			let args = ''
+		endif
+		let args = ' ' . args
 	endif
 
-	return s:function . ' ' . fn . ' ' . args
+	let fn = s:function . ' ' . fn
+	let fn = fn . args
+
+	if (s:show_lines)
+		let lines = v:foldend - v:foldstart - 1
+		let fn = fn . ' : ' . lines
+	endif
+
+	return fn
 
 endfunction
 
