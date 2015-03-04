@@ -16,8 +16,12 @@ function! Perl_FoldText(lnum)
 	else
 		let args = next
 	endif
-	let args = substitute (args, '\s\+my \+\(([^)]\+)\) *= *@_;', '\1', '')
-	let args = substitute (args, '\$', '', 'g')
+	if (args =~ 'my .* @_;')
+		let args = substitute (args, '\s\+my \+\(([^)]\+)\) *= *@_;', '\1', '')
+		let args = substitute (args, '\$', '', 'g')
+	else
+		let args = ''
+	endif
 
 	return s:function . ' ' . fn . ' ' . args
 
