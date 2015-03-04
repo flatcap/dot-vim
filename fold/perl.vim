@@ -9,6 +9,10 @@ function! Perl_FoldText(lnum)
 	let next = getline (a:lnum + 1)
 	let nex2 = getline (a:lnum + 2)
 
+	if (line =~ '#!.*')
+		return line
+	endif
+
 	let fn = substitute (line, 'sub \+\(\i\+\)\( *{\)*', '\1', '')
 
 	if (next =~ '^{$')
@@ -30,11 +34,16 @@ endfunction
 function! Perl_FoldLevel(lnum)
 	let prev = getline (a:lnum - 1)
 	let line = getline (a:lnum)
+	let next = getline (a:lnum + 1)
 
 	if (line =~ '^sub .*')
 		let level = 'a1'
 	elseif ((prev =~ '^}') && (line == ""))
 		let level = '<1'
+	elseif (a:lnum == 1)
+		let level = 'a1'
+	elseif ((line =~ '^$') && (next =~ '^sub '))
+		let level = '0'
 	else
 		let level = '='
 	endif
