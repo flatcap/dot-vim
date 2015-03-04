@@ -80,7 +80,7 @@ let g:c_space_errors=1
 
 autocmd BufNewFile,BufRead *                             set fdm=manual
 autocmd BufNewFile,BufRead *.c,*.h,*.cc,*.cpp,*.ccg,*.hg source ~/.vim/fold/c.vim
-autocmd BufNewFile,BufRead *.pl                          source ~/.vim/fold/perl.vim
+autocmd BufNewFile,BufRead *.pl,*.pm                     source ~/.vim/fold/perl.vim
 autocmd BufNewFile,BufRead *.pas,*.dpr                   source ~/.vim/syntax/pascal.vim
 autocmd BufNewFile,BufRead *.html,*css                   source ~/.vim/syntax/html.vim
 autocmd BufNewFile,BufRead *.java                        source ~/.vim/syntax/java.vim
