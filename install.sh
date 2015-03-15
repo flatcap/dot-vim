@@ -1,9 +1,13 @@
 #!/bin/bash
 
-#ln all the files into their correct places
+# link the files into their correct places
 
+BASE=${0%/*}
+cd "$BASE"
+
+DIR=$(pwd)
 cd
 
-[ -L .vim   ] || ln -sf shell/vim       .vim
-[ -L .vimrc ] || ln -sf shell/vim/vimrc .vimrc
+[ -L .vim   ] || ln -sf "$DIR"       .vim
+[ -L .vimrc ] || ln -sf "$DIR/vimrc" .vimrc
 
