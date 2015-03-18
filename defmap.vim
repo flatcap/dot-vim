@@ -33,14 +33,21 @@ nmap <silent> <leader>ff :silent! source ~/.vim/fold/c.vim<CR>
 nnoremap <C-W>] :vsplit<CR><C-]>zv
 
 nmap <silent> <F1>      :let &conceallevel=2-&conceallevel<CR>
-nmap <silent> <F2>	:make .obj/%:r.o<CR>
-nmap <silent> <F3>	:let &laststatus = 2-&laststatus<CR>
-nmap          <F4>	:call tagsrotate#TagsRotate()<CR>
-nmap          <F6>	zmzv
-nmap          <F7>	zr
-nmap <silent> <F10>	:cnext<CR>zvzz
-nmap <silent> <F11>	:cc<CR>zvzz
-nmap <silent> <F12>	:cwindow 5<CR>
+nmap <silent> <F2>      :wall<CR>:make .obj/%:r.o<CR>
+nmap <silent> <F3>      :let &laststatus = 2-&laststatus<CR>
+nmap          <F4>      :call tagsrotate#TagsRotate()<CR>
+nmap          <F5>      <Plug>Keyword_Toggle
+nmap          <F6>      zmzv
+nmap          <F7>      zr
+nmap <silent> <F8>      :GundoToggle<CR>
+nmap <silent> <F9>      <Plug>SaveNextFile
+nmap <silent> <F10>     :cnext<CR>zvzz
+nmap <silent> <F11>     :cc<CR>zvzz
+nmap <silent> <F12>     :cwindow 5<CR>
+
+" nmap <silent> <F5> :cclose<CR>
+
+let g:keyword_highlight="ctermfg=207 ctermbg=none"
 
 " Shift-F1-F4 are a bit wonky
 " S-F5: create some temp space
@@ -78,14 +85,14 @@ imap kj <esc>
 cmap kj <esc>
 
 " Only mapping
-nmap <silent> <Leader>o :only<CR>:set ls=1<CR>
-nmap <silent> <Leader>O :only<CR>:tabonly<CR>:set ls=1<CR>
+nmap <silent> <Leader>o :only<CR>:set laststatus=1<CR>
+nmap <silent> <Leader>O :only<CR>:tabonly<CR>:set laststatus=1<CR>
 
 " Update diff markings
 nmap <Leader>u :diffupdate<CR>
 
-" Make the current file executable
-nmap <leader>x :w<cr>:!chmod +x %<cr>:e<cr>
+" Make the current file executable (:edit ensures syntax highlighting)
+nmap <leader>x :update<cr>:!chmod +x %<cr>:edit<cr>
 
 " #ifdef 0
 vmap <leader>0 :call ifzero#Ifdef()<CR>
@@ -95,8 +102,6 @@ source ~/.vim/defmap_file.vim
 
 " Select all
 "nmap <C-A> ggVG
-
-nmap <silent> <F9> <Plug>SaveNextFile
 
 cmap @ (.*)
 nmap <silent> gcr :set commentstring=//RAR%s<cr><Plug>CommentaryLine:set commentstring=//%s<CR>

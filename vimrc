@@ -156,10 +156,3 @@ autocmd BufNew * :set buftype= bufhidden=
 
 "autocmd BufWritePre *.c %s/\s\+$//e
 
-nmap <silent> <F5> :cclose<CR>
-nmap <silent> <F2> :wall<CR>:make .obj/%:r.o<CR>
-nmap <silent> <F8> :GundoToggle<CR>
-
-let g:keyword_highlight="ctermfg=207 ctermbg=none"
-map <F3> <plug>Keyword_Toggle
-
