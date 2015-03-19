@@ -6,8 +6,8 @@ cmap <C-B> <S-Left>
 cmap <C-F> <S-Right>
 
 " Tab between windows
-"nmap <Tab> <C-W><C-W>
-nmap <silent> <Tab> :call tab#TabSkip()<CR>
+nmap <silent> <Tab>   :call tab#TabSkip(1)<CR>
+nmap <silent> <S-Tab> :call tab#TabSkip(0)<CR>
 
 " Quit, now
 nmap <silent> Q :call quit#SaveAndClose()<CR>
