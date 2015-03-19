@@ -156,3 +156,5 @@ autocmd BufNew * :set buftype= bufhidden=
 
 "autocmd BufWritePre *.c %s/\s\+$//e
 
+source ~/.vim/tabmap.vim
+
