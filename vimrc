@@ -31,6 +31,7 @@ Bundle 'flatcap/vim-deleteto.git'
 Bundle 'flatcap/vim-keyword.git'
 Bundle 'flatcap/vim-piper.git'
 Bundle 'flatcap/vim-save-next-file.git'
+Bundle 'flatcap/vim-tabby.git'
 
 filetype plugin indent on
 
