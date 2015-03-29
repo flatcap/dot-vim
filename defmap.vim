@@ -34,7 +34,7 @@ nnoremap <C-W>] :vsplit<CR><C-]>zv
 
 nmap <silent> <F1>      :let &conceallevel=2-&conceallevel<CR>
 nmap <silent> <F2>      :wall<CR>:make .obj/%:r.o<CR>
-nmap <silent> <F3>      :let &laststatus = 2-&laststatus<CR>
+nmap <silent> <F3>      :let &laststatus = (&laststatus+1)%3<CR>
 nmap          <F4>      :call tagsrotate#TagsRotate()<CR>
 nmap          <F5>      <Plug>Keyword_Toggle
 nmap          <F6>      zmzv
@@ -44,6 +44,8 @@ nmap <silent> <F9>      <Plug>SaveNextFile
 nmap <silent> <F10>     :cnext<CR>zvzz
 nmap <silent> <F11>     :cc<CR>zvzz
 nmap <silent> <F12>     :cwindow 5<CR>
+
+nnoremap <F6> :let @k = Keyword_Export()<CR>
 
 " nmap <silent> <F5> :cclose<CR>
 

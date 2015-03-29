@@ -64,6 +64,8 @@ let g:zipPlugin_ext = '*.zip,*.jar,*.xpi,*.ja,*.war,*.ear,*.celzip,*.oxt,*.kmz,*
 
 let g:gundo_preview_bottom = 1
 
+let g:netrw_banner=0
+
 set conceallevel=2
 set concealcursor=ncv
 highlight conceal ctermfg=red ctermbg=none
@@ -97,7 +99,7 @@ autocmd BufNewFile,BufRead *.txt                        setf txt
 autocmd BufNewFile,BufRead *.txt                        set ai nosi ts=8 sw=8 noet
 autocmd BufNewFile,BufRead .extra                       set syn=sh
 autocmd BufNewFile,BufRead *.geojson,*.jsonp            set syn=javascript
-" autocmd BufNewFile,BufRead .vimlocal                    setf vim
+autocmd BufNewFile,BufRead .vimlocal                    setf vim
 
 autocmd BufReadPre  *.kmz,*.map let &bin=1
 autocmd BufReadPost *.kmz,*.map %!unzip -p % | tidy -q -xml | unexpand -t8
