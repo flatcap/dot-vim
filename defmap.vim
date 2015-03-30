@@ -34,7 +34,7 @@ nnoremap <C-W>] :vsplit<CR><C-]>zv
 
 nmap <silent> <F1>      :let &conceallevel=2-&conceallevel<CR>
 nmap <silent> <F2>      :wall<CR>:make .obj/%:r.o<CR>
-nmap <silent> <F3>      :let &laststatus = (&laststatus+1)%3<CR>
+nmap <silent> <F3>      :let &laststatus = (&laststatus+1)%3<CR>:set laststatus?<CR>
 nmap          <F4>      :call tagsrotate#TagsRotate()<CR>
 nmap          <F5>      <Plug>Keyword_Toggle
 nmap          <F6>      zmzv
