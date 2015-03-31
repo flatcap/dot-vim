@@ -45,8 +45,6 @@ nmap <silent> <F10>     :cnext<CR>zvzz
 nmap <silent> <F11>     :cc<CR>zvzz
 nmap <silent> <F12>     :cwindow 5<CR>
 
-nnoremap <F6> :let @k = Keyword_Export()<CR>
-
 " nmap <silent> <F5> :cclose<CR>
 
 let g:keyword_highlight="ctermfg=207 ctermbg=none"
@@ -59,6 +57,7 @@ nmap <silent> <S-F5>		:vnew<CR>:set buftype=nofile bufhidden=delete<CR>:setlocal
 nmap          <S-F6>		:tabs<CR>
 nmap          <S-F7>		:tabclose<CR>
 nmap          <S-F8>		:tabnew<Space>
+nmap          <S-F9>            :let @k = Keyword_Export()<CR>
 
 " C-Up/Down Scroll Window
 nmap <Esc>[1;5A <C-Y>
