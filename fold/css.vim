@@ -20,7 +20,9 @@ function! Css_FoldLevel(lnum)
 
 	if (line =~ '\s*{\s*$')
 		return 'a1'
-	elseif (prev =~ '^}$')
+	elseif ((prev =~ '^}$') && (line == ''))
+		return 's1'
+	elseif (line =~ '^}$')
 		return 's1'
 	else
 		return '='
