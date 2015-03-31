@@ -86,6 +86,7 @@ autocmd BufNewFile,BufRead *.c,*.h,*.cc,*.cpp,*.ccg,*.hg source ~/.vim/fold/c.vi
 autocmd BufNewFile,BufRead *.pl,*.pm                     source ~/.vim/fold/perl.vim
 autocmd BufNewFile,BufRead *.pas,*.dpr                   source ~/.vim/syntax/pascal.vim
 autocmd BufNewFile,BufRead *.html,*css                   source ~/.vim/syntax/html.vim
+autocmd BufNewFile,BufRead *css                          source ~/.vim/fold/css.vim
 autocmd BufNewFile,BufRead *.java                        source ~/.vim/syntax/java.vim
 autocmd BufNewFile,BufRead *.vim                         source ~/.vim/syntax/vim.vim
 autocmd BufNewFile,BufRead *.dcf,pharos                  source ~/.vim/syntax/dcf.vim
