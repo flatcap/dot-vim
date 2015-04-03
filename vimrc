@@ -86,7 +86,7 @@ autocmd BufNewFile,BufRead *.c,*.h,*.cc,*.cpp,*.ccg,*.hg source ~/.vim/fold/c.vi
 autocmd BufNewFile,BufRead *.pl,*.pm                     source ~/.vim/fold/perl.vim
 autocmd BufNewFile,BufRead *.pas,*.dpr                   source ~/.vim/syntax/pascal.vim
 autocmd BufNewFile,BufRead *.html,*css                   source ~/.vim/syntax/html.vim
-autocmd BufNewFile,BufRead *css                          source ~/.vim/fold/css.vim
+autocmd BufNewFile,BufRead *.css                         source ~/.vim/fold/css.vim
 autocmd BufNewFile,BufRead *.java                        source ~/.vim/syntax/java.vim
 autocmd BufNewFile,BufRead *.vim                         source ~/.vim/syntax/vim.vim
 autocmd BufNewFile,BufRead *.dcf,pharos                  source ~/.vim/syntax/dcf.vim
@@ -130,7 +130,7 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " If there's an error in my STL use, there's little point staring at the source
 autocmd BufRead /usr/include/* set foldlevel=4
-autocmd BufRead /usr/include/c++/4.8.2/*  set syntax=c bufhidden=delete
+autocmd BufRead /usr/include/c++/4.9.2/*  set syntax=c bufhidden=delete
 autocmd BufRead /usr/include/sigc++-2.0/* set syntax=c bufhidden=delete
 
 "autocmd BufReadPost *.h set bufhidden=delete autowriteall
