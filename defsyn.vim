@@ -15,7 +15,7 @@
 " Vim basics
 highlight CursorColumn	ctermfg=white		ctermbg=22		cterm=none
 highlight CursorLine	ctermfg=white		ctermbg=22		cterm=none
-highlight Directory	ctermfg=darkcyan	ctermbg=black
+highlight Directory	ctermfg=yellow		ctermbg=none
 highlight ErrorMsg	ctermfg=black		ctermbg=red		cterm=none
 highlight Folded	ctermfg=green		ctermbg=none		cterm=none
 highlight IncSearch	ctermfg=black		ctermbg=red		cterm=none
@@ -25,7 +25,7 @@ highlight ModeMsg	ctermfg=grey					cterm=none
 highlight MoreMsg	ctermfg=green					cterm=none
 highlight NonText	ctermfg=darkgrey	ctermbg=none
 highlight Search	ctermfg=black		ctermbg=yellow		cterm=none
-highlight SignColumn	ctermfg=70		ctermbg=black		cterm=none
+highlight SignColumn	ctermfg=70		ctermbg=none		cterm=none
 highlight SpecialKey	ctermfg=darkcyan
 highlight StatusLine	ctermfg=42		ctermbg=none		cterm=none
 highlight StatusLineNC	ctermfg=black		ctermbg=none		cterm=none
@@ -54,7 +54,7 @@ highlight DiffText	ctermfg=black		ctermbg=129		cterm=none
 " Keywords common to many languages
 highlight Comment	ctermfg=77					cterm=none
 highlight String	ctermfg=229
-highlight Todo		ctermfg=22		ctermbg=black		cterm=reverse
+highlight Todo		ctermfg=22		ctermbg=none		cterm=reverse
 highlight Number	ctermfg=none
 
 " highlight Type		ctermfg=red  cterm=reverse
