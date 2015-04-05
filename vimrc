@@ -67,15 +67,6 @@ let g:gundo_preview_bottom = 1
 
 let g:netrw_banner=0
 
-let icons_path = '~/.vim/bundle/flagit/signs/tango/'
-let g:Fi_Flags = {
-	\ 'arrow' :    [icons_path.'16.png', '→ ', 1, 'texthl=Title'],
-	\ 'error' :    [icons_path.'4.png',  '⇒ ', 1, 'texthl=ErrorMsg linehl=ErrorMsg'],
-	\ 'function' : [icons_path.'17.png', '⊙ ', 0, 'texthl=Comment'],
-	\ 'warning' :  [icons_path.'8.png',  '▶ ', 0, 'texthl=WarningMsg'],
-	\ 'step' :     [icons_path.'5.png',  '○ ', 0, '']
-\ }
-
 let g:Fi_OnlyText = 1
 let g:Fi_ShowMenu = 0
 
@@ -83,6 +74,7 @@ set conceallevel=2
 set concealcursor=ncv
 highlight conceal ctermfg=red ctermbg=none
 
+source ~/.vim/flagit.vim
 source ~/.vim/defset.vim
 source ~/.vim/defmap.vim
 source ~/.vim/defsyn.vim
