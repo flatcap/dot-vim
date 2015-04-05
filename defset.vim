@@ -67,7 +67,7 @@ set   tagrelative
 set   tags=tags
 set   terse
 set   textwidth=0
-set   timeout=500
+set   timeoutlen=500
 set   title
 set   titleold=
 set   titlestring=vi\ %f\ %m%r
