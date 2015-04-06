@@ -4,7 +4,7 @@ let g:Fi_Flags = {
 	\ 'arrow' :    ['', '→ ', 1, 'texthl=Title'],
 	\ 'error' :    ['', '⇒ ', 1, 'texthl=ErrorMsg linehl=ErrorMsg'],
 	\ 'function' : ['', '⊙ ', 0, 'texthl=Comment'],
-	\ 'warning' :  ['', '▶ ', 0, 'texthl=WarningMsg'],
+	\ 'warning' :  ['', '▶ ', 0, 'texthl=WarningMsg linehl=WarningMsg'],
 	\ 'step' :     ['', '○ ', 0, '']
 \ }
 
