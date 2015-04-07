@@ -113,3 +113,6 @@ map <silent> <leader>jt :%!json_reformat<BAR>unexpand -t4 --first-only<CR>
 map <silent> <leader>jm :%!json_reformat -m<CR>
 map <silent> <leader>xt :%!tidy -quiet -xml<CR>
 
+nnoremap j gj
+nnoremap k gk
+
