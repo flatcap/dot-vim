@@ -24,7 +24,7 @@ set noequalalways
 set noerrorbells
 set noexrc
 set   fillchars=fold:\ ,vert:│
-set   formatoptions=tcnoqr
+set   formatoptions=tcjnoqr
 set   gdefault
 set   hidden
 set   history=500
