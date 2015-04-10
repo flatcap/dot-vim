@@ -120,3 +120,37 @@ nnoremap k gk
 nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
 imap <C-l> :nohlsearch<CR>
 
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+map <up> <nop>
+
+" Faster viewport scrolling (3 lines at a time)
+nnoremap <C-e> 3<C-e>
+nnoremap <C-y> 3<C-y>
+vnoremap <C-e> 3<C-e>
+vnoremap <C-y> 3<C-y>
+
+" Make `Y` work from the cursor to the end of line (which is more logical)
+nnoremap Y y$
+
+nnoremap <leader>ts2 :set tabstop=2 shiftwidth=2 noexpandtab<CR>
+nnoremap <leader>ts4 :set tabstop=4 shiftwidth=4 noexpandtab<CR>
+nnoremap <leader>ts8 :set tabstop=8 shiftwidth=8 noexpandtab<CR>
+
+" repeat last substitute (including the flags)
+nnoremap & :&&<CR>
+vnoremap & :&&<CR>
+
+" Alt-{hjkl} navigate between windows
+nnoremap h h
+nnoremap j j
+nnoremap k k
+nnoremap l l
+
+" Alt-{HJKL} navigate between tabs
+nnoremap H :tabNext<cr>
+nnoremap J :tablast<cr>
+nnoremap K :tabfirst<cr>
+nnoremap L :tabnext<cr>
+

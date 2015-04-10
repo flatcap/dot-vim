@@ -22,9 +22,10 @@ set   diffopt=filler,vertical
 set   directory=~/.vim/swap//
 set noequalalways
 set noerrorbells
+set noesckeys
 set noexrc
 set   fillchars=fold:\ ,vert:│
-set   formatoptions=tcjnoqr
+set   formatoptions=cjnoqrt
 set   gdefault
 set   hidden
 set   history=500
@@ -35,12 +36,13 @@ set noinfercase
 set   laststatus=1
 set   lazyredraw
 set nolinebreak
-set   listchars=extends:>,precedes:<,tab:>-,eol:$,trail:X,nbsp:+
+set   listchars=extends:▶,precedes:◀,tab:▷∙,eol:↵,trail:∙,nbsp:△
 set   magic
 set nomore
 set   mouse=nvr
 set   nrformats+=alpha
 set   nrformats-=octal
+set   report=0
 set noruler
 set   scrolloff=0
 set   sessionoptions=buffers,curdir,folds,options,tabpages,winsize
@@ -67,16 +69,21 @@ set   tagrelative
 set   tags=tags
 set   terse
 set   textwidth=0
+set   timeout
 set   timeoutlen=500
+set   ttimeout
+set   ttimeoutlen=50
 set   title
 set   titleold=
 set   titlestring=vi\ %f\ %m%r
 set   t_Co=256
 set   t_vb=
+set   ttyfast
 set   undofile
 set   undodir=~/.vim/undo//
 set   viewdir=~/.vim/view//
 set   viminfo=%,'50,:500,@100,/500,n~/.vim/viminfo
+set   virtualedit+=block
 set novisualbell
 set nowarn
 set   whichwrap=b,s,[,],<,>,~
