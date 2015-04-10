@@ -73,6 +73,8 @@ let g:netrw_banner=0
 let g:Fi_OnlyText = 1
 let g:Fi_ShowMenu = 0
 
+let g:delimitMate_expand_cr    = 2
+
 set conceallevel=2
 set concealcursor=ncv
 highlight conceal ctermfg=red ctermbg=none
