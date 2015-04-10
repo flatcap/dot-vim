@@ -22,7 +22,7 @@ set   diffopt=filler,vertical
 set   directory=~/.vim/swap//
 set noequalalways
 set noerrorbells
-set noesckeys
+set   esckeys
 set noexrc
 set   fillchars=fold:\ ,vert:│
 set   formatoptions=cjnoqrt
