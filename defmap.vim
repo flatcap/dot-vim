@@ -116,3 +116,7 @@ map <silent> <leader>xt :%!tidy -quiet -xml<CR>
 nnoremap j gj
 nnoremap k gk
 
+" Pressing ^L will clear highlighting
+nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
+imap <C-l> :nohlsearch<CR>
+
