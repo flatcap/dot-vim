@@ -49,6 +49,7 @@ set   sessionoptions=buffers,curdir,folds,options,tabpages,winsize
 set   shiftround
 set   shiftwidth=8
 set   shortmess=filnxtToOsrmI
+let  &showbreak="↳ "
 set   showcmd
 set   showmatch
 set   showmode
