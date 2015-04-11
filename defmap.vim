@@ -51,8 +51,8 @@ let g:keyword_highlight="ctermfg=207 ctermbg=none"
 
 " Shift-F1-F4 are a bit wonky
 " S-F5: create some temp space
-nmap          <Esc>O1;2Q	:set paste!<Bar>:set paste?<CR>
-nmap          <Esc>O1;2R	:set ruler!<CR><C-L>
+nmap          <Esc>[1;2Q	:set paste!<Bar>:set paste?<CR>
+nnoremap      <Esc>[1;2R	:set ruler!<CR><C-L>
 nmap <silent> <S-F5>		:vnew<CR>:set buftype=nofile bufhidden=delete<CR>:setlocal noswapfile<CR>
 nmap          <S-F6>		:tabs<CR>
 nmap          <S-F7>		:tabclose<CR>
