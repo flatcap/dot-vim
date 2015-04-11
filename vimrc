@@ -11,13 +11,17 @@ Bundle 'bling/vim-airline.git'
 Bundle 'godlygeek/tabular.git'
 Bundle 'Lokaltog/vim-easymotion.git'
 Bundle 'mhinz/vim-signify.git'
+" Bundle 'paulrouget/flagit.git'
+Bundle 'Raimondi/delimitMate.git'
 Bundle 'SirVer/ultisnips.git'
 Bundle 'sjl/gundo.vim.git'
+Bundle 'tmhedberg/matchit.git'
 Bundle 'tommcdo/vim-exchange.git'
 Bundle 'tommcdo/vim-fugitive-blame-ext.git'
 Bundle 'tommcdo/vim-lion.git'
 Bundle 'tpope/vim-abolish.git'
 Bundle 'tpope/vim-commentary.git'
+Bundle 'tpope/vim-endwise.git'
 Bundle 'tpope/vim-fugitive.git'
 Bundle 'tpope/vim-git.git'
 Bundle 'tpope/vim-obsession.git'
@@ -25,11 +29,8 @@ Bundle 'tpope/vim-repeat.git'
 Bundle 'tpope/vim-speeddating.git'
 Bundle 'tpope/vim-surround.git'
 Bundle 'tpope/vim-unimpaired.git'
+Bundle 'vasconcelloslf/vim-interestingwords.git'
 Bundle 'vim-scripts/taglist.vim.git'
-Bundle 'paulrouget/flagit.git'
-Bundle 'tmhedberg/matchit.git'
-Bundle 'Raimondi/delimitMate.git'
-Bundle 'tpope/vim-endwise.git'
 
 Bundle 'flatcap/vim-deleteto.git'
 Bundle 'flatcap/vim-keyword.git'
@@ -48,12 +49,15 @@ let g:Tlist_Compact_Format=1
 let g:Tlist_Enable_Fold_Column=0
 let g:Tlist_Ctags_Cmd='ctags -I UNUSED'
 
+let g:airline#extensions#tabline#buffer_idx_mode = 1
 let g:airline#extensions#tabline#buffer_min_count = 1
 let g:airline#extensions#tabline#buffer_nr_show = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#show_tab_nr = 0
+let g:airline#extensions#tabline#show_tab_nr = 1
+let g:airline#extensions#tabline#show_tab_type = 1
 let g:airline#extensions#tabline#tab_min_count = 2
+let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline#extensions#whitespace#checks = [ 'trailing' ]
 let g:airline_powerline_fonts = 1
 let g:airline_theme='wombat'
