@@ -104,7 +104,7 @@ source ~/.vim/defmap_file.vim
 " Select all
 "nmap <C-A> ggVG
 
-cmap @ (.*)
+cmap <C-@> (.*)
 nmap <silent> gcr :set commentstring=//RAR%s<cr><Plug>CommentaryLine:set commentstring=//%s<CR>
 
 " Misc
