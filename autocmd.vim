@@ -72,6 +72,11 @@ autocmd BufReadPost * if (exists ("b:current_syntax") && ((b:current_syntax == "
 autocmd BufReadPost *   source ~/.vim/fold/diff.vim
 autocmd BufReadPost * endif
 
+autocmd BufReadPost * if (exists ("b:current_syntax") && (b:current_syntax == "gitcommit"))
+autocmd BufReadPost *   normal gg
+autocmd BufReadPost *   startinsert
+autocmd BufReadPost * endif
+
 " Attempt to save scratch buffer
 autocmd BufNew * :set buftype= bufhidden=
 
