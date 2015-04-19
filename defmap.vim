@@ -10,7 +10,7 @@ nmap <silent> <Tab>   :call tab#TabSkip(1)<CR>
 nmap <silent> <S-Tab> :call tab#TabSkip(0)<CR>
 
 " Quit, now
-nmap <silent> Q :call quit#SaveAndClose()<CR>
+nmap <silent> Q :call quitter#SaveAndClose()<CR>
 
 " Double-click to open/close folds
 map <2-LeftMouse> za

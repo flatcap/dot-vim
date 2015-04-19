@@ -78,7 +78,7 @@ autocmd BufReadPost *   startinsert
 autocmd BufReadPost * endif
 
 " Attempt to save scratch buffer
-autocmd BufNew * :set buftype= bufhidden=
+" autocmd BufNew * :set buftype= bufhidden=
 
 "autocmd BufWritePre *.c %s/\s\+$//e
 
