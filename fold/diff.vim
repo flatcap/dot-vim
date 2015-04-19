@@ -23,7 +23,8 @@ endfunction
 function! Diff_FoldText(lnum)
 	let line = getline (a:lnum)
 	let line = substitute (line, '^.* ', '', 'g')
-	let line = line . ' (' . (v:foldend - v:foldstart - 3) . ')'
+	let line = substitute (line, '^[^/]\+/', '', 'g')
+	let line = '▶ ' . line . ' (' . (v:foldend - v:foldstart - 3) . ')'
 	return line
 endfunction
 
