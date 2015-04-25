@@ -44,3 +44,5 @@ Bundle 'flatcap/vim-piper'
 Bundle 'flatcap/vim-save-next-file'
 Bundle 'flatcap/vim-tabby'
 
+Bundle 'file:///home/flatcap/vim-local'
+
