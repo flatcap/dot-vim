@@ -40,3 +40,6 @@ let g:c_space_errors=1
 
 let g:commentary_map_backslash = 0
 
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
