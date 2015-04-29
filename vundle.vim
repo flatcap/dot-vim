@@ -9,7 +9,6 @@ Bundle 'gmarik/vundle'
 Bundle 'bling/vim-airline'
 Bundle 'godlygeek/tabular'
 Bundle 'henrik/vim-indexed-search'
-" Bundle 'jeaye/color_coded'
 Bundle 'kien/ctrlp.vim'
 Bundle 'lambdalisue/vim-gista'
 Bundle 'Lokaltog/vim-easymotion'
@@ -44,5 +43,8 @@ Bundle 'flatcap/vim-piper'
 Bundle 'flatcap/vim-save-next-file'
 Bundle 'flatcap/vim-tabby'
 
-Bundle 'file:///home/flatcap/vim-local'
+if ((hostname() == 'laptop.flatcap.org') && (expand('$USER') == 'flatcap'))
+	" Bundle 'jeaye/color_coded'
+	Bundle 'file:///home/flatcap/vim-local'
+endif
 

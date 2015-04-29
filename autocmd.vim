@@ -34,8 +34,10 @@ autocmd BufNewFile *.sh   call template#load('sh',   3, 1)
 autocmd BufNewFile *.awk  call template#load('awk',  7, 1)
 autocmd BufNewFile *.pl   call template#load('pl',  10, 1)
 
-autocmd BufEnter *.cpp,*.h call classname#classname()
-autocmd BufNewFile,BufRead * call vimlocal#Load()
+if ((hostname() == 'laptop.flatcap.org') && (expand('$USER') == 'flatcap'))
+	autocmd BufEnter *.cpp,*.h call classname#classname()
+	autocmd BufNewFile,BufRead * call vimlocal#Load()
+endif
 
 " good enough for now
 autocmd BufNewFile,BufRead *.js  so ~/.vim/fold/c.vim
