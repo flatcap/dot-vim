@@ -39,12 +39,12 @@ Bundle 'vim-scripts/taglist.vim'
 
 Bundle 'flatcap/vim-deleteto'
 Bundle 'flatcap/vim-keyword'
+Bundle 'flatcap/vim-local'
 Bundle 'flatcap/vim-piper'
 Bundle 'flatcap/vim-save-next-file'
 Bundle 'flatcap/vim-tabby'
 
 if ((hostname() == 'laptop.flatcap.org') && (expand('$USER') == 'flatcap'))
 	" Bundle 'jeaye/color_coded'
-	Bundle 'file:///home/flatcap/vim-local'
 endif
 

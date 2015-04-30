@@ -36,7 +36,7 @@ autocmd BufNewFile *.pl   call template#load('pl',  10, 1)
 
 if ((hostname() == 'laptop.flatcap.org') && (expand('$USER') == 'flatcap'))
 	autocmd BufEnter *.cpp,*.h call classname#classname()
-	autocmd BufNewFile,BufRead * call vimlocal#Load()
+	autocmd BufNewFile,BufRead * call LoadVimLocal()
 endif
 
 " good enough for now
