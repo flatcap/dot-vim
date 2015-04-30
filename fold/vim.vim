@@ -6,17 +6,23 @@ if ($QV == 1)
 	finish
 endif
 
-let s:function = '●'
+let s:global_function = '●'
+let s:local_function  = '○'
 
 function! Vim_FoldText(lnum)
 	let line = getline (a:lnum)
+	let icon = s:local_function
 
 	if (line =~ '^function!*\s.*')
 		let line = substitute (line, '^function!*\s*', '', '')
 		let line = substitute (line, '\s*(.*', '', '')
+		if (line =~ '^g:.*')
+			let icon = s:global_function
+		endif
+		let line = substitute (line, '^[gs]:', '', '')
 	endif
 
-	return s:function . ' ' . line
+	return icon . ' ' . line
 endfunction
 
 function! Vim_FoldLevel(lnum)
