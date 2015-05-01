@@ -1,5 +1,4 @@
-f
-letype off
+filetype off
 
 set runtimepath+=~/.vim/bundle/vundle/
 call vundle#rc()
