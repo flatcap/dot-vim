@@ -23,4 +23,5 @@ endfunction
 " Enable folding.
 set foldexpr=Dosini_FoldLevel(v:lnum)
 set foldtext=Dosini_FoldText(v:foldstart)
+set foldlevel=1
 
