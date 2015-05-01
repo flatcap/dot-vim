@@ -43,3 +43,7 @@ let g:commentary_map_backslash = 0
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
+let g:deleteto_create_mappings = 1
+let g:piper_create_mappings = 1
+let g:tabby_create_mappings = 1
+

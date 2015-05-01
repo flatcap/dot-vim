@@ -36,7 +36,7 @@ nmap <silent> <F1>      :let &conceallevel=2-&conceallevel<CR>
 nmap <silent> <F2>      :wall<CR>:make .obj/%:r.o<CR>
 nmap <silent> <F3>      :let &laststatus = (&laststatus+1)%3<CR>:set laststatus?<CR>
 nmap          <F4>      :call tagsrotate#TagsRotate()<CR>
-nmap          <F5>      <Plug>Keyword_Toggle
+nmap          <F5>      <Plug>KeywordToggle
 nmap          <F6>      zmzv
 nmap          <F7>      zr
 nmap <silent> <F8>      :GundoToggle<CR>
@@ -57,7 +57,7 @@ nmap <silent> <S-F5>		:vnew<CR>:set buftype=nofile bufhidden=delete<CR>:setlocal
 nmap          <S-F6>		:tabs<CR>
 nmap          <S-F7>		:tabclose<CR>
 nmap          <S-F8>		:tabnew<Space>
-nmap          <S-F9>            :let @k = Keyword_Export()<CR>
+nmap          <S-F9>            :let @k = KeywordExport()<CR>
 
 " C-Up/Down Scroll Window
 nmap <Esc>[1;5A <C-Y>
