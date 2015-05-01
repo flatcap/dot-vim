@@ -1,4 +1,5 @@
-filetype off
+f
+letype off
 
 set runtimepath+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -7,7 +8,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'bling/vim-airline'
-Bundle 'godlygeek/tabular'
 Bundle 'henrik/vim-indexed-search'
 Bundle 'kien/ctrlp.vim'
 Bundle 'lambdalisue/vim-gista'
