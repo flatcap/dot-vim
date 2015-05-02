@@ -47,3 +47,8 @@ let g:deleteto_create_mappings = 1
 let g:piper_create_mappings = 1
 let g:tabby_create_mappings = 1
 
+let g:tab_navigate_windows = 1
+let g:tab_navigate_tabs    = 1
+let g:tab_wrap_around      = 0
+let g:tab_select_window    = 1
+
