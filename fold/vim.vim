@@ -16,6 +16,10 @@ function! Vim_FoldText(lnum)
 	if (line =~ '^function!*\s.*')
 		let line = substitute (line, '^function!*\s*', '', '')
 		let line = substitute (line, '\s*(.*', '', '')
+		if (line =~ '^\i\+#.*')
+			let icon = s:global_function
+			let line = substitute (line, '^\i\+#', '', '')
+		endif
 		if (line =~ '^g:.*')
 			let icon = s:global_function
 		endif
