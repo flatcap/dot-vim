@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 " let icons_path = '~/.vim/bundle/flagit/signs/tango/'
 
 let g:Fi_Flags = {

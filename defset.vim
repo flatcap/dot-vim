@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 let s:dirs = [ 'backup', 'swap', 'undo', 'view' ]
 for i in s:dirs
 	let dir = $HOME.'/.vim/'.i
