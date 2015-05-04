@@ -109,8 +109,11 @@ map <silent> <leader>jt :%!json_reformat<BAR>unexpand -t4 --first-only<CR>
 map <silent> <leader>jm :%!json_reformat -m<CR>
 map <silent> <leader>xt :%!tidy -quiet -xml<CR>
 
-nnoremap j gj
-nnoremap k gk
+" For wrapped lines make navigation work as expected
+noremap <silent> k gk
+noremap <silent> j gj
+noremap <silent> 0 g0
+noremap <silent> $ g$
 
 " Pressing ^L will clear highlighting
 nnoremap <silent> <C-l> :set nohlsearch nocursorline nocursorcolumn<CR><C-l>

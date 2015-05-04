@@ -49,7 +49,8 @@ let g:tabby_create_mappings = 1
 
 let g:tabitha_navigate_windows = 1
 let g:tabitha_navigate_tabs    = 1
-let g:tabitha_wrap_around      = 0
+let g:tabitha_navigate_files   = 1
+let g:tabitha_wrap_around      = 1
 let g:tabitha_select_window    = 1
 let g:tabitha_create_mappings  = 1
 
