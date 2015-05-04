@@ -150,3 +150,8 @@ nnoremap J :tablast<cr>
 nnoremap K :tabfirst<cr>
 nnoremap L :tabnext<cr>
 
+" Break the undo chain after Ctrl-W, Ctrl-U, or Enter
+inoremap <C-u> <C-g>u<C-u>
+inoremap <C-w> <C-g>u<C-w>
+inoremap <CR> <C-g>u<CR>
+
