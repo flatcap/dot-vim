@@ -73,3 +73,7 @@ autocmd BufReadPost * endif
 
 "autocmd BufWritePre *.c %s/\s\+$//e
 
+if ((hostname() == 'laptop.flatcap.org') && (expand('$USER') == 'flatcap'))
+	autocmd BufNewFile,BufRead * call LoadVimLocal()
+endif
+
