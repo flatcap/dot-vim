@@ -2,10 +2,6 @@
 
 source ~/.vim/fold/deffold.vim
 
-if ($QV == 1)
-	finish
-endif
-
 let s:global_function = '●'
 let s:local_function  = '○'
 

@@ -2,10 +2,6 @@
 
 source ~/.vim/fold/deffold.vim
 
-if ($QV == 1)
-	finish
-endif
-
 let s:style   = '      ★'
 let s:cluster = '      ●'
 

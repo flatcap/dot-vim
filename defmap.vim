@@ -28,22 +28,17 @@ nmap          <F6>      zmzv
 nmap          <F7>      zr
 nmap <silent> <F8>      :GundoToggle<CR>
 nmap <silent> <F9>      <Plug>SaveNextFile
-nmap <silent> <F10>     :cnext<CR>zvzz
-nmap <silent> <F11>     :cc<CR>zvzz
-nmap <silent> <F12>     :cwindow 5<CR>
 
 " nmap <silent> <F5> :cclose<CR>
-
-let g:keyword_highlight="ctermfg=207 ctermbg=none"
 
 " Shift-F1-F4 are a bit wonky
 " S-F5: create some temp space
 nmap          <Esc>[1;2Q	:set paste!<Bar>:set paste?<CR>
 nnoremap      <Esc>[1;2R	:set ruler!<CR><C-L>
 nmap <silent> <S-F5>		:vnew<CR>:set buftype=nofile bufhidden=delete<CR>:setlocal noswapfile<CR>
-nmap          <S-F6>		:tabs<CR>
-nmap          <S-F7>		:tabclose<CR>
-nmap          <S-F8>		:tabnew<Space>
+" nmap          <S-F6>		:tabs<CR>
+" nmap          <S-F7>		:tabclose<CR>
+" nmap          <S-F8>		:tabnew<Space>
 nmap          <S-F9>            :let @k = KeywordExport()<CR>
 
 " C-Up/Down Scroll Window
@@ -74,7 +69,7 @@ cmap kj <esc>
 
 " Only mapping
 nmap <silent> <Leader>o :only<CR>:set laststatus=1<CR>
-nmap <silent> <Leader>O :only<CR>:tabonly<CR>:set laststatus=1<CR>
+nmap <silent> <Leader>O :only<CR>:tabonly<CR>:set laststatus=1 showtabline=1<CR>
 
 " Update diff markings
 nmap <Leader>u :diffupdate<CR>
@@ -82,7 +77,9 @@ nmap <Leader>u :diffupdate<CR>
 " Make the current file executable (:edit ensures syntax highlighting)
 nmap <leader>x :update<cr>:!chmod +x %<cr>:edit<cr>
 
-source ~/.vim/defmap_file.vim
+if ((hostname() != 'laptop.flatcap.org') || (expand ('$USER') != 'flatcap'))
+	source ~/.vim/defmap_file.vim
+endif
 
 " Select all
 "nmap <C-A> ggVG
@@ -98,8 +95,8 @@ map <silent> <leader>xt :%!tidy -quiet -xml<CR>
 " For wrapped lines make navigation work as expected
 noremap <silent> k gk
 noremap <silent> j gj
-noremap <silent> 0 g0
-noremap <silent> $ g$
+" noremap <silent> 0 g0
+" noremap <silent> $ g$
 
 " Pressing ^L will clear highlighting
 nnoremap <silent> <C-l> :set nohlsearch nocursorline nocursorcolumn<CR><C-l>

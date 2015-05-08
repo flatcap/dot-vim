@@ -49,3 +49,5 @@ let g:tabitha_wrap_around      = 1
 let g:tabitha_select_window    = 1
 let g:tabitha_create_mappings  = 1
 
+let g:keyword_highlight="ctermfg=207 ctermbg=none"
+
