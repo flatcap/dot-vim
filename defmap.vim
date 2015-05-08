@@ -14,7 +14,6 @@ map <2-LeftMouse> za
 " Find common items
 nmap <silent> <leader>h :silent! call swapfile#SwapFile()<CR>
 nmap <silent> <leader>H :silent! vsplit<Bar>call swapfile#SwapFile()<CR>
-nmap <silent> <leader>m :call make#RichMake()<CR>
 nmap <silent> <leader>l :CommandTBuffer<CR>
 
 nmap <silent> <leader>vv :vert split<CR>
@@ -22,16 +21,8 @@ nmap <silent> <leader>vt :tabedit %<CR>
 nmap <silent> <leader>vn :vert split<Bar>:next<CR>
 nmap <silent> <leader>vl :vert split .vimlocal<CR>
 
-nmap <silent> <leader>fc :silent! call function#CommentBlock()<CR>
-nmap <silent> <leader>ff :silent! source ~/.vim/fold/c.vim<CR>
-
-" open tag in new window
-nnoremap <C-W>] :vsplit<CR><C-]>zv
-
 nmap <silent> <F1>      :let &conceallevel=2-&conceallevel<CR>
-nmap <silent> <F2>      :wall<CR>:make .obj/%:r.o<CR>
 nmap <silent> <F3>      :let &laststatus = (&laststatus+1)%3<CR>:set laststatus?<CR>
-nmap          <F4>      :call tagsrotate#TagsRotate()<CR>
 nmap          <F5>      <Plug>KeywordToggle
 nmap          <F6>      zmzv
 nmap          <F7>      zr
@@ -91,17 +82,12 @@ nmap <Leader>u :diffupdate<CR>
 " Make the current file executable (:edit ensures syntax highlighting)
 nmap <leader>x :update<cr>:!chmod +x %<cr>:edit<cr>
 
-" #ifdef 0
-vmap <leader>0 :call ifzero#Ifdef()<CR>
-vmap <leader>r :call ifzero#Ifdef('RAR')<CR>
-
 source ~/.vim/defmap_file.vim
 
 " Select all
 "nmap <C-A> ggVG
 
 cmap <C-@> (.*)
-nmap <silent> gcr :set commentstring=//RAR%s<cr><Plug>CommentaryLine:set commentstring=//%s<CR>
 
 " Misc
 map <silent> <leader>t :S/{true,false}/{false,true}/w<CR>

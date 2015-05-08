@@ -33,11 +33,6 @@ let g:Fi_ShowMenu = 0
 
 let g:delimitMate_expand_cr = 2
 
-let g:c_space_errors=1
-"let g:c_gnu=1
-"let g:c_curly_error=1
-"let g:c_comment_strings=1
-
 let g:commentary_map_backslash = 0
 
 let g:ctrlp_map = '<c-p>'

@@ -1,5 +1,4 @@
 " autocmd BufNewFile,BufRead *                             set fdm=manual
-autocmd BufNewFile,BufRead *.c,*.h,*.cc,*.cpp,*.ccg,*.hg source ~/.vim/fold/c.vim
 autocmd BufNewFile,BufRead *.pl,*.pm                     source ~/.vim/fold/perl.vim
 autocmd BufNewFile,BufRead *.pas,*.dpr                   source ~/.vim/syntax/pascal.vim
 autocmd BufNewFile,BufRead *.html,*css                   source ~/.vim/syntax/html.vim
@@ -34,11 +33,6 @@ autocmd BufNewFile *.sh   call template#load('sh',   3, 1)
 autocmd BufNewFile *.awk  call template#load('awk',  7, 1)
 autocmd BufNewFile *.pl   call template#load('pl',  10, 1)
 
-if ((hostname() == 'laptop.flatcap.org') && (expand('$USER') == 'flatcap'))
-	autocmd BufEnter *.cpp,*.h call classname#classname()
-	autocmd BufNewFile,BufRead * call LoadVimLocal()
-endif
-
 " good enough for now
 autocmd BufNewFile,BufRead *.js  so ~/.vim/fold/c.vim
 autocmd BufNewFile,BufRead *.awk so ~/.vim/fold/php.vim
@@ -46,11 +40,6 @@ autocmd BufNewFile,BufRead *.vim so ~/.vim/fold/vim.vim
 
 " automatically hide fugitive buffers after use
 autocmd BufReadPost fugitive://* set bufhidden=delete
-
-" If there's an error in my STL use, there's little point staring at the source
-autocmd BufRead /usr/include/* set foldlevel=4
-autocmd BufRead /usr/include/c++/4.9.2/*  set syntax=c bufhidden=delete
-autocmd BufRead /usr/include/sigc++-2.0/* set syntax=c bufhidden=delete
 
 "autocmd BufReadPost *.h set bufhidden=delete autowriteall
 
