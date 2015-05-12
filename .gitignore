@@ -8,3 +8,6 @@ viminfo
 /undo
 /view
 /bundle
+
+# data
+/macros.vim
