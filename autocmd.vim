@@ -77,3 +77,6 @@ if ((hostname() == 'laptop.flatcap.org') && (expand('$USER') == 'flatcap'))
 	autocmd BufNewFile,BufRead * call LoadVimLocal()
 endif
 
+" easy escape from help pages
+autocmd BufReadPost /usr/share/vim/*/doc/*	silent nnoremap q :<c-u>quit!<cr>
+
