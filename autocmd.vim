@@ -78,6 +78,7 @@ if ((hostname() == 'laptop.flatcap.org') && (expand('$USER') == 'flatcap'))
 endif
 
 " easy escape from help pages, quickfix windows and fugitive buffers
-autocmd FileType    help,qf      silent nnoremap <buffer> q :<c-u>quit!<cr>
-autocmd BufReadPost fugitive://* silent nnoremap <buffer> q :<c-u>quit!<cr>
+autocmd FileType    help,qf      nnoremap <silent> <buffer> q :<c-u>quit!<cr>
+autocmd BufReadPost fugitive://* nnoremap <silent> <buffer> q :<c-u>quit!<cr>
+autocmd CmdwinEnter *            nnoremap <silent> <buffer> q :<c-u>quit!<cr>
 
