@@ -77,6 +77,7 @@ if ((hostname() == 'laptop.flatcap.org') && (expand('$USER') == 'flatcap'))
 	autocmd BufNewFile,BufRead * call LoadVimLocal()
 endif
 
-" easy escape from help pages and quickfix windows
-autocmd FileType help,qf silent nnoremap <buffer> q :<c-u>quit!<cr>
+" easy escape from help pages, quickfix windows and fugitive buffers
+autocmd FileType    help,qf      silent nnoremap <buffer> q :<c-u>quit!<cr>
+autocmd BufReadPost fugitive://* silent nnoremap <buffer> q :<c-u>quit!<cr>
 
