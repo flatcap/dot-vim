@@ -15,8 +15,7 @@ function! Vim_FoldText(lnum)
 		if (line =~ '^\i\+#.*')
 			let icon = s:global_function
 			let line = substitute (line, '^\i\+#', '', '')
-		endif
-		if (line =~ '^g:.*')
+		elseif ((line =~ '^g:.*') || (line =~# '^[A-Z][^:].*'))
 			let icon = s:global_function
 		endif
 		let line = substitute (line, '^[gs]:', '', '')
