@@ -16,7 +16,8 @@ set   concealcursor=ncv
 set   cpoptions=aABceFMns
 set   diffopt=filler,vertical
 set   directory=~/.vim/swap//
-set noequalalways
+set   eadirection=ver
+set   equalalways
 set noerrorbells
 set   esckeys
 set noexrc

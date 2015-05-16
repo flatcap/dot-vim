@@ -142,5 +142,5 @@ inoremap <C-w> <C-g>u<C-w>
 inoremap <CR>  <C-g>u<CR>
 
 " Open help in a new tab
-cabbrev h    tab help
-cabbrev help tab help
+cnoremap <expr> h<space> ((getcmdtype() == ':') && (getcmdpos() == 1)) ? 'tab help ' : 'h '
+
