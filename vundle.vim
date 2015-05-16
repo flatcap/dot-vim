@@ -41,6 +41,7 @@ Bundle 'flatcap/vim-keyword'
 Bundle 'flatcap/vim-local'
 Bundle 'flatcap/vim-piper'
 Bundle 'flatcap/vim-save-next-file'
+Bundle 'flatcap/vim-scratch'
 Bundle 'flatcap/vim-tabby'
 Bundle 'flatcap/vim-tabitha'
 
