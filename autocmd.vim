@@ -12,11 +12,11 @@ autocmd BufNewFile,BufRead *.sql,/tmp/sql*              set syntax=mysql
 autocmd BufNewFile,BufRead *.gconf,*.kml,*.gpx          set syntax=xml
 autocmd BufNewFile,BufRead *.gv                         set filetype=dot
 autocmd BufNewFile,BufRead *.conf                       set syntax=cfg
-autocmd BufNewFile,BufRead *.txt                        setf txt
+autocmd BufNewFile,BufRead *.txt                        setfiletype txt
 autocmd BufNewFile,BufRead *.txt                        setlocal autoindent nosmartindent tabstop=8 shiftwidth=8 noexpandtab linebreak
 autocmd BufNewFile,BufRead .extra                       set syntax=sh
 autocmd BufNewFile,BufRead *.geojson,*.jsonp            set syntax=javascript
-autocmd BufNewFile,BufRead .vimlocal                    setf vim
+autocmd BufNewFile,BufRead .vimlocal                    setfiletype vim
 
 autocmd BufReadPre  *.kmz,*.map let &bin=1
 autocmd BufReadPost *.kmz,*.map %!unzip -p % | tidy -q -xml | unexpand -t8

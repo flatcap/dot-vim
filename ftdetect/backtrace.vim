@@ -1,6 +1,6 @@
 " auto-detect backtrace files
 
-autocmd BufRead *	call <SID>backtrace()
+autocmd BufRead * call <SID>backtrace()
 
 function! s:backtrace()
 	let name = expand('%:t')
@@ -18,5 +18,6 @@ function! s:backtrace()
 		return
 	endif
 
-	set filetype=backtrace
+	" Only set the filetype if it isn't already set
+	setfiletype backtrace
 endfunction

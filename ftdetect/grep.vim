@@ -1,6 +1,6 @@
 " auto-detect grep output
 
-autocmd BufRead *	call <SID>grep()
+autocmd BufRead * call <SID>grep()
 
 function! s:grep()
 	let match = '\v^[^:]+:\d+:'
@@ -15,5 +15,6 @@ function! s:grep()
 		return
 	endif
 
-	set filetype=grep
+	" Only set the filetype if it isn't already set
+	setfiletype grep
 endfunction
