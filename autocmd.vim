@@ -1,4 +1,4 @@
-" autocmd BufNewFile,BufRead *                             set fdm=manual
+" autocmd BufNewFile,BufRead *                             set foldmethod=manual
 autocmd BufNewFile,BufRead *.pl,*.pm                     source ~/.vim/fold/perl.vim
 autocmd BufNewFile,BufRead *.pas,*.dpr                   source ~/.vim/syntax/pascal.vim
 autocmd BufNewFile,BufRead *.html,*css                   source ~/.vim/syntax/html.vim
@@ -8,21 +8,21 @@ autocmd BufNewFile,BufRead *.vim                         source ~/.vim/syntax/vi
 autocmd BufNewFile,BufRead *.dcf,pharos                  source ~/.vim/syntax/dcf.vim
 autocmd BufNewFile,BufRead *.xsl                         source ~/.vim/syntax/xsl.vim
 autocmd BufNewFile,BufRead *.module,*.php,*.inc,*.theme,*.engine,*.install,*.js source ~/.vim/syntax/php.vim
-autocmd BufNewFile,BufRead *.sql,/tmp/sql*              set syn=mysql
-autocmd BufNewFile,BufRead *.gconf,*.kml,*.gpx          set syn=xml
-autocmd BufNewFile,BufRead *.gv                         set ft=dot
-autocmd BufNewFile,BufRead *.conf                       set syn=cfg
+autocmd BufNewFile,BufRead *.sql,/tmp/sql*              set syntax=mysql
+autocmd BufNewFile,BufRead *.gconf,*.kml,*.gpx          set syntax=xml
+autocmd BufNewFile,BufRead *.gv                         set filetype=dot
+autocmd BufNewFile,BufRead *.conf                       set syntax=cfg
 autocmd BufNewFile,BufRead *.txt                        setf txt
-autocmd BufNewFile,BufRead *.txt                        set ai nosi ts=8 sw=8 noet
-autocmd BufNewFile,BufRead .extra                       set syn=sh
-autocmd BufNewFile,BufRead *.geojson,*.jsonp            set syn=javascript
+autocmd BufNewFile,BufRead *.txt                        setlocal autoindent nosmartindent tabstop=8 shiftwidth=8 noexpandtab linebreak
+autocmd BufNewFile,BufRead .extra                       set syntax=sh
+autocmd BufNewFile,BufRead *.geojson,*.jsonp            set syntax=javascript
 autocmd BufNewFile,BufRead .vimlocal                    setf vim
 
 autocmd BufReadPre  *.kmz,*.map let &bin=1
 autocmd BufReadPost *.kmz,*.map %!unzip -p % | tidy -q -xml | unexpand -t8
-autocmd BufReadPost *.kmz,*.map set syn=xml
+autocmd BufReadPost *.kmz,*.map set syntax=xml
 
-autocmd BufNewFile,BufRead *.{automount,device,mount,path,service,socket,swap,target,timer,unit} set syn=dosini
+autocmd BufNewFile,BufRead *.{automount,device,mount,path,service,socket,swap,target,timer,unit} set syntax=dosini
 
 "autocmd BufRead [0-9][0-9][0-9][0-9][0-9]  source ~/decode/highlight.vim
 
@@ -34,9 +34,9 @@ autocmd BufNewFile *.awk  call template#load('awk',  7, 1)
 autocmd BufNewFile *.pl   call template#load('pl',  10, 1)
 
 " good enough for now
-autocmd BufNewFile,BufRead *.js  so ~/.vim/fold/c.vim
-autocmd BufNewFile,BufRead *.awk so ~/.vim/fold/php.vim
-autocmd BufNewFile,BufRead *.vim so ~/.vim/fold/vim.vim
+autocmd BufNewFile,BufRead *.js  source ~/.vim/fold/c.vim
+autocmd BufNewFile,BufRead *.awk source ~/.vim/fold/php.vim
+autocmd BufNewFile,BufRead *.vim source ~/.vim/fold/vim.vim
 
 " automatically hide fugitive buffers after use
 autocmd BufReadPost fugitive://* set bufhidden=delete
@@ -48,7 +48,7 @@ augroup Binary
   autocmd!
   autocmd BufReadPre   *.bin let &bin=1
   autocmd BufReadPost  *.bin if &bin | %!xxd -g1
-  autocmd BufReadPost  *.bin set ft=xxd | endif
+  autocmd BufReadPost  *.bin set filetype=xxd | endif
   autocmd BufWritePre  *.bin if &bin | %!xxd -r
   autocmd BufWritePre  *.bin endif
   autocmd BufWritePost *.bin if &bin | %!xxd -g1

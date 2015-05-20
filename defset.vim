@@ -95,10 +95,10 @@ set   wrapscan
 
 if &diff
 	set diffopt=filler,context:3,foldcolumn:0
-	hi Folded ctermbg=none ctermfg=22 term=none
-	hi DiffChange term=none ctermbg=none
+	highlight Folded ctermbg=none ctermfg=22 term=none
+	highlight DiffChange term=none ctermbg=none
 	set laststatus=2
-	hi DiffText ctermfg=165 ctermbg=black
-	hi DiffChange ctermbg=none ctermfg=none
+	highlight DiffText ctermfg=165 ctermbg=black
+	highlight DiffChange ctermbg=none ctermfg=none
 endif
 
