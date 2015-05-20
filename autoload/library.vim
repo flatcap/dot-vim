@@ -1,15 +1,21 @@
-" Copyright 2011-2012 Richard Russon (flatcap)
+" Copyright 2011-2015 Richard Russon (flatcap)
 " library
 
-function! library#Highlight(group, filename, colour)
-	if (!filereadable (a:filename))		" Does the file exist?
+function! library#Highlight(filename, ...)
+	let l:opt_syntax = (a:0 > 0) ? a:1 : 'ctermfg=lightblue'
+	let l:opt_group  = (a:0 > 1) ? a:2 : 'library_group'
+
+	if (!filereadable (a:filename))
+		echohl error
+		echom 'Library cannot read file: ' . a:filename
+		echohl none
 		return
 	endif
 
-	for line in readfile(a:filename)
-		execute "syntax keyword" a:group line
+	for l:line in readfile(a:filename)
+		execute 'syntax keyword ' . l:opt_group . ' ' . l:line
 	endfor
 
-	execute "highlight" a:group "ctermfg=" a:colour
+	execute 'highlight ' . l:opt_group . ' ' . l:opt_syntax
 endfunction
 
