@@ -13,9 +13,17 @@ function! s:MakeMappings(map, command)
 	execute 'nmap <Leader>'.a:map.'2 :'.s:cmd.'%s/^..//<CR>'
 	execute 'vmap <Leader>'.a:map.'2 :'.s:cmd.'s/^..//<CR>'
 
+	" End of line
+	execute 'nmap <Leader>'.a:map.'4 :'.s:cmd.'%s/$//<Left>'
+	execute 'vmap <Leader>'.a:map.'4 :'.s:cmd.'s/$//<Left>'
+
 	" All of selection/file
 	execute 'nmap <Leader>'.a:map.'5 :'.s:cmd.'%s/\v'
 	execute 'vmap <Leader>'.a:map.'5 :'.s:cmd.'s/\v'
+
+	" Start of line
+	execute 'nmap <Leader>'.a:map.'6 :'.s:cmd.'%s/^/'
+	execute 'vmap <Leader>'.a:map.'6 :'.s:cmd.'s/^/'
 
 	" Everything
 	execute 'nmap <Leader>'.a:map.'8 :'.s:cmd.'%s/.*//<Left>'
