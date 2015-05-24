@@ -17,4 +17,5 @@ cd "$BASE"
 find backup/ swap/ undo/ view/ -type f -delete
 
 rm -f viminfo
+rm -f macros.vim
 
