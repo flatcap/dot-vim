@@ -10,7 +10,7 @@ autocmd BufNewFile,BufRead *.xsl                         source ~/.vim/syntax/xs
 autocmd BufNewFile,BufRead *.module,*.php,*.inc,*.theme,*.engine,*.install,*.js source ~/.vim/syntax/php.vim
 autocmd BufNewFile,BufRead *.sql,/tmp/sql*              set syntax=mysql
 autocmd BufNewFile,BufRead *.gconf,*.kml,*.gpx          set syntax=xml
-autocmd BufNewFile,BufRead *.gv                         set filetype=dot
+autocmd BufNewFile,BufRead *.gv                         setfiletype dot
 autocmd BufNewFile,BufRead *.conf                       set syntax=cfg
 autocmd BufNewFile,BufRead *.txt                        setfiletype txt
 autocmd BufNewFile,BufRead *.txt                        setlocal autoindent nosmartindent tabstop=8 shiftwidth=8 noexpandtab linebreak
