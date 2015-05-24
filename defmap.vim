@@ -77,9 +77,7 @@ nmap <Leader>u :diffupdate<CR>
 " Make the current file executable (:edit ensures syntax highlighting)
 nmap <leader>x :update<cr>:!chmod +x %<cr>:edit<cr>
 
-if ((hostname() != 'laptop.flatcap.org') || (expand ('$USER') != 'flatcap'))
-	source ~/.vim/defmap_file.vim
-endif
+source ~/.vim/defmap_file.vim
 
 " Select all
 "nmap <C-A> ggVG
