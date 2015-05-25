@@ -97,7 +97,7 @@ noremap <silent> j gj
 " noremap <silent> $ g$
 
 " Pressing ^L will clear highlighting
-nnoremap <silent> <C-l> :set nohlsearch nocursorline nocursorcolumn<CR><C-l>
+nnoremap <silent> <C-l> :set nohlsearch nocursorline nocursorcolumn nolist<CR><C-l>
 imap <C-l> :set nohlsearch nocursorline nocursorcolumn<CR>
 
 map <down> <nop>
