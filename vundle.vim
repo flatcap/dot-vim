@@ -43,7 +43,6 @@ Bundle 'flatcap/vim-piper'
 Bundle 'flatcap/vim-save-next-file'
 Bundle 'flatcap/vim-scratch'
 Bundle 'flatcap/vim-space-man'
-Bundle 'flatcap/vim-tabby'
 Bundle 'flatcap/vim-tabitha'
 
 if ((hostname() == 'laptop.flatcap.org') && (expand ('$USER') == 'flatcap'))
