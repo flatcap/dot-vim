@@ -85,7 +85,7 @@ set   virtualedit+=block
 set novisualbell
 set nowarn
 set   whichwrap=b,s,[,],<,>,~
-set   wildignore=*.o,tags,*.img,*.qcow2
+set   wildignore=*.o,tags,*.img,*.qcow2,*.iso
 set nowildignorecase
 set nowildmenu
 set   wildmode=list:full
