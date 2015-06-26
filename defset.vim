@@ -81,7 +81,7 @@ set   ttyfast
 set   undofile
 set   undodir=~/.vim/undo//
 set   viewdir=~/.vim/view//
-set   viminfo=%,'50,:500,@100,/500,n~/.vim/viminfo
+set   viminfo=%,'50,:500,@100,/500,n~/.viminfo
 set   virtualedit+=block
 set novisualbell
 set nowarn
