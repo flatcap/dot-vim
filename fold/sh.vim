@@ -29,7 +29,11 @@ function! Sh_FoldLevel(lnum)
 		let level = '>1'
 	elseif ((prev =~ '^# .*$') && (line =~ '^.*()$') && (next =~ '^{$'))
 		let level = '1'
+	elseif (line =~ '^\i\+=($')
+		let level = '1'
 	elseif (prev =~ '^}$')
+		let level = 's1'
+	elseif (prev =~ '^)$')
 		let level = 's1'
 	else
 		let level = '='
@@ -59,13 +63,17 @@ function! Sh_FoldText(lnum)
 		let comm = substitute (next, '# ', '', '')
 		return g:precom . comm . g:sufcom
 	else
-		let func = Sh_GetFuncName(a:lnum)
-		if (next =~ '^#')
-			let comm = ' - ' . substitute (next, '# ', '', '')
-			return g:prefun . func . comm
+		if (line =~ '^\i\+=($')
+			return line . ')'
 		else
-			return g:prefun . func
-		fi
+			let func = Sh_GetFuncName(a:lnum)
+			if (next =~ '^#')
+				let comm = ' - ' . substitute (next, '# ', '', '')
+				return g:prefun . func . comm
+			else
+				return g:prefun . func
+			fi
+		endif
 	endif
 endfunction
 
