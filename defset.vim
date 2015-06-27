@@ -6,7 +6,7 @@ set   background=dark
 set   backspace=indent,eol,start
 set   backup
 set   backupcopy=yes
-set   backupdir=~/.vim/backup//
+set   backupdir=~/.cache/vim/backup//
 set   clipboard=unnamed,unnamedplus
 set   commentstring=#%s
 set   complete-=i
@@ -15,7 +15,7 @@ set   conceallevel=2
 set   concealcursor=ncv
 set   cpoptions=aABceFMns
 set   diffopt=filler,vertical
-set   directory=~/.vim/swap//
+set   directory=~/.cache/vim/swap//
 set   eadirection=ver
 set   equalalways
 set noerrorbells
@@ -79,9 +79,9 @@ set   t_Co=256
 set   t_vb=
 set   ttyfast
 set   undofile
-set   undodir=~/.vim/undo//
-set   viewdir=~/.vim/view//
-set   viminfo=%,'50,:500,@100,/500,n~/.viminfo
+set   undodir=~/.cache/vim/undo//
+set   viewdir=~/.cache/vim/view//
+set   viminfo=%,'50,:500,@100,/500,n~/.cache/vim/viminfo
 set   virtualedit+=block
 set novisualbell
 set nowarn

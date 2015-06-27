@@ -2,7 +2,7 @@ set nocompatible
 
 let s:dirs = [ 'backup', 'swap', 'undo', 'view' ]
 for i in s:dirs
-	let dir = $HOME.'/.vim/'.i
+	let dir = $HOME.'/.cache/vim/'.i
 	if (!isdirectory(dir))
 		call mkdir(dir, 'p')
 	endif
