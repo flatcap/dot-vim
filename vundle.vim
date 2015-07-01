@@ -47,8 +47,8 @@ Bundle 'flatcap/vim-tabitha'
 
 if ((hostname() == 'laptop.flatcap.org') && (expand ('$USER') == 'flatcap'))
 	" Bundle 'jeaye/color_coded'
-	Bundle 'file:///home/flatcap/.vim/bundle/rich/cpp'
-	Bundle 'file:///home/flatcap/.vim/bundle/rich/mnemosyne'
+	" Bundle 'file:///home/flatcap/.vim/bundle/vim-cpp'
+	Bundle 'file:///home/flatcap/.vim/bundle/vim-mnemosyne'
 	" Bundle 'kshenoy/vim-signature'
 endif
 

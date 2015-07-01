@@ -111,7 +111,7 @@ nnoremap <C-y> 3<C-y>
 vnoremap <C-e> 3<C-e>
 vnoremap <C-y> 3<C-y>
 
-" Make `Y` work from the cursor to the end of line (which is more logical)
+" Make 'Y' work from the cursor to the end of line (which is more logical)
 nnoremap Y y$
 
 nnoremap <leader>ts2 :set tabstop=2 shiftwidth=2 noexpandtab<CR>
