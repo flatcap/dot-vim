@@ -89,7 +89,7 @@ set   whichwrap=b,s,[,],<,>,~
 set   wildignore=*.o,tags,*.img,*.qcow2,*.iso
 set nowildignorecase
 set nowildmenu
-set   wildmode=list:full
+set   wildmode=list:longest
 set   winwidth=10
 set nowrap
 set   wrapscan
