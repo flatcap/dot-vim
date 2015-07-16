@@ -85,7 +85,7 @@ highlight red     ctermfg=red
 highlight white   ctermfg=white
 highlight yellow  ctermfg=yellow
 
-syntax match MergeConflict "^\(<\|=\|>\)\{7\}"
+syntax match MergeConflict "^\(<\|=\|>\)\{7\}\ze[^=]"
 highlight MergeConflict ctermfg=black ctermbg=red
 
 highlight conceal ctermfg=red ctermbg=none
