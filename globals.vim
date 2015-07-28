@@ -52,4 +52,5 @@ let g:tabitha_create_mappings  = 1
 let g:keyword_highlight="ctermfg=207 ctermbg=none"
 
 let g:mnemosyne_max_macros = 100
+let g:mnemosyne_window_size = 40
 

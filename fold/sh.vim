@@ -25,7 +25,7 @@ function! Sh_FoldLevel(lnum)
 
 	if ((prev =~ '^$') && (line =~ '^##$') && (next =~ '^# .*$'))
 		let level = '>2'
-	elseif ((prev =~ '^$') && ((line =~ '^\i\+\s*()$') || (line =~ 'function \i\+\s*()$')))
+	elseif ((prev =~ '^$') && ((line =~ '^\S\+\s*()$') || (line =~ 'function \S\+\s*()$')))
 		let level = '>1'
 	elseif ((prev =~ '^# .*$') && (line =~ '^.*()$') && (next =~ '^{$'))
 		let level = '1'
