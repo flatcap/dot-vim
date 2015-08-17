@@ -39,7 +39,6 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 let g:deleteto_create_mappings = 1
-let g:piper_create_mappings = 1
 let g:tabby_create_mappings = 1
 
 let g:tabitha_navigate_windows = 1
@@ -53,4 +52,20 @@ let g:keyword_highlight="ctermfg=207 ctermbg=none"
 
 let g:mnemosyne_max_macros = 100
 let g:mnemosyne_window_size = 40
+
+let g:piper_create_mappings = 1
+let g:piper_command_list = {
+	\ 'c': 'LANG=C column -t -o " "',
+	\ 'd': 'LANG=C uniq -d',
+	\ 'e': 'LANG=C uniq -c',
+	\ 'l': 'LANG=C nl -nrz -w4',
+	\ 'n': 'LANG=C sort -n',
+	\ 'r': 'LANG=C rev',
+	\ 's': 'LANG=C sort -f',
+	\ 't': 'LANG=C tac',
+	\ 'u': 'LANG=C uniq',
+	\ 'x': 'LANG=C shuf',
+	\ 'z': 'LANG=C cat -s',
+\ }
+
 
