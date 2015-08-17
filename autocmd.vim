@@ -7,6 +7,7 @@ autocmd BufNewFile,BufRead *.java                        source ~/.vim/syntax/ja
 autocmd BufNewFile,BufRead *.vim                         source ~/.vim/syntax/vim.vim
 autocmd BufNewFile,BufRead *.dcf,pharos                  source ~/.vim/syntax/dcf.vim
 autocmd BufNewFile,BufRead *.xsl                         source ~/.vim/syntax/xsl.vim
+autocmd BufNewFile,BufRead *.ics                         source ~/.vim/syntax/icalendar.vim
 autocmd BufNewFile,BufRead *.module,*.php,*.inc,*.theme,*.engine,*.install,*.js source ~/.vim/syntax/php.vim
 autocmd BufNewFile,BufRead *.sql,/tmp/sql*              set syntax=mysql
 autocmd BufNewFile,BufRead *.gconf,*.kml,*.gpx          set syntax=xml

@@ -35,7 +35,7 @@ set   lazyredraw
 set nolinebreak
 set   listchars=extends:▶,precedes:◀,tab:▷∙,eol:↵,trail:∙,nbsp:△
 set   magic
-set nomodeline
+set   modeline
 set nomore
 set   mouse=nvr
 set   nrformats+=alpha
