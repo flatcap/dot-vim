@@ -8,11 +8,12 @@ autocmd BufNewFile,BufRead *.vim                         source ~/.vim/syntax/vi
 autocmd BufNewFile,BufRead *.dcf,pharos                  source ~/.vim/syntax/dcf.vim
 autocmd BufNewFile,BufRead *.xsl                         source ~/.vim/syntax/xsl.vim
 autocmd BufNewFile,BufRead *.ics                         source ~/.vim/syntax/icalendar.vim
+autocmd BufNewFile,BufRead *.conf                        set syntax=cfg
+autocmd BufNewFile,BufRead **/nginx/*.{inc,conf}         set syntax=nginx
 autocmd BufNewFile,BufRead *.module,*.php,*.inc,*.theme,*.engine,*.install,*.js source ~/.vim/syntax/php.vim
 autocmd BufNewFile,BufRead *.sql,/tmp/sql*              set syntax=mysql
 autocmd BufNewFile,BufRead *.gconf,*.kml,*.gpx          set syntax=xml
 autocmd BufNewFile,BufRead *.gv                         setfiletype dot
-autocmd BufNewFile,BufRead *.conf                       set syntax=cfg
 autocmd BufNewFile,BufRead *.txt                        setfiletype txt
 autocmd BufNewFile,BufRead *.txt                        setlocal autoindent nosmartindent tabstop=8 shiftwidth=8 noexpandtab linebreak
 autocmd BufNewFile,BufRead .extra                       set syntax=sh
