@@ -19,6 +19,7 @@ autocmd BufNewFile,BufRead *.txt                        setlocal autoindent nosm
 autocmd BufNewFile,BufRead .extra                       set syntax=sh
 autocmd BufNewFile,BufRead *.geojson,*.jsonp            set syntax=javascript
 autocmd BufNewFile,BufRead .vimlocal                    setfiletype vim
+autocmd BufNewFile,BufRead ~/.mutt/*                    set syntax=muttrc
 
 autocmd BufReadPre  *.kmz,*.map let &bin=1
 autocmd BufReadPost *.kmz,*.map %!unzip -p % | tidy -q -xml | unexpand -t8
