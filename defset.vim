@@ -56,6 +56,9 @@ set   sidescrolloff=0
 set   smartcase
 set   smartindent
 set   smarttab
+set nospell
+set   spellfile=~/.spelling.en.add
+set   spelllang=en
 set   splitbelow
 set   splitright
 set   statusline=%f
