@@ -7,6 +7,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'bling/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
 " Bundle 'henrik/vim-indexed-search'
 " Bundle 'kien/ctrlp.vim'
 Bundle 'lambdalisue/vim-gista'
