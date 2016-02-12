@@ -67,6 +67,7 @@ set   swapfile
 set   synmaxcol=1024
 set   showtabline=1
 set   tabstop=8
+set   tabpagemax=20
 set   tagrelative
 set   tags=tags
 set   terse

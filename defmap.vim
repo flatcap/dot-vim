@@ -68,8 +68,8 @@ imap kj <esc>
 cmap kj <esc>
 
 " Only mapping
-nmap <silent> <Leader>o :only<CR>:set laststatus=1<CR>
-nmap <silent> <Leader>O :only<CR>:tabonly<CR>:set laststatus=1 showtabline=1<CR>
+nmap <silent> <Leader>o :silent only<CR>:set laststatus=1<CR>
+nmap <silent> <Leader>O :silent only<CR>:silent tabonly<CR>:set laststatus=1 showtabline=1<CR>
 
 " Update diff markings
 nmap <Leader>u :diffupdate<CR>
