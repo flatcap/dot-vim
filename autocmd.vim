@@ -65,7 +65,7 @@ autocmd BufReadPost * if (exists ("b:current_syntax") && ((b:current_syntax == "
 autocmd BufReadPost *   source ~/.vim/syntax/sh.vim
 autocmd BufReadPost * endif
 
-autocmd BufReadPost * if (exists ("b:current_syntax") && ((b:current_syntax == "diff") || (b:current_syntax == "gitcommit")))
+autocmd BufReadPost * if (exists ("b:current_syntax") && ((b:current_syntax == "diff") || (b:current_syntax == "gitcommit") || (b:current_syntax == "gitsendemail")))
 autocmd BufReadPost *   source ~/.vim/fold/diff.vim
 autocmd BufReadPost * endif
 
