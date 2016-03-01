@@ -114,9 +114,9 @@ vnoremap <C-y> 3<C-y>
 " Make 'Y' work from the cursor to the end of line (which is more logical)
 nnoremap Y y$
 
-nnoremap <leader>ts2 :set tabstop=2 shiftwidth=2 noexpandtab<CR>
-nnoremap <leader>ts4 :set tabstop=4 shiftwidth=4 noexpandtab<CR>
-nnoremap <leader>ts8 :set tabstop=8 shiftwidth=8 noexpandtab<CR>
+nnoremap <leader>ts2 :setlocal tabstop=2 shiftwidth=2 noexpandtab<CR>
+nnoremap <leader>ts4 :setlocal tabstop=4 shiftwidth=4 noexpandtab<CR>
+nnoremap <leader>ts8 :setlocal tabstop=8 shiftwidth=8 noexpandtab<CR>
 
 " repeat last substitute (including the flags)
 nnoremap & :&&<CR>
