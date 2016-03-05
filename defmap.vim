@@ -139,6 +139,13 @@ inoremap <C-u> <C-g>u<C-u>
 inoremap <C-w> <C-g>u<C-w>
 inoremap <CR>  <C-g>u<CR>
 
+" For editing xml with vim-ragtag
+inoremap <C-a> F<
+inoremap <C-e> f><Right>
+inoremap <C-o> <Esc>o
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+
 " Open help in a new tab
 cnoremap <expr> h<space> ((getcmdtype() == ':') && (getcmdpos() == 1)) ? 'tab help ' : 'h '
 
