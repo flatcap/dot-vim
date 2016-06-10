@@ -14,8 +14,11 @@ autocmd BufNewFile,BufRead *.module,*.php,*.inc,*.theme,*.engine,*.install,*.js 
 autocmd BufNewFile,BufRead *.sql,/tmp/sql*              set syntax=mysql
 autocmd BufNewFile,BufRead *.gconf,*.kml,*.gpx          set syntax=xml
 autocmd BufNewFile,BufRead *.gv                         setfiletype dot
+autocmd BufNewFile,BufRead *.md                         set filetype=markdown syntax=markdown tw=80 ts=4 sw=4 et
+autocmd BufNewFile,BufRead *.md                         source ~/.vim/fold/markdown.vim
 autocmd BufNewFile,BufRead *.txt                        setfiletype txt
 autocmd BufNewFile,BufRead *.txt                        setlocal autoindent nosmartindent tabstop=8 shiftwidth=8 noexpandtab linebreak
+autocmd BufNewFile,BufRead *.yml                        setlocal tabstop=2 shiftwidth=2 expandtab textwidth=0
 autocmd BufNewFile,BufRead .extra                       set syntax=sh
 autocmd BufNewFile,BufRead *.geojson,*.jsonp            set syntax=javascript
 autocmd BufNewFile,BufRead .vimlocal                    setfiletype vim
@@ -24,6 +27,7 @@ autocmd BufRead            */.git/rebase-apply/patch    set syntax=diff
 autocmd BufRead            /tmp/bash-fc-*               set syntax=sh
 autocmd BufRead            /tmp/mutt-*                  set syntax=mail ts=4 sw=4 et
 autocmd BufRead            ~/.cache/mutt/mutt-*         set syntax=mail ts=4 sw=4 et
+autocmd BufRead            /tmp/GHI_*                   set syntax=markdown ts=4 sw=4 et tw=80
 
 autocmd BufReadPre  *.kmz,*.map let &bin=1
 autocmd BufReadPost *.kmz,*.map %!unzip -p % | tidy -q -xml | unexpand -t8
@@ -68,6 +72,10 @@ autocmd BufReadPost * endif
 
 autocmd BufReadPost * if (exists ("b:current_syntax") && ((b:current_syntax == "diff") || (b:current_syntax == "gitcommit") || (b:current_syntax == "gitsendemail")))
 autocmd BufReadPost *   source ~/.vim/fold/diff.vim
+autocmd BufReadPost * endif
+
+autocmd BufReadPost * if (exists ("b:current_syntax") && (b:current_syntax == "gitcommit"))
+autocmd BufReadPost *   set spell
 autocmd BufReadPost * endif
 
 autocmd BufReadPost * if (exists ("b:current_syntax") && (b:current_syntax == "gitcommit"))
