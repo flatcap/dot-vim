@@ -5,7 +5,11 @@ source ~/.vim/fold/deffold.vim
 function! Markdown_FoldText(lnum)
 	let line = getline (a:lnum)
 
-    return line
+	let num = v:foldend - v:foldstart - 1
+
+	let line = substitute (line, '^#*', '▶', '')
+
+	return line . ' (' . num . ')'
 endfunction
 
 function! Markdown_FoldLevel(lnum)
