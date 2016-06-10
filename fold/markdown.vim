@@ -7,9 +7,9 @@ function! Markdown_FoldText(lnum)
 
 	let num = v:foldend - v:foldstart - 1
 
-	let line = substitute (line, '^#*', '▶', '')
+	let line = substitute (line, '#', '', 'g')
 
-	return line . ' (' . num . ')'
+	return '    ▶' . line . ' (' . num . ')'
 endfunction
 
 function! Markdown_FoldLevel(lnum)
