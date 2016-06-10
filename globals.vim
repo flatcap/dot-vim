@@ -68,5 +68,6 @@ let g:piper_command_list = {
 	\ 'z': 'LANG=C cat -s',
 \ }
 
-let g:interestingWordsTermColors = ['1', '208', '226', '46', '21', '128']
+"                                   Red   Orange Yellow Green Cyan  Blue   Pink Magenta White
+let g:interestingWordsTermColors = ['196', '208', '226', '46', '75', '21', '207', '63', '15']
 
