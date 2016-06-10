@@ -7,9 +7,14 @@ function! Markdown_FoldText(lnum)
 
 	let num = v:foldend - v:foldstart - 1
 
-	let line = substitute (line, '#', '', 'g')
+    if (line =~ '^##\= ')
+        let indent = '● '
+    else
+        let indent = '○ '
+    endif
+	let line = substitute (line, '#* ', '', '')
 
-	return '    ▶' . line . ' (' . num . ')'
+	return indent . line . ' (' . num . ')'
 endfunction
 
 function! Markdown_FoldLevel(lnum)
