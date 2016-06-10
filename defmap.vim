@@ -106,10 +106,10 @@ map <right> <nop>
 map <up> <nop>
 
 " Faster viewport scrolling (3 lines at a time)
-nnoremap <C-e> 3<C-e>
-nnoremap <C-y> 3<C-y>
-vnoremap <C-e> 3<C-e>
-vnoremap <C-y> 3<C-y>
+" nnoremap <C-e> 3<C-e>
+" nnoremap <C-y> 3<C-y>
+" vnoremap <C-e> 3<C-e>
+" vnoremap <C-y> 3<C-y>
 
 " Make 'Y' work from the cursor to the end of line (which is more logical)
 nnoremap Y y$
