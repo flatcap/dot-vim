@@ -23,6 +23,7 @@ autocmd BufNewFile,BufRead ~/.mutt/*                    set syntax=muttrc
 autocmd BufRead            */.git/rebase-apply/patch    set syntax=diff
 autocmd BufRead            /tmp/bash-fc-*               set syntax=sh
 autocmd BufRead            /tmp/mutt-*                  set syntax=mail ts=4 sw=4 et
+autocmd BufRead            ~/.cache/mutt/mutt-*         set syntax=mail ts=4 sw=4 et
 
 autocmd BufReadPre  *.kmz,*.map let &bin=1
 autocmd BufReadPost *.kmz,*.map %!unzip -p % | tidy -q -xml | unexpand -t8
