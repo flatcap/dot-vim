@@ -20,6 +20,7 @@ nmap <silent> <leader>vv :vert split<CR>
 nmap <silent> <leader>vt :tabedit %<CR>
 nmap <silent> <leader>vn :vert split<Bar>:next<CR>
 nmap <silent> <leader>vl :vert split .vimlocal<CR>
+nmap <silent> <leader>ww :vert split<Bar>:wincmd =<Bar>:quit<CR>
 
 nmap <silent> <F1>      :let &conceallevel=2-&conceallevel<CR>
 nmap <silent> <F3>      :let &laststatus = (&laststatus+1)%3<CR>:set laststatus?<CR>
