@@ -22,7 +22,6 @@ autocmd BufNewFile,BufRead *.yml                        setlocal tabstop=2 shift
 autocmd BufNewFile,BufRead .extra                       set syntax=sh
 autocmd BufNewFile,BufRead *.geojson,*.jsonp            set syntax=javascript
 autocmd BufNewFile,BufRead .vimlocal                    setfiletype vim
-autocmd BufNewFile,BufRead ~/.mutt/*                    set syntax=muttrc
 autocmd BufRead            */.git/rebase-apply/patch    set syntax=diff
 autocmd BufRead            /tmp/bash-fc-*               set syntax=sh
 autocmd BufRead            /tmp/mutt-*                  set syntax=mail ts=4 sw=4 et
