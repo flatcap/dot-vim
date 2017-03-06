@@ -3,10 +3,10 @@
 autocmd BufRead * call <SID>backtrace()
 
 function! s:backtrace()
-	let name = expand('%:t')
-	if (name !~ '\v^bt\d+$')
-		return
-	endif
+	" let name = expand('%:t')
+	" if (name !~ '\v^bt\d+$')
+	" 	return
+	" endif
 
 	let line = getline (1)
 	if (line !~ '\v^#\d+  \S')

@@ -50,10 +50,10 @@ Bundle 'flatcap/vim-tabitha'
 " Bundle 'SirVer/ultisnips'
 " Bundle 'tmhedberg/matchit'
 
-if ((hostname() == 'laptop.flatcap.org') && (expand ('$USER') == 'flatcap'))
+if ((hostname() == 'laptop.flatcap.org') && ((expand ('$USER') == 'flatcap') || (expand ('$USER') == 'mutt')|| (expand ('$USER') == 'build')))
 	" Bundle 'jeaye/color_coded'
-	" Bundle 'file:///home/flatcap/.vim/bundle/vim-cpp'
-	Bundle 'file:///home/flatcap/.vim/bundle/vim-mnemosyne'
+	Bundle 'file:///mnt/space/shell/vim/bundle/vim-cpp'
+	Bundle 'file:///mnt/space/shell/vim/bundle/vim-mnemosyne'
 	" Bundle 'kshenoy/vim-signature'
 endif
 

@@ -16,6 +16,9 @@ let g:airline#extensions#whitespace#checks = [ 'trailing' ]
 let g:airline_powerline_fonts = 1
 let g:airline_theme='wombat'
 
+" Turn off git branch
+let g:airline_section_b = ''
+
 let g:signify_disable_by_default = 1
 
 let g:UltiSnipsJumpForwardTrigger='<tab>'
@@ -68,6 +71,6 @@ let g:piper_command_list = {
 	\ 'z': 'LANG=C cat -s',
 \ }
 
-"                                   Red   Orange Yellow Green Cyan  Blue   Pink Magenta White
-let g:interestingWordsTermColors = ['196', '208', '226', '46', '75', '21', '207', '63', '15']
-
+"                                  Red,        Orange,    Yellow,    Green,     Cyan,      Blue,      Pink,      Magenta,   White
+let g:interestingWordsTermColors = ['196',     '208',     '226',     '46',      '75',      '21',      '207',     '63',      '15']
+let g:interestingWordsGuiColors  = ['#ff0000', '#ff8700', '#ffff00', '#00ff00', '#5fafff', '#0000ff', '#ff5fff', '#5f5fff', '#ffffff']

@@ -22,11 +22,16 @@ autocmd BufNewFile,BufRead *.yml                        setlocal tabstop=2 shift
 autocmd BufNewFile,BufRead .extra                       set syntax=sh
 autocmd BufNewFile,BufRead *.geojson,*.jsonp            set syntax=javascript
 autocmd BufNewFile,BufRead .vimlocal                    setfiletype vim
+autocmd BufNewFile,BufRead ChangeLog*                   set ts=2 sw=2 et tw=80
 autocmd BufRead            */.git/rebase-apply/patch    set syntax=diff
 autocmd BufRead            /tmp/bash-fc-*               set syntax=sh
 autocmd BufRead            /tmp/mutt-*                  set syntax=mail ts=4 sw=4 et
 autocmd BufRead            ~/.cache/mutt/mutt-*         set syntax=mail ts=4 sw=4 et
 autocmd BufRead            /tmp/GHI_*                   set syntax=markdown ts=4 sw=4 et tw=80
+autocmd BufRead            patch-*                      set syntax=diff
+
+autocmd BufNewFile,BufRead */issue/*.txt source ~/issue/issues.vim
+" autocmd BufNewFile,BufRead */issue/*.txt set wrap
 
 autocmd BufReadPre  *.kmz,*.map let &bin=1
 autocmd BufReadPost *.kmz,*.map %!unzip -p % | tidy -q -xml | unexpand -t8
@@ -87,12 +92,13 @@ autocmd BufReadPost * endif
 
 "autocmd BufWritePre *.c %s/\s\+$//e
 
-if ((hostname() == 'laptop.flatcap.org') && (expand('$USER') == 'flatcap'))
+" if ((hostname() == 'laptop.flatcap.org') && (expand('$USER') == 'flatcap'))
 	autocmd BufNewFile,BufRead * call LoadVimLocal()
-endif
+	autocmd BufNewFile,BufRead .vimlocal  setf vim
+" endif
 
 " easy escape from help pages, quickfix windows and fugitive buffers
 autocmd FileType    help,qf      nnoremap <silent> <buffer> q :<c-u>quit!<cr>
-autocmd BufReadPost fugitive://* nnoremap <silent> <buffer> q :<c-u>quit!<cr>
+" autocmd BufReadPost fugitive://* nnoremap <silent> <buffer> q :<c-u>quit!<cr>
 autocmd CmdwinEnter *            nnoremap <silent> <buffer> q :<c-u>quit!<cr>
 

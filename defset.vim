@@ -14,7 +14,7 @@ set   complete-=u
 set   conceallevel=2
 set   concealcursor=ncv
 set   cpoptions=aABceFMns
-set   diffopt=filler,vertical
+set   diffopt=filler,vertical,context:10
 set   directory=~/.cache/vim/swap//
 set   eadirection=ver
 set   equalalways
@@ -99,7 +99,8 @@ set nowrap
 set   wrapscan
 
 if &diff
-	set diffopt=filler,context:3,foldcolumn:0
+	" set diffopt=filler,context:40,foldcolumn:0
+	set diffopt=filler,context:4,foldcolumn:0
 	highlight Folded ctermbg=none ctermfg=22 term=none
 	highlight DiffChange term=none ctermbg=none
 	set laststatus=2
