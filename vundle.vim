@@ -35,6 +35,8 @@ Bundle 'tyru/open-browser.vim'
 Bundle 'vasconcelloslf/vim-interestingwords'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/DrawIt'
+Bundle 'gregsexton/gitv'
+Bundle 'junegunn/vim-github-dashboard'
 
 Bundle 'flatcap/vim-deleteto'
 Bundle 'flatcap/vim-keyword'
@@ -44,6 +46,9 @@ Bundle 'flatcap/vim-save-next-file'
 Bundle 'flatcap/vim-scratch'
 Bundle 'flatcap/vim-space-man'
 Bundle 'flatcap/vim-tabitha'
+
+" Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'luochen1990/rainbow'
 
 " Bundle 'henrik/vim-indexed-search'
 " Bundle 'kien/ctrlp.vim'

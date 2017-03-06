@@ -150,3 +150,4 @@ inoremap <C-k> <Up>
 " Open help in a new tab
 cnoremap <expr> h<space> ((getcmdtype() == ':') && (getcmdpos() == 1)) ? 'tab help ' : 'h '
 
+imap :wa <esc>:wa<enter>
