@@ -73,7 +73,7 @@ let g:piper_command_list = {
 
 "                                  Red,        Orange,    Yellow,    Green,     Cyan,      Blue,      Pink,      Magenta,   White
 let g:interestingWordsTermColors = ['196',     '208',     '226',     '46',      '75',      '21',      '207',     '63',      '15']
-let g:interestingWordsGuiColors  = ['#ff0000', '#ff8700', '#ffff00', '#00ff00', '#5fafff', '#0000ff', '#ff5fff', '#5f5fff', '#ffffff']
+let g:interestingWordsGUIColors  = ['#ff0000', '#ff8700', '#ffff00', '#00ff00', '#5fafff', '#0000ff', '#ff5fff', '#5f5fff', '#ffffff']
 
 let g:rainbow_active = 1
 
