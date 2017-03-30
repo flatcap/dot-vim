@@ -28,12 +28,12 @@ endfunction
 
 
 " Remove the defaults first.
-highlight Folded     term=none ctermfg=none ctermbg=none
-highlight FoldColumn term=none ctermfg=none ctermbg=none
+highlight Folded     term=none ctermfg=none ctermbg=none guifg=none guibg=none
+highlight FoldColumn term=none ctermfg=none ctermbg=none guifg=none guibg=none
 
 " Add some custom colours.
-"highlight Folded     term=none ctermfg=green ctermbg=darkgrey
-"highlight FoldColumn term=none ctermfg=black ctermbg=darkgrey
+"highlight Folded     term=none ctermfg=green ctermbg=darkgrey guifg=green guibg=darkgrey
+"highlight FoldColumn term=none ctermfg=black ctermbg=darkgrey guifg=black guibg=darkgrey
 
 " Or leave the folds comment coloured.
 highlight link Folded     Comment

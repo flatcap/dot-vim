@@ -1,29 +1,29 @@
 source ~/.vim/fold/java.vim
 
-highlight javaAssert       ctermfg=none
-highlight javaBoolean      ctermfg=DarkCyan
-highlight javaBranch       ctermfg=DarkCyan
-highlight javaCharacter    ctermfg=DarkYellow
-highlight javaComment      ctermfg=DarkGreen
-highlight javaConditional  ctermfg=DarkCyan
-highlight javaConstant     ctermfg=none
-highlight javaError        ctermfg=Red
-highlight javaExceptions   ctermfg=DarkCyan
-highlight javaExternal     ctermfg=DarkCyan
-highlight javaLabel        ctermfg=none
-highlight javaLineComment  ctermfg=DarkGreen
-highlight javaNumber       ctermfg=none
-highlight javaOperator     ctermfg=DarkCyan
-highlight javaRepeat       ctermfg=DarkCyan
-highlight javaSpecial      ctermfg=none
-highlight javaSpecialChar  ctermfg=none
-highlight javaStatement    ctermfg=DarkCyan
-highlight javaStorageClass ctermfg=DarkCyan
-highlight javaString       ctermfg=DarkYellow
-highlight javaTodo         ctermfg=DarkGreen
-highlight javaType         ctermfg=DarkCyan
-highlight javaTypedef      ctermfg=DarkCyan
-highlight javaUserLabel    ctermfg=none
+highlight javaAssert       ctermfg=none       guifg=NONE
+highlight javaBoolean      ctermfg=DarkCyan   guifg=DarkCyan
+highlight javaBranch       ctermfg=DarkCyan   guifg=DarkCyan
+highlight javaCharacter    ctermfg=DarkYellow guifg=DarkYellow
+highlight javaComment      ctermfg=DarkGreen  guifg=DarkGreen
+highlight javaConditional  ctermfg=DarkCyan   guifg=DarkCyan
+highlight javaConstant     ctermfg=none       guifg=NONE
+highlight javaError        ctermfg=Red        guifg=Red
+highlight javaExceptions   ctermfg=DarkCyan   guifg=DarkCyan
+highlight javaExternal     ctermfg=DarkCyan   guifg=DarkCyan
+highlight javaLabel        ctermfg=none       guifg=NONE
+highlight javaLineComment  ctermfg=DarkGreen  guifg=DarkGreen
+highlight javaNumber       ctermfg=none       guifg=NONE
+highlight javaOperator     ctermfg=DarkCyan   guifg=DarkCyan
+highlight javaRepeat       ctermfg=DarkCyan   guifg=DarkCyan
+highlight javaSpecial      ctermfg=none       guifg=NONE
+highlight javaSpecialChar  ctermfg=none       guifg=NONE
+highlight javaStatement    ctermfg=DarkCyan   guifg=DarkCyan
+highlight javaStorageClass ctermfg=DarkCyan   guifg=DarkCyan
+highlight javaString       ctermfg=DarkYellow guifg=DarkYellow
+highlight javaTodo         ctermfg=DarkGreen  guifg=DarkGreen
+highlight javaType         ctermfg=DarkCyan   guifg=DarkCyan
+highlight javaTypedef      ctermfg=DarkCyan   guifg=DarkCyan
+highlight javaUserLabel    ctermfg=none       guifg=NONE
 
 set tabstop=4
 set shiftwidth=4
