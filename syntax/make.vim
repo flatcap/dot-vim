@@ -28,8 +28,8 @@ endfunction
 
 
 " Remove the defaults first.
-highlight Folded     term=none ctermfg=none ctermbg=none guifg=none guibg=none
-highlight FoldColumn term=none ctermfg=none ctermbg=none guifg=none guibg=none
+highlight Folded     term=none ctermfg=none ctermbg=none guifg=NONE guibg=NONE
+highlight FoldColumn term=none ctermfg=none ctermbg=none guifg=NONE guibg=NONE
 
 " Add some custom colours.
 "highlight Folded     term=none ctermfg=green ctermbg=darkgrey guifg=green guibg=darkgrey

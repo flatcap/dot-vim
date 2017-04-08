@@ -49,7 +49,7 @@ highlight PmenuThumb	ctermfg=white		ctermbg=white                          guifg
                                                                                                                             
 " Vimdiff                                                                                                                   
 highlight DiffAdd	ctermfg=black		ctermbg=142		cterm=none     guifg=black    guibg=#afaf00         
-highlight DiffChange	ctermfg=black		ctermbg=141		cterm=none     guifg=black    guibg=#af87ff         
+highlight DiffChange	ctermfg=black		ctermbg=141		cterm=none     guifg=NONE     guibg=#180820
 highlight DiffDelete	ctermfg=black		ctermbg=124		cterm=none     guifg=black    guibg=#af0000         
 highlight DiffText	ctermfg=black		ctermbg=129		cterm=none     guifg=black    guibg=#af00ff         
                                                                                                                             
@@ -89,7 +89,7 @@ highlight reverse   cterm=reverse
 highlight underline cterm=underline
 
 syntax match MergeConflict "^[<=>]\{7\}\( .*\)*$"
-highlight MergeConflict ctermfg=black ctermbg=red
+highlight MergeConflict ctermfg=black ctermbg=red guifg=black guibg=red
 
 highlight conceal ctermfg=red ctermbg=none
 
