@@ -1,12 +1,12 @@
 " Common to all folded files
 
 " Remove the defaults first.
-" highlight Folded     term=none ctermfg=none ctermbg=none
-" highlight FoldColumn term=none ctermfg=none ctermbg=none
+highlight Folded     term=none ctermfg=none ctermbg=none
+highlight FoldColumn term=none ctermfg=none ctermbg=none
 
 " Add some custom colours.
-" highlight Folded     term=none ctermfg=green ctermbg=darkgrey
-" highlight FoldColumn term=none ctermfg=black ctermbg=darkgrey
+highlight Folded     term=none guifg=#00ff00 guibg=#000000
+highlight FoldColumn term=none guifg=#00ff00 guibg=#000000
 
 " Or leave the folds comment coloured.
 " highlight link Folded     Comment
@@ -18,8 +18,9 @@ set foldmethod=expr
 " Enable debugging
 "set debug=msg
 
-set foldcolumn=0
+set foldcolumn=4
 "set foldmethod=manual
+set foldminlines=0
 set foldclose=
 set foldopen=
 set foldopen+=mark

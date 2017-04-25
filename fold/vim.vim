@@ -48,6 +48,6 @@ endfunction
 
 
 " Enable folding.
-set foldexpr=Vim_FoldLevel(v:lnum)
-set foldtext=Vim_FoldText(v:foldstart)
+" set foldexpr=Vim_FoldLevel(v:lnum)
+" set foldtext=Vim_FoldText(v:foldstart)
 

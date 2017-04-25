@@ -1,5 +1,7 @@
 set termguicolors
 
+hi Normal guifg=NONE guibg=NONE
+
 " Colours used below
 "	12 - darkblue
 "	18 - very dark blue
@@ -94,4 +96,7 @@ highlight MergeConflict ctermfg=black ctermbg=red guifg=black guibg=red
 highlight conceal ctermfg=red ctermbg=none
 
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+highlight IndentGuidesOdd  ctermfg=242 ctermbg=0   guifg=grey15 guibg=grey30
+highlight IndentGuidesEven ctermfg=0   ctermbg=242 guifg=grey30 guibg=grey15
 

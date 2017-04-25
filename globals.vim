@@ -100,3 +100,10 @@ let g:rainbow_active = 1
     \   }
     \}
 
+let g:limelight_conceal_guifg = 'DarkGray'
+let g:limelight_conceal_guifg = '#777777'
+
+let g:autosave_extensions = '.backup'
+let g:autosave_backup     = '~/.cache/vim/backup'
+let g:autosave_timer      = 60
+
