@@ -58,6 +58,7 @@ let g:mnemosyne_window_size = 40
 
 let g:piper_create_mappings = 1
 let g:piper_command_list = {
+	\ 'a': 'LANG=C ansifilter',
 	\ 'c': 'LANG=C column -t -o " "',
 	\ 'd': 'LANG=C uniq -d',
 	\ 'e': 'LANG=C uniq -c',
@@ -73,7 +74,8 @@ let g:piper_command_list = {
 
 "                                  Red,        Orange,    Yellow,    Green,     Cyan,      Blue,      Pink,      Magenta,   White
 let g:interestingWordsTermColors = ['196',     '208',     '226',     '46',      '75',      '21',      '207',     '63',      '15']
-let g:interestingWordsGUIColors  = ['#ff0000', '#ff8700', '#ffff00', '#00ff00', '#5fafff', '#0000ff', '#ff5fff', '#5f5fff', '#ffffff']
+let g:interestingWordsGUIColors  = ['#ff0000', '#ff8700', '#ffff00', '#00ff00', '#5fafff', '#0000ff', '#ff5fff', '#5f5fff', '#ffffff', 
+	\ '#ff0000', '#ff8700', '#ffff00', '#00ff00', '#5fafff', '#0000ff', '#ff5fff', '#5f5fff', '#ffffff' ]
 
 let g:rainbow_active = 1
 
@@ -107,3 +109,4 @@ let g:autosave_extensions = '.backup'
 let g:autosave_backup     = '~/.cache/vim/backup'
 let g:autosave_timer      = 60
 
+let g:highlightedyank_highlight_duration = -1

@@ -18,7 +18,7 @@ set foldmethod=expr
 " Enable debugging
 "set debug=msg
 
-set foldcolumn=4
+set foldcolumn=0
 "set foldmethod=manual
 set foldminlines=0
 set foldclose=

@@ -25,7 +25,7 @@ nmap <silent> <leader>ww :vert split<Bar>:wincmd =<Bar>:quit<CR>
 nmap <silent> <F1>      :let &conceallevel=2-&conceallevel<CR>
 nmap <silent> <F3>      :let &laststatus = (&laststatus+1)%3<CR>:set laststatus?<CR>
 nmap          <F5>      <Plug>KeywordToggle
-nmap          <F6>      zmzv
+nmap          <F6>      zMzv
 nmap          <F7>      zr
 nmap <silent> <F8>      :GundoToggle<CR>
 nmap <silent> <F9>      <Plug>SaveNextFile
@@ -98,8 +98,8 @@ noremap <silent> j gj
 " noremap <silent> $ g$
 
 " Pressing ^L will clear highlighting
-nnoremap <silent> <C-l> :set nohlsearch nocursorline nocursorcolumn nolist nospell nonumber<CR><C-l>
-inoremap <C-l> :set nohlsearch nocursorline nocursorcolumn nolist nospell nonumber<CR>
+nnoremap <silent> <C-l> :nohlsearch<CR>:set nocursorline nocursorcolumn nolist nospell nonumber<CR><C-l>
+inoremap <C-l> :nohlsearch<CR>:set nocursorline nocursorcolumn nolist nospell nonumber<CR>
 
 map <down> <nop>
 map <left> <nop>
@@ -151,3 +151,17 @@ inoremap <C-k> <Up>
 cnoremap <expr> h<space> ((getcmdtype() == ':') && (getcmdpos() == 1)) ? 'tab help ' : 'h '
 
 imap :wa <esc>:wa<enter>
+
+" nnoremap <buffer> <leader>cs :cscope find s  <c-r>=expand('<cword>')<cr><cr>
+" nnoremap <buffer> <leader>cg :cscope find g  <c-r>=expand('<cword>')<cr><cr>
+" nnoremap <buffer> <leader>cc :cscope find c  <c-r>=expand('<cword>')<cr><cr>
+" nnoremap <buffer> <leader>ct :cscope find t  <c-r>=expand('<cword>')<cr><cr>
+" nnoremap <buffer> <leader>ce :cscope find e  <c-r>=expand('<cword>')<cr><cr>
+" nnoremap <buffer> <leader>cf :cscope find f  <c-r>=expand('<cfile>')<cr><cr>
+" nnoremap <buffer> <leader>ci :cscope find i ^<c-r>=expand('<cfile>')<cr>$<cr>
+" nnoremap <buffer> <leader>cd :cscope find d  <c-r>=expand('<cword>')<cr><cr>
+
+nnoremap <expr> n  'Nn'[v:searchforward]
+nnoremap <expr> N  'nN'[v:searchforward]
+
+map y <Plug>(highlightedyank)

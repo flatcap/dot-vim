@@ -90,13 +90,20 @@ highlight yellow  ctermfg=yellow                                                
 highlight reverse   cterm=reverse
 highlight underline cterm=underline
 
-syntax match MergeConflict "^[<=>]\{7\}\( .*\)*$"
+syntax match MergeConflict "^[<=>]\{7\}\( .*\)*$" containedin=cComment,automakeNoSubst
 highlight MergeConflict ctermfg=black ctermbg=red guifg=black guibg=red
 
-highlight conceal ctermfg=red ctermbg=none
+highlight conceal ctermfg=red ctermbg=none guifg=red guibg=NONE
 
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
 highlight IndentGuidesOdd  ctermfg=242 ctermbg=0   guifg=grey15 guibg=grey30
 highlight IndentGuidesEven ctermfg=0   ctermbg=242 guifg=grey30 guibg=grey15
+
+highlight SpellBad guifg=red
+
+highlight rainbow_p0 guifg=#0087d7
+highlight rainbow_o0 guifg=#0087d7
+
+highlight HighlightedyankRegion guifg=NONE guibg=#404040
 

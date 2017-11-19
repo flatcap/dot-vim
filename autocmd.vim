@@ -103,3 +103,6 @@ autocmd FileType    help,qf      nnoremap <silent> <buffer> q :<c-u>quit!<cr>
 " autocmd BufReadPost fugitive://* nnoremap <silent> <buffer> q :<c-u>quit!<cr>
 autocmd CmdwinEnter *            nnoremap <silent> <buffer> q :<c-u>quit!<cr>
 
+" autocmd InsertLeave,WinEnter * set cursorline
+" autocmd InsertEnter,WinLeave * set nocursorline
+

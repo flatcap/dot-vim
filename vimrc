@@ -12,7 +12,8 @@ source ~/.vim/vundle.vim
 
 syntax on
 
-let mapleader=','
+" let mapleader=','
+let mapleader=' '
 
 source ~/.vim/flagit.vim
 source ~/.vim/defset.vim
@@ -41,6 +42,9 @@ filetype plugin indent on
 " autocmd BufReadPost *.c call library#Highlight('q3',     'ctermbg=81  ctermfg=black', 'library_static')
 " autocmd BufReadPost * call library#Highlight('jim2', 'ctermbg=81  ctermfg=black', 'library_strmp')
 
+" autocmd BufReadPost *.[ch] call library#Highlight('/home/mutt/pager/other-globals.txt', 'guibg=#802020 guifg=NONE', 'global_other')
+" autocmd BufReadPost *.[ch] call library#Highlight('/home/mutt/pager/variables.txt',     'guibg=#004000 guifg=NONE', 'global_variables')
+
 " autocmd BufReadPost *.c syntax match func_contents '^{\n\_.\{-}\n}$' conceal cchar=★
 " autocmd BufReadPost *.c highlight func_contents ctermfg=240
 " autocmd BufReadPost *.c set cole=3
@@ -49,7 +53,19 @@ filetype plugin indent on
 " autocmd BufReadPost *.[ch] call library#Highlight('/home/mutt/functions/static.txt',     'guibg=#80ff80 guifg=black', 'static_fn')
 " autocmd BufReadPost *.[ch] call library#Highlight('/home/mutt/functions/non-static.txt', 'guibg=#80ffff guifg=black', 'non_static_fn')
 
-" autocmd BufReadPost *.c source /home/mutt/.vim/fold/deffold.vim
-" autocmd BufReadPost *.c source /home/mutt/fold/fold/0_default.vim
-" autocmd BufReadPost *.c source /home/mutt/fold/fold/neomutt_fold.vim
+autocmd BufNewFile,BufReadPost *.[ch] source /home/mutt/.vim/fold/deffold.vim
+" autocmd BufNewFile,BufReadPost *.[ch] source /home/mutt/fold/fold/0_default.vim
+" autocmd BufNewFile,BufReadPost *.[ch] source /home/mutt/fold/fold/neomutt_fold.vim
+" autocmd BufNewFile,BufReadPost *.[ch] source /home/mutt/account/conceal.vim
+
+cabbrev Se  set
+cabbrev Set set
+cabbrev Ta  tag
+cabbrev te  tabedit
+cabbrev Tag tag
+cabbrev ren Rename
+cabbrev gd  Gdiff
+cabbrev Gd  Gdiff
+cabbrev Gdelete  Gdiff
+cabbrev Vs  vsplit
 

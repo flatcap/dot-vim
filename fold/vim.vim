@@ -6,6 +6,7 @@ let s:global_function = '●'
 let s:local_function  = '○'
 let s:comment         = '▶'
 
+
 function! Vim_FoldText(lnum)
 	let line = getline (a:lnum)
 	let icon = s:local_function
@@ -41,6 +42,10 @@ function! Vim_FoldLevel(lnum)
 		return '>2'
 	elseif ((prev =~ '^" ') && (line == ''))
 		return '0'
+	elseif ((prev == '') && (line =~ '^let ') && (next =~ '^let '))
+		return '1'
+	elseif ((line == '') && (prev =~ '^let '))
+		return '<1'
 	else
 		return '='
 	endif
@@ -48,6 +53,6 @@ endfunction
 
 
 " Enable folding.
-" set foldexpr=Vim_FoldLevel(v:lnum)
-" set foldtext=Vim_FoldText(v:foldstart)
+set foldexpr=Vim_FoldLevel(v:lnum)
+set foldtext=Vim_FoldText(v:foldstart)
 

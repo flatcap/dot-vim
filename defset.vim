@@ -14,7 +14,7 @@ set   complete-=u
 set   conceallevel=2
 set   concealcursor=ncv
 set   cpoptions=aABceFMns
-set   diffopt=filler,vertical,context:10
+set   diffopt=filler,vertical,context:10,foldcolumn:0
 set   directory=~/.cache/vim/swap//
 set   eadirection=ver
 set   equalalways
@@ -90,13 +90,18 @@ set   virtualedit+=block
 set novisualbell
 set nowarn
 set   whichwrap=b,s,[,],<,>,~
-set   wildignore=*.o,tags,*.img,*.qcow2,*.iso
+set   wildignore=*.o,tags,*.img,*.qcow2,*.iso,*.gc??,*.Po,*.Tpo
 set nowildignorecase
 set nowildmenu
-set   wildmode=list:longest
-set   winwidth=10
+" set   wildmode=list:longest
+set   wildmode=full
+set   winheight=1
+set   winminheight=0
+set   winminwidth=0
+set   winwidth=1
 set nowrap
 set   wrapscan
+
 
 if &diff
 	" set diffopt=filler,context:40,foldcolumn:0
