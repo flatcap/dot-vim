@@ -62,6 +62,7 @@ let g:piper_command_list = {
 	\ 'c': 'LANG=C column -t -o " "',
 	\ 'd': 'LANG=C uniq -d',
 	\ 'e': 'LANG=C uniq -c',
+	\ 'f': 'LANG=C clang-format -assume-filename=%',
 	\ 'l': 'LANG=C nl -nrz -w4',
 	\ 'n': 'LANG=C sort -n',
 	\ 'r': 'LANG=C rev',

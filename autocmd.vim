@@ -49,7 +49,7 @@ autocmd BufNewFile *.awk  call template#load('awk',  7, 1)
 autocmd BufNewFile *.pl   call template#load('pl',  10, 1)
 
 " good enough for now
-autocmd BufNewFile,BufRead *.js  source ~/.vim/fold/c.vim
+" autocmd BufNewFile,BufRead *.js  source ~/.vim/fold/c.vim
 autocmd BufNewFile,BufRead *.awk source ~/.vim/fold/php.vim
 autocmd BufNewFile,BufRead *.vim source ~/.vim/fold/vim.vim
 autocmd BufNewFile,BufRead *.po  source ~/.vim/fold/po.vim

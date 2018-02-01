@@ -52,11 +52,17 @@ filetype plugin indent on
 " autocmd BufReadPost *.[ch] call library#Highlight('/home/mutt/functions/sus.txt',        'guibg=#ff8040 guifg=black', 'sus_ops')
 " autocmd BufReadPost *.[ch] call library#Highlight('/home/mutt/functions/static.txt',     'guibg=#80ff80 guifg=black', 'static_fn')
 " autocmd BufReadPost *.[ch] call library#Highlight('/home/mutt/functions/non-static.txt', 'guibg=#80ffff guifg=black', 'non_static_fn')
+" autocmd BufReadPost *.[ch] call library#Highlight('i1', 'guibg=#ff8040 guifg=black', 'non_static_fn')
+" autocmd BufReadPost *.[ch] call library#Highlight('/home/mutt/work/globals.txt', 'guibg=#380000 guifg=white', 'global')
+
+autocmd BufReadPost *.[ch] call library#Highlight('/home/mutt/work/globals2.txt',     'guibg=#282828 guifg=#ff8040', 'neo_global_vars')
+" autocmd BufReadPost *.[ch] call library#Highlight('/home/mutt/work/config-items.txt', 'guibg=#80ffff guifg=black', 'neo_config_items')
+autocmd BufReadPost *.[ch] call library#Highlight('/home/mutt/work/config-vars.txt',  'guibg=#282828 guifg=#ff2020',  'neo_config_var')
 
 autocmd BufNewFile,BufReadPost *.[ch] source /home/mutt/.vim/fold/deffold.vim
-" autocmd BufNewFile,BufReadPost *.[ch] source /home/mutt/fold/fold/0_default.vim
-" autocmd BufNewFile,BufReadPost *.[ch] source /home/mutt/fold/fold/neomutt_fold.vim
-" autocmd BufNewFile,BufReadPost *.[ch] source /home/mutt/account/conceal.vim
+autocmd BufNewFile,BufReadPost *.[ch] source /home/mutt/fold-vim/fold/0_default.vim
+autocmd BufNewFile,BufReadPost *.[ch] source /home/mutt/fold-vim/fold/neomutt_fold.vim
+autocmd BufNewFile,BufReadPost *.[ch] source /home/mutt/vim/conceal.vim
 
 cabbrev Se  set
 cabbrev Set set
@@ -69,3 +75,5 @@ cabbrev Gd  Gdiff
 cabbrev Gdelete  Gdiff
 cabbrev Vs  vsplit
 
+" autocmd BufNewFile,BufReadPost ~/.muttrc setl filetype=neomuttrc
+autocmd FileType muttrc setl filetype=neomuttrc
