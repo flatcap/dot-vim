@@ -10,6 +10,7 @@ nmap <silent> Q :call quitter#SaveAndClose()<CR>
 
 " Double-click to open/close folds
 map <2-LeftMouse> za
+" map <2-LeftMouse> nop
 
 " Find common items
 nmap <silent> <leader>h :silent! call swapfile#SwapFile()<CR>
@@ -24,7 +25,7 @@ nmap <silent> <leader>ww :vert split<Bar>:wincmd =<Bar>:quit<CR>
 
 nmap <silent> <F1>      :let &conceallevel=2-&conceallevel<CR>
 nmap <silent> <F3>      :let &laststatus = (&laststatus+1)%3<CR>:set laststatus?<CR>
-nmap          <F5>      <Plug>KeywordToggle
+nmap          <F17>     <Plug>KeywordToggle
 nmap          <F6>      zMzv
 nmap          <F7>      zr
 nmap <silent> <F8>      :GundoToggle<CR>
@@ -36,7 +37,7 @@ nmap <silent> <F9>      <Plug>SaveNextFile
 " S-F5: create some temp space
 nmap          <Esc>[1;2Q	:set paste!<Bar>:set paste?<CR>
 nnoremap      <Esc>[1;2R	:set ruler!<CR><C-L>
-nmap <silent> <S-F5>		<Plug>ScratchVertical
+nmap <silent> <F17>		<Plug>ScratchVertical
 " nmap          <S-F6>		:tabs<CR>
 " nmap          <S-F7>		:tabclose<CR>
 " nmap          <S-F8>		:tabnew<Space>
@@ -92,14 +93,15 @@ map <silent> <leader>jm :%!json_reformat -m<CR>
 map <silent> <leader>xt :%!tidy -quiet -xml<CR>
 
 " For wrapped lines make navigation work as expected
-noremap <silent> k gk
-noremap <silent> j gj
+" noremap <silent> k gk
+" noremap <silent> j gj
 " noremap <silent> 0 g0
 " noremap <silent> $ g$
 
 " Pressing ^L will clear highlighting
 nnoremap <silent> <C-l> :nohlsearch<CR>:set nocursorline nocursorcolumn nolist nospell nonumber<CR><C-l>
-inoremap <C-l> :nohlsearch<CR>:set nocursorline nocursorcolumn nolist nospell nonumber<CR>
+" inoremap <C-l> :nohlsearch<CR>:set nocursorline nocursorcolumn nolist nospell nonumber<CR>
+inoremap <C-l> <nop>
 
 map <down> <nop>
 map <left> <nop>
@@ -161,7 +163,25 @@ imap :wa <esc>:wa<enter>
 " nnoremap <buffer> <leader>ci :cscope find i ^<c-r>=expand('<cfile>')<cr>$<cr>
 " nnoremap <buffer> <leader>cd :cscope find d  <c-r>=expand('<cword>')<cr><cr>
 
-nnoremap <expr> n  'Nn'[v:searchforward]
-nnoremap <expr> N  'nN'[v:searchforward]
+" nnoremap <expr> n  'Nn'[v:searchforward]
+" nnoremap <expr> N  'nN'[v:searchforward]
 
+if !has('nvim')
 map y <Plug>(highlightedyank)
+endif
+
+nnoremap \ :Ack 
+cabbrev vimgrep Ack
+cabbrev ack Ack
+nnoremap <leader>G :Ack! -w <enter>
+nnoremap <leader>L :LAck! -w <enter>
+
+nnoremap <leader>A :tabedit ~/docs/account.txt<enter>gg
+nnoremap <leader>C :tabedit ~/docs/config.txt<enter>
+nnoremap <leader>D :tabedit ~/docs/doc/help.md<enter>
+nnoremap <leader>N :tabedit ~/docs/notes.txt<enter>gg
+
+cnoremap <F5> (.*)
+
+iabbrev FA ∀
+

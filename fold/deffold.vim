@@ -27,6 +27,8 @@ set foldopen+=mark
 set foldopen+=tag
 set foldopen+=quickfix
 "set foldopen+=search
+set foldlevel=4
+set foldtext=
 
 " map 0 :set fdl=0<CR>
 " map 1 :set fdl=1<CR>

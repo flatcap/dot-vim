@@ -1,4 +1,5 @@
 let g:Tlist_Use_Right_Window=1
+
 let g:Tlist_Compact_Format=1
 let g:Tlist_Enable_Fold_Column=0
 let g:Tlist_Ctags_Cmd='ctags -I UNUSED'
@@ -78,6 +79,9 @@ let g:interestingWordsTermColors = ['196',     '208',     '226',     '46',      
 let g:interestingWordsGUIColors  = ['#ff0000', '#ff8700', '#ffff00', '#00ff00', '#5fafff', '#0000ff', '#ff5fff', '#5f5fff', '#ffffff', 
 	\ '#ff0000', '#ff8700', '#ffff00', '#00ff00', '#5fafff', '#0000ff', '#ff5fff', '#5f5fff', '#ffffff' ]
 
+" let g:interestingWordsGUIColors  = [ '#ff0000', '#00ff00', '#ff0000', '#00ff00', '#ff0000', '#00ff00', '#ff0000', '#00ff00', '#ff0000', '#00ff00', '#ff0000', '#00ff00', '#ff0000', '#00ff00', '#ff0000', '#00ff00', '#ff0000', '#00ff00' ]
+let g:interestingWordsRandomiseColors = 0
+
 let g:rainbow_active = 1
 
     let g:rainbow_conf = {
@@ -110,4 +114,23 @@ let g:autosave_extensions = '.backup'
 let g:autosave_backup     = '~/.cache/vim/backup'
 let g:autosave_timer      = 60
 
-let g:highlightedyank_highlight_duration = -1
+let g:highlightedyank_highlight_duration = 4000
+let g:highlightedyank_max_lines = 100
+
+let g:neolog_default_colors = 1
+
+let g:clang_close_preview = 1
+let g:clang_jumpto_declaration_key = "<nop>"
+let g:clang_jumpto_back_key = "<nop>"
+
+let g:gutentags_ctags_exclude = [ 'autosetup/*', 'contrib/*', 'doxygen/*', 'test/*', 'doc/*', 'pgp*.c' ]
+
+" let g:ackprg='ag --nogroup --nocolor --column'
+let g:ackprg='ag --nogroup --nocolor --column -G ".*\.[ch]" --ignore test --ignore doc --ignore autosetup'
+let g:ack_apply_qmappings=1
+" let g:ack_autoclose=1
+let g:ack_qhandler="vert botright copen 60"
+" let g:ack_qhandler="botright copen 7"
+" let g:ackpreview=1
+" let g:ackhighlight=1
+

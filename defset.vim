@@ -14,20 +14,29 @@ set   complete-=u
 set   conceallevel=2
 set   concealcursor=ncv
 set   cpoptions=aABceFMns
-set   diffopt=filler,vertical,context:10,foldcolumn:0
+set   diffopt=filler,vertical,context:3,foldcolumn:0
 set   directory=~/.cache/vim/swap//
 set   eadirection=ver
 set   equalalways
 set noerrorbells
+if !has('nvim')
 set   esckeys
+endif
 set noexrc
 set   fillchars=fold:\ ,vert:│
+set   foldopen=mark,tag,quickfix
 set   formatoptions=cjnoqrt
 set   gdefault
+if has('nvim')
+set guicursor+=n:blinkon1
+endif
 set   hidden
 set   history=500
 set nohlsearch
 set   ignorecase
+if has('nvim')
+set   inccommand=nosplit
+endif
 set   incsearch
 set noinfercase
 set   laststatus=1
@@ -85,7 +94,11 @@ set   ttyfast
 set   undofile
 set   undodir=~/.cache/vim/undo//
 set   viewdir=~/.cache/vim/view//
+if has('nvim')
+set   viminfo=%,'50,:500,@100,/500,n~/.cache/vim/nviminfo
+else
 set   viminfo=%,'50,:500,@100,/500,n~/.cache/vim/viminfo
+endif
 set   virtualedit+=block
 set novisualbell
 set nowarn
@@ -102,14 +115,22 @@ set   winwidth=1
 set nowrap
 set   wrapscan
 
-
 if &diff
 	" set diffopt=filler,context:40,foldcolumn:0
-	set diffopt=filler,context:4,foldcolumn:0
+	set diffopt=filler,context:12,foldcolumn:0
 	highlight Folded ctermbg=none ctermfg=22 term=none
 	highlight DiffChange term=none ctermbg=none
 	set laststatus=2
 	highlight DiffText ctermfg=165 ctermbg=black
 	highlight DiffChange ctermbg=none ctermfg=none
 endif
+
+" set nobackup
+" set backupcopy=yes
+" set backupdir=
+" set directory=/tmp/neo//
+" set undodir=
+" set viewdir=
+" set noundofile
+" set undolevels=-1
 
