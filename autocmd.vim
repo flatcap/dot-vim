@@ -25,15 +25,12 @@ autocmd BufNewFile,BufRead .vimlocal                    setfiletype vim
 autocmd BufNewFile,BufRead ChangeLog*                   set ts=2 sw=2 et tw=80
 autocmd BufRead            */.git/rebase-apply/patch    set syntax=diff
 autocmd BufRead            /tmp/bash-fc-*               set syntax=sh
-autocmd BufRead            /tmp/mutt-*                  set syntax=mail ts=4 sw=4 et
-autocmd BufRead            ~/.cache/mutt/mutt-*         set syntax=mail ts=4 sw=4 et
+autocmd BufRead            /tmp/neomutt-*               set syntax=mail ts=4 sw=4 et
+autocmd BufRead            ~/.cache/mutt/neomutt-*      set syntax=mail ts=4 sw=4 et
 autocmd BufRead            /tmp/GHI_*                   set syntax=markdown ts=4 sw=4 et tw=80
 autocmd BufRead            patch-*                      set syntax=diff
-" autocmd BufRead            **/queue.h                   setl tabstop=8 shiftwidth=8
 
 autocmd BufNewFile,BufRead */issue/*.txt source ~/issue/issues.vim
-autocmd BufNewFile,BufRead */issue/**/[0-9][0-9][0-9][0-9][beip][oc] source ~/issue/issues.vim
-" autocmd BufNewFile,BufRead /tmp/new-issues/* source ~/issue/issues.vim
 " autocmd BufNewFile,BufRead */issue/*.txt set wrap
 
 autocmd BufReadPre  *.kmz,*.map let &bin=1
@@ -108,6 +105,4 @@ autocmd CmdwinEnter *            nnoremap <silent> <buffer> q :<c-u>quit!<cr>
 
 " autocmd InsertLeave,WinEnter * set cursorline
 " autocmd InsertEnter,WinLeave * set nocursorline
-
-autocmd BufRead ~/work/render-parse/* set syntax=mail ts=4 sw=4 et
 

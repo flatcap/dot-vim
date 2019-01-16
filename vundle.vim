@@ -4,7 +4,7 @@ set runtimepath+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " git clone git://github.com/gmarik/Vundle.vim bundle/vundle
-Plugin 'gmarik/vundle'
+Bundle 'gmarik/vundle'
 
 Plugin 'flatcap/vim-cpp'
 Plugin 'flatcap/vim-deleteto'
@@ -45,12 +45,13 @@ Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'machakann/vim-highlightedyank'
 " Plugin 'tmhedberg/matchit'
 Plugin 'mileszs/ack.vim'
-Plugin 'paulrouget/flagit'
+" Plugin 'paulrouget/flagit'
 " Plugin 'luochen1990/rainbow'
 " Plugin 'vim-scripts/scratch.vim'
 Plugin 'sjl/gundo.vim'
 Plugin 'skywind3000/asyncrun.vim'
 " Plugin 'mklabs/split-term.vim'
+Plugin 'tommcdo/vim-exchange'
 Plugin 'tommcdo/vim-fugitive-blame-ext'
 Plugin 'tommcdo/vim-lion'
 Plugin 'vasconcelloslf/vim-interestingwords'
@@ -62,4 +63,16 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'wellle/targets.vim'
 Plugin 'whiteinge/diffconflicts'
 " Plugin 'vim-scripts/YankRing.vim'
+
+Plugin 'junegunn/gv.vim'
+
+" Plugin 'Yggdroot/indentLine'
+Plugin 'haya14busa/incsearch.vim'
+" Plugin 'itchyny/vim-cursorword'
+
+if ((hostname() == 'laptop.flatcap.org') && ((expand ('$USER') == 'flatcap') || (expand ('$USER') == 'mutt')|| (expand ('$USER') == 'build')))
+	" Plugin 'jeaye/color_coded'
+	" Plugin 'file:///mnt/space/shell/vim/Plugin/vim-cpp'
+	" Plugin 'kshenoy/vim-signature'
+endif
 

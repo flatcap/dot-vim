@@ -24,6 +24,7 @@ set   esckeys
 endif
 set noexrc
 set   fillchars=fold:\ ,vert:│
+set   foldlevel=4
 set   foldopen=mark,tag,quickfix
 set   formatoptions=cjnoqrt
 set   gdefault
