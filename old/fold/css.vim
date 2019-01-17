@@ -1,6 +1,6 @@
 " Copyright 2015 Richard Russon.
 
-source ~/.vim/fold/deffold.vim
+source ~/.config/nvim/fold/deffold.vim
 
 let s:function = '▶'
 

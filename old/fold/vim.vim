@@ -6,7 +6,6 @@ let s:global_function = '●'
 let s:local_function  = '○'
 let s:comment         = '▶'
 
-
 function! Vim_FoldText(lnum)
 	let line = getline (a:lnum)
 	let icon = s:local_function
