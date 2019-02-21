@@ -2,7 +2,7 @@
 " library
 
 function! library#Highlight(filename, ...)
-	let l:opt_syntax = (a:0 > 0) ? a:1 : 'ctermfg=lightblue'
+	let l:opt_syntax = (a:0 > 0) ? a:1 : 'ctermfg=lightblue guifg=#30c0c0'
 	let l:opt_group  = (a:0 > 1) ? a:2 : 'library_group'
 
 	if (!filereadable (a:filename))
