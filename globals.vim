@@ -92,6 +92,7 @@ let g:keyword_highlight="ctermfg=207 ctermbg=none guifg=#ff5fff guibg=NONE"
 
 let g:mnemosyne_max_macros = 100
 let g:mnemosyne_window_size = 40
+let g:mnemosyne_macro_file = '~/.config/nvim/macros.vim'
 
 let g:piper_create_mappings = 1
 let g:piper_command_list = {
