@@ -80,9 +80,9 @@ augroup END
 " autocmd BufReadPost *   source ~/.vim/fold/diff.vim
 " autocmd BufReadPost * endif
 
-autocmd BufReadPost * if (exists ("b:current_syntax") && (b:current_syntax == "gitcommit"))
-autocmd BufReadPost *   set spell
-autocmd BufReadPost * endif
+" autocmd BufReadPost * if (exists ("b:current_syntax") && (b:current_syntax == "gitcommit"))
+" autocmd BufReadPost *   set spell
+" autocmd BufReadPost * endif
 
 autocmd BufReadPost * if (exists ("b:current_syntax") && (b:current_syntax == "gitcommit"))
 autocmd BufReadPost *   normal gg

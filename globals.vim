@@ -192,3 +192,4 @@ let g:ack_qhandler="vert botright copen 60"
 " let g:ackpreview=1
 " let g:ackhighlight=1
 
+let g:committia_min_window_width = 140
