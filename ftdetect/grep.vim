@@ -3,7 +3,7 @@
 autocmd BufRead * call <SID>grep()
 
 function! s:grep()
-	let match = '\v^[^:]+:\d+:'
+	let match = '\v^[^:]+:\d+[-:]'
 
 	let line = getline (1)
 	if (line !~ match)
